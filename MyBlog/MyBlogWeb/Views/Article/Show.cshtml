@@ -1,0 +1,171 @@
+﻿@model MyBlogWeb.Models.Article.ShowVM
+
+@{
+    ViewBag.Title = Model.Article.Title;
+    Layout = "~/Views/Layout/Main.cshtml";
+}
+
+<div class="row XCLArticleContent">
+    <div class="col-md-8 col-md-offset-2">
+
+        @if (Model.Article.ArticleID > 0)
+        {
+            <div class="page-header text-center" style="margin-top:10px;">
+                <h2>@Model.Article.Title</h2>
+                <small class="text-muted">分类：@Model.Article.ArticleTypeNames 来源：@Model.Article.FromInfo 作者：@Model.Article.AuthorName  @string.Format("{0:yyyy-MM-dd HH:mm}", Model.Article.CreateTime)</small>
+            </div>
+
+            if (!string.IsNullOrWhiteSpace(Model.Article.Summary))
+            {
+                <div class="alert alert-success">
+                    <p>
+                        <strong>概要：</strong>@Model.Article.Summary
+                    </p>
+                </div>
+            }
+
+            <div class="text-success XCLIndent" style="line-height:35px;">
+                @Html.Raw(Model.Article.Contents)
+            </div>
+
+            <p class="text-right text-muted">
+                编辑：@Model.Article.UpdaterName
+                最后更新于：@string.Format("{0:yyyy-MM-dd HH:mm}", Model.Article.UpdateTime)
+            </p>
+
+            if (!string.IsNullOrWhiteSpace(Model.Article.Comments))
+            {
+                <div class="alert alert-warning">
+                    <p>
+                        <strong>点评：</strong>@Model.Article.Comments
+                    </p>
+                </div>
+            }
+
+            <hr />
+
+            <div class="row">
+                <div class="col-md-6">
+                    <blockquote>
+                        <p><button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myPayModal"><span class="glyphicon glyphicon-heart"></span>您不【&nbsp;&yen;打赏】一下吗？<span class="glyphicon glyphicon-heart"></span></button></p>
+                        <footer>如果觉得我的文章对您有用，请随意打赏，您的支持将鼓励我继续创作！</footer>
+                    </blockquote>
+                </div>
+                
+                <!--上一篇、下一篇-->
+                @if (null != Model.RelationDetail && (null != Model.RelationDetail.PreArticle || null != Model.RelationDetail.NextArticle))
+                {
+                    <div class="col-md-6">
+                        <blockquote>
+                            @if (null != Model.RelationDetail.PreArticle)
+                            {
+                                <p>
+                                    <span class="text-success">上一篇：</span>
+                                    <a href="@Url.RouteUrl("DefaultRouter",new { controller="article",action="show",id=Model.RelationDetail.PreArticle.ArticleID })">
+                                        @Model.RelationDetail.PreArticle.Title
+                                    </a>
+                                </p>
+                            }
+                            @if (null != Model.RelationDetail.NextArticle)
+                            {
+                                <p>
+                                    <span class="text-success">下一篇：</span>
+                                    <a href="@Url.RouteUrl("DefaultRouter",new { controller="article",action="show",id=Model.RelationDetail.NextArticle.ArticleID })">
+                                        @Model.RelationDetail.NextArticle.Title
+                                    </a>
+                                </p>
+                            }
+                        </blockquote>
+                    </div>
+                }
+
+            </div>
+
+            
+
+            <!-- Modal -->
+            <div class="modal fade" id="myPayModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="关闭"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">准备赏个脸</h4>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="~/Resources/Images/wxpay.jpg" />
+                            <p>微信扫一扫，非常强烈地感谢您的支持！</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-dismiss="modal">关闭</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--相关文章-->
+            if (null != Model.RelationDetail && null != Model.RelationDetail.SameTypeArticleList && Model.RelationDetail.SameTypeArticleList.Count > 0)
+            {
+                <hr />
+                <ul style="padding:0px;list-style-position:inside;">
+                    @foreach (var sameModel in Model.RelationDetail.SameTypeArticleList)
+                    {
+                        <li>
+                            <a href="@Url.RouteUrl("DefaultRouter", new { controller = "article", action = "show", id = sameModel.ArticleID })">
+                                @sameModel.Title
+                            </a>
+                        </li>
+                    }
+                </ul>
+            }
+
+            <hr />
+            <p class="text-muted">
+                <small>
+                    声明：本站<strong>部分文章</strong>系本站编辑转载，转载目的在于加快信息的传递，及时与广大网友分享更多信息，并不代表本站赞同其观点和对其真实性负责。
+                    如涉及作品内容、版权和其它问题，请及时与本站联系，我们将在第一时间删除内容！本站文章版权归原作者所有，内容为作者个人观点，本站只提供参考并不构成任何投资及应用的建议。
+                </small>
+            </p>
+
+            <hr />
+
+            <div class="ds-share" data-thread-key="@Model.Article.ArticleID" data-title="@Model.Article.Title" data-content="@Model.Article.Summary" data-url="@string.Format("{0}Article/Show/{1}",XCLNetTools.StringHander.Common.RootUri,Model.Article.ArticleID)">
+                <div class="ds-share-inline">
+                    <ul class="ds-share-icons-32">
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);"></a></li>
+                        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo"></a></li>
+                        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone"></a></li>
+                        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt"></a></li>
+                        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat"></a></li>
+                    </ul>
+                    <div class="ds-share-icons-more">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 多说评论框 start -->
+            <div class="ds-thread" data-thread-key="@Model.Article.ArticleID" data-title="@Model.Article.Title" data-url="@string.Format("{0}Article/Show/{1}",XCLNetTools.StringHander.Common.RootUri,Model.Article.ArticleID)"></div>
+            <!-- 多说评论框 end -->
+            <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+            <script type="text/javascript">
+                var duoshuoQuery = { short_name: "wodeabc" };
+                (function () {
+                    var ds = document.createElement('script');
+                    ds.type = 'text/javascript'; ds.async = true;
+                    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                    ds.charset = 'UTF-8';
+                    (document.getElementsByTagName('head')[0]
+                        || document.getElementsByTagName('body')[0]).appendChild(ds);
+                })();
+            </script>
+            <!-- 多说公共JS代码 end -->
+        }
+        else
+        {
+            <div class="alert alert-warning text-center">
+                <h3>
+                    您查看的内容不存在，或已被删除！
+                </h3>
+            </div>
+        }
+    </div>
+</div>

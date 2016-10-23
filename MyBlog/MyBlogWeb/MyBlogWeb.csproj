@@ -74,11 +74,29 @@
     <Reference Include="Webdiyer.MvcPager">
       <HintPath>..\..\..\..\GitHub\XCLCMS\XCLCMS.Document\Libs\MvcPager\3.0\Webdiyer.MvcPager.dll</HintPath>
     </Reference>
-    <Reference Include="XCLNetLogger">
-      <HintPath>..\..\..\..\GitHub\XCLCMS\XCLCMS.Document\Libs\XCLNetLogger.dll</HintPath>
+    <Reference Include="XCLCMS.Data.CommonHelper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\XCLCMS.Data.CommonHelper.dll</HintPath>
     </Reference>
-    <Reference Include="XCLNetTools">
-      <HintPath>..\..\..\..\GitHub\XCLCMS\XCLCMS.Document\Libs\XCLNetTools.dll</HintPath>
+    <Reference Include="XCLCMS.Data.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\XCLCMS.Data.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="XCLCMS.Data.WebAPIEntity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\XCLCMS.Data.WebAPIEntity.dll</HintPath>
+    </Reference>
+    <Reference Include="XCLCMS.Lib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\XCLCMS.Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="XCLNetLogger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\XCLNetLogger.dll</HintPath>
+    </Reference>
+    <Reference Include="XCLNetTools, Version=2.6.6101.42291, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\XCLNetTools.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -105,6 +123,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Dll\XCLCMS.Data.CommonHelper.dll" />
+    <Content Include="Dll\XCLCMS.Data.Model.dll" />
+    <Content Include="Dll\XCLCMS.Data.WebAPIEntity.dll" />
+    <Content Include="Dll\XCLCMS.Lib.dll" />
+    <Content Include="Dll\XCLNetLogger.dll" />
+    <Content Include="Dll\XCLNetTools.dll" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Resources\Css\Base.css" />
@@ -176,24 +200,6 @@
     </None>
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\GitHub\XCLCMS\XCLCMS.Data\XCLCMS.Data.CommonHelper\XCLCMS.Data.CommonHelper.csproj">
-      <Project>{4f53bbd2-fcdc-403d-9546-281cda981cf8}</Project>
-      <Name>XCLCMS.Data.CommonHelper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\GitHub\XCLCMS\XCLCMS.Data\XCLCMS.Data.Model\XCLCMS.Data.Model.csproj">
-      <Project>{1c3a4834-de9b-4b4f-8378-084f83c58e90}</Project>
-      <Name>XCLCMS.Data.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\GitHub\XCLCMS\XCLCMS.Data\XCLCMS.Data.WebAPIEntity\XCLCMS.Data.WebAPIEntity.csproj">
-      <Project>{df6f982f-2be8-4a93-b835-79629c487a5e}</Project>
-      <Name>XCLCMS.Data.WebAPIEntity</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\GitHub\XCLCMS\XCLCMS.Lib\XCLCMS.Lib.csproj">
-      <Project>{e2aa6c7f-5b46-4a4b-93e4-4ed457587c4e}</Project>
-      <Name>XCLCMS.Lib</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -6,15 +6,15 @@
     <add key="UnobtrusiveJavaScriptEnabled" value="true" />
 
     <!--应用号-->
-    <add key="AppID" value="900115" />
-    <add key="AppKey" value="ABBCABF58A396B4BD696F837BFA2A3EA" />
+    <add key="AppID" value="${config.AppID}" />
+    <add key="AppKey" value="${config.AppKey}" />
     <!--文章分类根节点ID-->
-    <add key="ArticleTypeRootID" value="300286" />
+    <add key="ArticleTypeRootID" value="${config.ArticleTypeRootID}" />
     <!--商户主账号用户名-->
-    <add key="MainUserName" value="myweb" />
+    <add key="MainUserName" value="${config.MainUserName}" />
     <!--商户主账号密码-->
-    <add key="MainPwd" value="67192FB9BEB8A00F714F665E1DBD7022" />
-    <add key="WebAPIServiceURL" value="http://localhost/XCLCMS.WebAPI/api/" />
+    <add key="MainPwd" value="${config.MainPwd}" />
+    <add key="WebAPIServiceURL" value="${config.WebAPIServiceURL}" />
     <!--当前系统所在环境（XCLCMS.Lib.Common.Comm.SysEnvironmentEnum）-->
-    <add key="SysEnvironment" value="DEV" />
+    <add key="SysEnvironment" value="${ENV}" />
 </appSettings>

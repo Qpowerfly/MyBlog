@@ -1,0 +1,67 @@
+{
+  "configs": {
+    "appSettings": {
+      "name": "appSettings配置信息",
+      "cfg": [
+        {
+          "source": "${ROOT_PATH}AppSettings.config.tpl",
+          "target": "${ROOT_PATH}AppSettings.config"
+        }
+      ],
+      "val": {
+        "DEV": {
+          "AppID": 900115,
+          "AppKey": "ABBCABF58A396B4BD696F837BFA2A3EA",
+          "ArticleTypeRootID": 300286,
+          "MainUserName": "myweb",
+          "MainPwd": "67192FB9BEB8A00F714F665E1DBD7022",
+          "WebAPIServiceURL": "http://localhost/XCLCMS.WebAPI/api/"
+        },
+        "PRD": {
+          "AppID": 900115,
+          "AppKey": "***************",
+          "ArticleTypeRootID": 300286,
+          "MainUserName": "myweb",
+          "MainPwd": "*********************",
+          "WebAPIServiceURL": "http://www.wodeabc.com/XCLCMS.WebAPI/api/"
+        }
+      }
+    },
+    "connectionString": {
+      "name": "数据库连接配置信息",
+      "cfg": [
+        {
+          "source": "${ROOT_PATH}ConnectionStrings.config.tpl",
+          "target": "${ROOT_PATH}ConnectionStrings.config"
+        }
+      ],
+      "val": {
+        "DEV": {
+          "dbConnectionString": "Server=XCL-PC\\\\SQL2012;Database=XCLCMS;User Id=sa;Password=sa1989;"
+        },
+        "PRD": {
+          "dbConnectionString": "Data Source=127.0.0.1;Initial Catalog=XCLCMS;Integrated Security=True;"
+        }
+      }
+    },
+    "XCLNetLogger": {
+      "name": "XCLNetLogger日志记录组件配置信息",
+      "cfg": [
+        {
+          "source": "${ROOT_PATH}XCLNetLogger.config.tpl",
+          "target": "${ROOT_PATH}XCLNetLogger.config"
+        }
+      ],
+      "val": {
+        "DEV": {
+          "MerchantID": 600134,
+          "dbConnectionString": "Server=XCL-PC\\\\SQL2012;Database=XCLCMS;User Id=sa;Password=sa1989;"
+        },
+        "PRD": {
+          "MerchantID": 600134,
+          "dbConnectionString": "Data Source=127.0.0.1;Initial Catalog=XCLCMS;Integrated Security=True;"
+        }
+      }
+    }
+  }
+}

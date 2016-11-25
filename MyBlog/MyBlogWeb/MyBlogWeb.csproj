@@ -193,9 +193,6 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Config\ConnectionStrings.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Config\XCLNetLogger.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -204,9 +201,6 @@
     <Content Include="Views\UserControl\XCLPager.cshtml" />
     <Content Include="Views\Common\Error.cshtml" />
     <Content Include="Config\AppSettings.config.tpl">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Config\ConnectionStrings.config.tpl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Config\XCLNetLogger.config.tpl">

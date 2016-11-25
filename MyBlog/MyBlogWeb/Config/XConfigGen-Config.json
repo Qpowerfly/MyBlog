@@ -23,7 +23,7 @@
           "ArticleTypeRootID": 300286,
           "MainUserName": "myweb",
           "MainPwd": "*********************",
-          "WebAPIServiceURL": "http://www.wodeabc.com/XCLCMS.WebAPI/api/"
+          "WebAPIServiceURL": "http://cms.wodeabc.com/api/api/"
         }
       }
     },
@@ -38,10 +38,12 @@
       "val": {
         "DEV": {
           "MerchantID": 600134,
+          "MerchantAppID": 900115,
           "dbConnectionString": "Server=XCL-PC\\\\SQL2012;Database=XCLCMS;User Id=sa;Password=sa1989;"
         },
         "PRD": {
           "MerchantID": 600134,
+          "MerchantAppID": 900115,
           "dbConnectionString": "Data Source=127.0.0.1;Initial Catalog=XCLCMS;Integrated Security=True;"
         }
       }

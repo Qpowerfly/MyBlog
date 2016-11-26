@@ -19,10 +19,10 @@
         },
         "PRD": {
           "AppID": 900115,
-          "AppKey": "***************",
+          "AppKey": "ABBCABF58A396B4BD696F837BFA2A3EA",
           "ArticleTypeRootID": 300286,
           "MainUserName": "myweb",
-          "MainPwd": "*********************",
+          "MainPwd": "E9156AD29C25EEC7ADF4A1D6EC23C0E3",
           "WebAPIServiceURL": "http://cms.wodeabc.com/api/api/"
         }
       }

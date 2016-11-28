@@ -25,5 +25,15 @@ namespace MyBlogWeb.Controllers
 
             return View("~/Views/Common/Error.cshtml", viewModel);
         }
+
+        /// <summary>
+        /// 搜索和导航
+        /// </summary>
+        public ActionResult So()
+        {
+            ViewBag.IsShowHeader = false;
+            ViewBag.Title = "我的导航";
+            return View();
+        }
     }
 }

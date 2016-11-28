@@ -1,0 +1,136 @@
+﻿@{
+    Layout = "~/Views/Layout/Main.cshtml";
+}
+
+<style type="text/css">
+    .inputbox {
+        height: 60px;
+        font-size: 25px;
+    }
+
+    .searchBtn {
+        height: 60px;
+        width: 150px;
+        font-size: 20px;
+        font-weight: bolder;
+        word-spacing: 2px;
+        letter-spacing: 2px;
+    }
+
+    form {
+        margin-top: 170px;
+    }
+
+        form .label {
+            color: #fff !important;
+        }
+
+            form .label:hover {
+                color: #ddd !important;
+            }
+
+    .divLinks {
+        font-size: 18px;
+        word-spacing: 5px;
+        letter-spacing: 5px;
+        color: #888;
+    }
+
+        .divLinks .panel-body {
+            display: none;
+        }
+</style>
+
+<form id="form1" name="form1" class="form-horizontal" role="form" method="get" action="http://www.google.com/search" target="_blank">
+    <div class="form-group">
+        <label class="col-md-3 control-label"></label>
+        <div class="col-md-6">
+            <a href="http://news.google.com/" class="label label-success" target="_blank">新闻</a>
+            <a href="http://music.google.com/" class="label label-success" target="_blank">音乐</a>
+            <a href="http://images.google.com/" class="label label-success" target="_blank">图片</a>
+            <a href="http://video.google.com/" class="label label-success" target="_blank">视频</a>
+            <a href="http://maps.google.com/" class="label label-success" target="_blank">地图</a>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-3 control-label"></label>
+        <div class="col-md-6">
+            <input type="text" class="form-control inputbox" id="txtGoogle" name="q" baiduSug="1" placeholder="谷歌搜索" />
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-success searchBtn" id="btnGoogleSearch"><span class="glyphicon glyphicon-search"></span>谷歌搜索</button>
+        </div>
+    </div>
+</form>
+
+<form id="form2" name="form2" class="form-horizontal" role="form" method="get" action="http://www.baidu.com/s" target="_blank">
+    <div class="form-group">
+        <label class="col-md-3 control-label"></label>
+        <div class="col-md-6">
+            <a href="http://news.baidu.com/" class="label label-info" target="_blank">新闻</a>
+            <a href="http://tieba.baidu.com/" class="label label-info" target="_blank">贴吧</a>
+            <a href="http://zhidao.baidu.com/" class="label label-info" target="_blank">知道</a>
+            <a href="http://music.baidu.com/" class="label label-info" target="_blank">音乐</a>
+            <a href="http://image.baidu.com/" class="label label-info" target="_blank">图片</a>
+            <a href="http://v.baidu.com/" class="label label-info" target="_blank">视频</a>
+            <a href="http://baike.baidu.com/" class="label label-info" target="_blank">百科</a>
+            <a href="http://ditu.baidu.com/" class="label label-info" target="_blank">地图</a>
+            <a href="http://wenku.baidu.com/" class="label label-info" target="_blank">文库</a>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-3 control-label"></label>
+        <div class="col-md-6">
+            <input type="text" class="form-control inputbox" id="txtBaidu" name="word" baiduSug="1" placeholder="百度搜索" />
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-info searchBtn" id="btnBaiduSearch"><span class="glyphicon glyphicon-search"></span>百度搜索</button>
+        </div>
+    </div>
+</form>
+
+<div class="panel  divLinks">
+    <div class="panel-heading"><span class="glyphicon glyphicon-globe"></span>Internet</div>
+    <div class="panel-body">
+        <div class="col-md-1">门户：</div>
+        <div class="col-md-1"><a href="http://www.qq.com/" target="_blank">腾讯网</a></div>
+        <div class="col-md-1"><a href="http://www.ifeng.com/" target="_blank">凤凰网</a></div>
+        <div class="col-md-1"><a href="http://www.sina.com.cn/" target="_blank">新浪网</a></div>
+        <div class="col-md-1"><a href="http://www.163.com/" target="_blank">网易</a></div>
+
+        <div class="col-md-12"></div>
+
+        <div class="col-md-1">视频：</div>
+        <div class="col-md-1"><a href="http://www.youku.com/" target="_blank">优酷</a></div>
+        <div class="col-md-1"><a href="http://www.iqiyi.com/" target="_blank">爱奇艺</a></div>
+        <div class="col-md-1"><a href="http://www.xiaopian.com/" target="_blank">电影天堂</a></div>
+        <div class="col-md-1"><a href="http://tv.cctv.com/live/" target="_blank">CNTV</a></div>
+
+        <div class="col-md-12"></div>
+
+        <div class="col-md-1">节目：</div>
+        <div class="col-md-1"><a href="http://list.youku.com/show/spm_a2hww.20023042.search.4_id_zd5c211ba91af11e5a080.html" target="_blank">CX六点半</a></div>
+        <div class="col-md-1"><a href="http://www.iqiyi.com/a_19rrgifngp.html#vfrm=2-3-0-1" target="_blank">晓说</a></div>
+        <div class="col-md-1"><a href="http://list.youku.com/show/spm_a2hww.20023042.search.4_id_z5bdbf57c947311e3b8b7.html" target="_blank">罗辑思维</a></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        var $txtGoogle = $("#txtGoogle"), $txtBaidu = $("#txtBaidu");
+        $txtGoogle.on("keyup", function () {
+            $txtBaidu.val($.trim(this.value))
+        });
+        $txtBaidu.on("keyup", function () {
+            $txtGoogle.val($.trim(this.value));
+        });
+        $(".divLinks .panel-heading").on("click", function () {
+            $(".divLinks .panel-body").toggle();
+        });
+    });
+</script>
+<script type="text/javascript" charset="gbk" src="http://www.baidu.com/js/opensug.js"></script>

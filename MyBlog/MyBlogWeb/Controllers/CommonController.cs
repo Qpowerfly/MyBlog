@@ -32,7 +32,7 @@ namespace MyBlogWeb.Controllers
         public ActionResult So()
         {
             ViewBag.IsShowHeader = false;
-            ViewBag.Title = "我的导航";
+            ViewBag.Title = "导航搜索";
             return View();
         }
     }

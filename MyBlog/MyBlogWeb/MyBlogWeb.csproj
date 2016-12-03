@@ -146,6 +146,7 @@
     <Content Include="Resources\Images\banners\6.jpg" />
     <Content Include="Resources\Images\logo.gif" />
     <Content Include="Resources\Images\wxpay.jpg" />
+    <Content Include="Resources\Js\angular.min.js" />
     <Content Include="Resources\Js\App.js" />
     <Content Include="Resources\Js\bootstrap\css\bootstrap-theme.css" />
     <Content Include="Resources\Js\bootstrap\css\bootstrap-theme.min.css" />
@@ -175,6 +176,7 @@
     </Compile>
     <Compile Include="Models\Article\ListVM.cs" />
     <Compile Include="Models\Article\ShowVM.cs" />
+    <Compile Include="Models\Common\SoVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

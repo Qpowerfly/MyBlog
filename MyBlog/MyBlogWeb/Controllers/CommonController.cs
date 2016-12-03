@@ -29,11 +29,13 @@ namespace MyBlogWeb.Controllers
         /// <summary>
         /// 搜索和导航
         /// </summary>
-        public ActionResult So()
+        public ActionResult So(string key)
         {
+            var viewModel = new Models.Common.SoVM();
+            viewModel.Key = key;
             ViewBag.IsShowHeader = false;
             ViewBag.Title = "导航搜索";
-            return View();
+            return View(viewModel);
         }
     }
 }

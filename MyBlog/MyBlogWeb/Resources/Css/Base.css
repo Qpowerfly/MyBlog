@@ -90,6 +90,16 @@ a:not(.btn) {
     -webkit-transition: transform 1s ease 0s;
     -o-transition: transform 1s ease 0s;
 }
+
+.XCLSummary {
+    -ms-word-break: break-all;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 /*article list image  end*/
 
 /*menu  begin*/

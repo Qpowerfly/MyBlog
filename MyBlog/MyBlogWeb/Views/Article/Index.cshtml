@@ -21,7 +21,7 @@
                     <div class="media-body">
                         <h3 class="media-heading"><a href="@Url.RouteUrl("DefaultRouter",new { controller="article",action="show",id=m.ArticleID })">@m.Title</a></h3>
                         <blockquote style="font-size:15px;">
-                            <p class="text-success XCLIndent" style="line-height:25px;">@m.Summary ...</p>
+                            <p class="text-success XCLIndent XCLSummary" style="line-height:25px;">@m.Summary ...</p>
                             <div class="text-right text-muted">
                                 分类：@m.ArticleTypeNames
                                 <span class="hidden-xs">来源：@m.FromInfo</span>

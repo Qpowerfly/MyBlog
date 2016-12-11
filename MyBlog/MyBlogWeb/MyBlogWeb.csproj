@@ -129,11 +129,17 @@
   <ItemGroup>
     <Content Include="Dll\Newtonsoft.Json.dll" />
     <Content Include="Dll\XCLCMS.Data.CommonHelper.dll" />
+    <Content Include="Dll\XCLCMS.Data.CommonHelper.xml" />
     <Content Include="Dll\XCLCMS.Data.Model.dll" />
+    <Content Include="Dll\XCLCMS.Data.Model.xml" />
     <Content Include="Dll\XCLCMS.Data.WebAPIEntity.dll" />
+    <Content Include="Dll\XCLCMS.Data.WebAPIEntity.xml" />
     <Content Include="Dll\XCLCMS.Lib.dll" />
+    <Content Include="Dll\XCLCMS.Lib.xml" />
     <Content Include="Dll\XCLNetLogger.dll" />
+    <Content Include="Dll\XCLNetLogger.xml" />
     <Content Include="Dll\XCLNetTools.dll" />
+    <Content Include="Dll\XCLNetTools.xml" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Resources\Css\Base.css" />

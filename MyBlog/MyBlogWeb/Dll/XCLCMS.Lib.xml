@@ -1,0 +1,1087 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XCLCMS.Lib</name>
+    </assembly>
+    <members>
+        <member name="T:XCLCMS.Lib.Base.AbstractBaseController">
+            <summary>
+            抽象基类
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Base.AbstractBaseController.CurrentUserInfoDetailModel">
+            <summary>
+            当前登录用户详情
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Base.AbstractBaseController.CurrentUserModel">
+            <summary>
+            当前登录的用户实体
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Base.AbstractBaseController.UserID">
+            <summary>
+            当前已登录用户的ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Base.AbstractBaseController.UserToken">
+            <summary>
+            当前用户登录令牌
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Base.AbstractBaseController.CurrentUserMerchant">
+            <summary>
+            当前用户所属的商户信息实体
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Base.AbstractBaseController.CurrentUserMerchantApp">
+            <summary>
+            当前用户所属的商户应用实体
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Base.AbstractBaseController.ContextModel">
+            <summary>
+            db上下文
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Base.AbstractBaseController.CurrentApplicationMerchantApp">
+            <summary>
+            当前应用程序的商户应用实体
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Base.AbstractBaseController.CurrentApplicationMerchant">
+            <summary>
+            当前应用程序的商户信息实体
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Base.AbstractBaseController.PageParamsInfo">
+            <summary>
+            当前页面分页参数信息
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Base.AbstractBaseController.CurrentHandleType">
+            <summary>
+            当前页面操作类型
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Base.AbstractBaseController.CurrentHandleTypeValue">
+            <summary>
+            页面操作类型HandleType的参数值
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Base.AbstractBaseController.AddSubmit(System.Web.Mvc.FormCollection)">
+            <summary>
+            添加
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Base.AbstractBaseController.DelSubmit(System.Web.Mvc.FormCollection)">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Base.AbstractBaseController.UpdateSubmit(System.Web.Mvc.FormCollection)">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Base.AbstractBaseController.InputSubmit(System.Web.Mvc.FormCollection)">
+            <summary>
+            导入
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Base.AbstractBaseController.OutputSubmit(System.Web.Mvc.FormCollection)">
+            <summary>
+            导出
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Base.AbstractBaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            OnActionExecuting
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Base.AbstractBaseController.OnActionExecuted(System.Web.Mvc.ActionExecutedContext)">
+            <summary>
+            OnActionExecuted
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.Common.Comm">
+            <summary>
+            公共操作
+            </summary>
+        </member>
+        <member name="F:XCLCMS.Lib.Common.Comm.SettingCacheName">
+            <summary>
+            站点配置信息缓存
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Common.Comm.ClearCache">
+            <summary>
+            缓存清理
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Common.Comm.GetCurrentEnvironment">
+            <summary>
+            获取当前系统所处环境
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Common.Comm.AppID">
+            <summary>
+            获取当前应用ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Common.Comm.AppKey">
+            <summary>
+            获取当前应用AppKey
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Common.Comm.WebAPIJsUrl">
+            <summary>
+            获取当前应用WebAPIJsUrl
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Common.Comm.WebAPIServiceURL">
+            <summary>
+            获取当前应用WebAPIServiceURL
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Common.Comm.GetSysDicOptionsByCode(System.String,XCLNetTools.Entity.SetOptionEntity)">
+            <summary>
+            将指定code的SysDic的子项转为options
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Common.Comm.GetAttachmentAbsoluteURL(System.Int64)">
+            <summary>
+            根据文件id，返回用于网站上显示的文件地址
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Common.Comm.GetAttachmentAbsoluteURL(System.String)">
+            <summary>
+            将文件管理中的文件相对路径转为url绝对路径
+            如：~/upload/files/123.jpg -> //www.w.com/filemanager/upload/files/123.jpg
+            </summary>
+        </member>
+        <member name="F:XCLCMS.Lib.Common.Comm.GetAllEnumJson">
+            <summary>
+            类别枚举json
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Common.Comm.XCLJsonResult(System.Object,System.Web.Mvc.JsonRequestBehavior)">
+            <summary>
+            重写json
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Common.Comm.GetCurrentApplicationMerchant">
+            <summary>
+            获取当前应用程序的商户实体
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Common.Comm.GetCurrentApplicationMerchantApp">
+            <summary>
+            获取当前应用程序的商户应用实体
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Common.Comm.GetCurrentApplicationMerchantAppInfo">
+            <summary>
+            获取当前应用程序的商户应用信息
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.Common.LoginHelper">
+            <summary>
+            登录相关
+            </summary>
+        </member>
+        <member name="F:XCLCMS.Lib.Common.LoginHelper.UserLoginFlagName">
+            <summary>
+            登录信息的session名 or Cookie名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Common.LoginHelper.IsLogOn">
+            <summary>
+            是否已登录
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Common.LoginHelper.SetLogInfo(XCLNetTools.Enum.CommonEnum.LoginTypeEnum,System.String)">
+            <summary>
+            设置登录与退出的登录令牌信息（session/cookie...）
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Common.LoginHelper.GetUserInfoFromLoginInfo">
+            <summary>
+            根据session或cookie中的登录令牌来获取当前用户model
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.Common.Setting">
+            <summary>
+            获取站点配置
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Common.Setting.GetAllSettings">
+            <summary>
+            获取所有配置
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Common.Setting.SettingModel">
+            <summary>
+            model形式的配置
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.Filters.ExceptionFilter">
+            <summary>
+            异常处理
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Filters.ExceptionFilter.OnException(System.Web.Mvc.ExceptionContext)">
+            <summary>
+            异常
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.Filters.FunctionFilter">
+            <summary>
+            功能Filter
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Filters.FunctionFilter.Function">
+            <summary>
+            当前功能标识组
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.Filters.PermissionFilter">
+            <summary>
+            权限拦截
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Filters.PermissionFilter.IsMustLogin">
+            <summary>
+            是否必须验证登录
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Filters.PermissionFilter.UserInfo">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Filters.PermissionFilter.AuthorizeCore(System.Web.HttpContextBase)">
+            <summary>
+            登录权限验证
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Filters.PermissionFilter.HandleUnauthorizedRequest(System.Web.Mvc.AuthorizationContext)">
+            <summary>
+            处理无权限的请求
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Filters.PermissionFilter.OnAuthorization(System.Web.Mvc.AuthorizationContext)">
+            <summary>
+            功能权限验证
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.Model.CommonModel">
+            <summary>
+            全局公共model
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.CommonModel.CurrentUserModel">
+            <summary>
+            当前登录用户
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.CommonModel.IsLogOn">
+            <summary>
+            是否已登录
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.Model.PageGlobalConfig">
+            <summary>
+            页面全局配置（序列化为json）
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.PageGlobalConfig.AppID">
+            <summary>
+            当前应用程序的应用号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.PageGlobalConfig.AppKey">
+            <summary>
+            当前应用程序的应用Key
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.PageGlobalConfig.UserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.PageGlobalConfig.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.PageGlobalConfig.UserToken">
+            <summary>
+            用户token
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.PageGlobalConfig.IsLogOn">
+            <summary>
+            当前用户是否已登录
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.PageGlobalConfig.RootURL">
+            <summary>
+            站点根路径
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.PageGlobalConfig.EnumConfig">
+            <summary>
+            枚举json
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.PageGlobalConfig.FileManagerFileListURL">
+            <summary>
+            文件管理器文件列表路径
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.PageGlobalConfig.FileManagerLogicFileListURL">
+            <summary>
+            文件管理器逻辑文件列表路径
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.PageGlobalConfig.WebAPIServiceURL">
+            <summary>
+            web api服务地址
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.Model.SettingModel">
+            <summary>
+            站点配置model
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.SettingModel.Common_UserDefaultPwd">
+            <summary>
+            添加用户信息时的默认密码
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.SettingModel.Admin_LogOutURL">
+            <summary>
+            后台系统退出地址
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.SettingModel.Admin_LogOnURL">
+            <summary>
+            后台系统登录页地址
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.SettingModel.FileManager_RootURL">
+            <summary>
+            文件管理根路径
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.SettingModel.FileManager_FileListURL">
+            <summary>
+            文件管理中的文件列表首页
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.SettingModel.FileManager_FileUploadURL">
+            <summary>
+            文件管理中的文件上传页面
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.SettingModel.FileManager_LogicFileListURL">
+            <summary>
+            文件管理中的逻辑文件列表首页
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.SettingModel.FileManager_OpenAPI_ShowAttachmentURL">
+            <summary>
+            文件管理查看附件的公共地址
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.Permission.PerHelper">
+            <summary>
+            权限帮助类
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Permission.PerHelper.GetRoleByUserID(System.Int64)">
+            <summary>
+            获取指定用户的角色
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Permission.PerHelper.GetNormalMerchantFunctionTreeList">
+            <summary>
+            获取普通商户的所有功能数据源列表
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Permission.PerHelper.GetNormalMerchantFunctionIDList">
+            <summary>
+            获取普通商户的所有功能id List
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Permission.PerHelper.HasAnyPermission(System.Int64,System.Collections.Generic.List{XCLCMS.Data.CommonHelper.Function.FunctionEnum})">
+            <summary>
+            判断指定用户是否至少拥有权限组中的某个权限
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Permission.PerHelper.HasPermission(System.Int64,XCLCMS.Data.CommonHelper.Function.FunctionEnum)">
+            <summary>
+            判断指定用户是否拥有某个权限
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Permission.PerHelper.IsOnlyCurrentMerchant(System.Int64)">
+            <summary>
+            判断指定用户是否只能访问自己商户的数据
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.WebAPI.AdsAPI">
+            <summary>
+            广告位管理 API
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.AdsAPI.Detail(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+            <summary>
+            查询广告信息实体
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.AdsAPI.PageList(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.PageListConditionEntity})">
+            <summary>
+            查询广告信息分页列表
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.AdsAPI.IsExistCode(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.Ads.IsExistCodeEntity})">
+            <summary>
+            检查广告code是否已存在
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.AdsAPI.Add(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.Ads})">
+            <summary>
+            新增广告信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.AdsAPI.Update(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.Ads})">
+            <summary>
+            修改广告信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.AdsAPI.Delete(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Collections.Generic.List{System.Int64}})">
+            <summary>
+            删除广告信息
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.WebAPI.ArticleAPI">
+            <summary>
+            文章API
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.ArticleAPI.Detail(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+            <summary>
+            查询文章信息实体
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.ArticleAPI.RelationDetail(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+            <summary>
+            查询指定文章关联的其它文章信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.ArticleAPI.PageList(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.PageListConditionEntity})">
+            <summary>
+            查询文章信息分页列表
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.ArticleAPI.SimplePageList(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.Article.SimplePageListEntity})">
+            <summary>
+            查询文章信息分页列表(简单分页)
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.ArticleAPI.IsExistCode(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.Article.IsExistCodeEntity})">
+            <summary>
+            检查文章code是否已存在
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.ArticleAPI.Add(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.Article.AddOrUpdateEntity})">
+            <summary>
+            新增文章信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.ArticleAPI.Update(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.Article.AddOrUpdateEntity})">
+            <summary>
+            修改文章信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.ArticleAPI.Delete(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Collections.Generic.List{System.Int64}})">
+            <summary>
+            删除文章信息
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.WebAPI.AttachmentAPI">
+            <summary>
+            附件API
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.AttachmentAPI.Detail(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+            <summary>
+            查询附件信息实体
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.AttachmentAPI.GetObjectAttachmentList(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.Attachment.GetObjectAttachmentListEntity})">
+            <summary>
+            根据附件关系信息查询附件列表
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.AttachmentAPI.GetAttachmentListByIDList(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.Attachment.GetAttachmentListByIDListEntity})">
+            <summary>
+            根据文件id，查询文件详情列表
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.WebAPI.CommonAPI">
+            <summary>
+            公共API
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.CommonAPI.GenerateID(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.Common.GenerateIDEntity})">
+            <summary>
+            生成ID号
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.CommonAPI.ClearRubbishData(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Object})">
+            <summary>
+            垃圾数据清理
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.WebAPI.FriendLinksAPI">
+            <summary>
+            友情链接 API
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.FriendLinksAPI.Detail(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+            <summary>
+            查询友情链接信息实体
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.FriendLinksAPI.PageList(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.PageListConditionEntity})">
+            <summary>
+            查询友情链接信息分页列表
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.FriendLinksAPI.IsExistTitle(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.FriendLinks.IsExistTitleEntity})">
+            <summary>
+            判断友情链接标题是否存在
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.FriendLinksAPI.Add(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.FriendLinks})">
+            <summary>
+            新增友情链接信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.FriendLinksAPI.Update(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.FriendLinks})">
+            <summary>
+            修改友情链接信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.FriendLinksAPI.Delete(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Collections.Generic.List{System.Int64}})">
+            <summary>
+            删除友情链接信息
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.WebAPI.Library">
+            <summary>
+            WEB API 公共库
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.Library.Request``2(XCLCMS.Data.WebAPIEntity.APIRequestEntity{``0},System.String,System.Boolean)">
+            <summary>
+            请求
+            </summary>
+            <typeparam name="TRequest">请求类型</typeparam>
+            <typeparam name="TResponse">返回类型</typeparam>
+            <param name="request">请求类对象</param>
+            <param name="path">请求路径</param>
+            <param name="isGet">是否为get请求，默认为get</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.Library.CreateRequest``1(System.String)">
+            <summary>
+            创建request对象
+            </summary>
+            <returns>request对象</returns>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.Library.CommonAPI_GenerateID(System.String,XCLCMS.Data.WebAPIEntity.RequestEntity.Common.GenerateIDEntity)">
+            <summary>
+            生成ID
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.Library.MerchantAPI_GetMerchantTypeDic(System.String)">
+            <summary>
+            获取商户类型
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.Library.SysDicAPI_GetPassTypeDic(System.String)">
+            <summary>
+            获取证件类型
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.Library.SysDicAPI_GetLayerListBySysDicID(System.String,XCLCMS.Data.WebAPIEntity.RequestEntity.SysDic.GetLayerListBySysDicIDEntity)">
+            <summary>
+            获取当前sysDicID所属的层级list
+            如:根目录/子目录/文件
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.Library.SysDicAPI_GetSystemMenuModelList(System.String)">
+            <summary>
+            获取XCLCMS管理后台系统的菜单
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.Library.SysDicAPI_GetChildListByID(System.String,System.Int64)">
+            <summary>
+            根据SysDicID查询其子项
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.Library.SysDicAPI_GetAllUnderListByID(System.String,System.Int64)">
+            <summary>
+            递归获取指定SysDicID下的所有列表（不包含该SysDicID的记录）
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.Library.SysFunctionAPI_GetLayerListBySysFunctionId(System.String,XCLCMS.Data.WebAPIEntity.RequestEntity.SysFunction.GetLayerListBySysFunctionIdEntity)">
+            <summary>
+            获取当前SysFunctionID所属的层级list
+            如:根目录/子目录/文件
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.Library.SysFunctionAPI_GetListByRoleID(System.String,System.Int64)">
+            <summary>
+            获取指定角色的所有功能
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.Library.SysRoleAPI_GetLayerListBySysRoleID(System.String,XCLCMS.Data.WebAPIEntity.RequestEntity.SysRole.GetLayerListBySysRoleIDEntity)">
+            <summary>
+            获取当前SysRoleID所属的层级list
+            如:根目录/子目录/文件
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.Library.SysRoleAPI_Add(System.String,XCLCMS.Data.WebAPIEntity.RequestEntity.SysRole.AddOrUpdateEntity)">
+            <summary>
+            添加角色
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.WebAPI.MerchantAPI">
+            <summary>
+            商户信息API
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.MerchantAPI.Detail(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+            <summary>
+            查询商户信息实体
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.MerchantAPI.PageList(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.PageListConditionEntity})">
+            <summary>
+            查询商户信息分页列表
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.MerchantAPI.GetMerchantTypeDic(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Object})">
+            <summary>
+            获取商户类型
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.MerchantAPI.IsExistMerchantName(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.Merchant.IsExistMerchantNameEntity})">
+            <summary>
+            判断商户名是否存在
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.MerchantAPI.Add(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.Merchant})">
+            <summary>
+            新增商户信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.MerchantAPI.Update(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.Merchant})">
+            <summary>
+            修改商户信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.MerchantAPI.Delete(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Collections.Generic.List{System.Int64}})">
+            <summary>
+            删除商户信息
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.WebAPI.MerchantAppAPI">
+            <summary>
+            商户应用信息API
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.MerchantAppAPI.Detail(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+            <summary>
+            查询商户应用信息实体
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.MerchantAppAPI.DetailByAppKey(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Object})">
+            <summary>
+            根据加密后的AppKey查询商户信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.MerchantAppAPI.PageList(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.PageListConditionEntity})">
+            <summary>
+            查询商户应用信息分页列表
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.MerchantAppAPI.IsExistMerchantAppName(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.MerchantApp.IsExistMerchantAppNameEntity})">
+            <summary>
+            判断商户应用名是否存在
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.MerchantAppAPI.Add(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.MerchantApp})">
+            <summary>
+            新增商户应用信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.MerchantAppAPI.Update(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.MerchantApp})">
+            <summary>
+            修改商户应用信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.MerchantAppAPI.Delete(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Collections.Generic.List{System.Int64}})">
+            <summary>
+            删除商户应用信息
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.WebAPI.OpenAPI">
+            <summary>
+            开放 API
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.OpenAPI.LogonCheck(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.Open.LogonCheckEntity})">
+            <summary>
+            登录检查
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.OpenAPI.CreateUserToken(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.Custom.UserNamePwd})">
+            <summary>
+            根据用户名和密码生成登录令牌
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.WebAPI.SysDicAPI">
+            <summary>
+            系统字典 API
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysDicAPI.Detail(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+            <summary>
+            查询字典信息实体
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysDicAPI.GetChildListByCode(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Object})">
+            <summary>
+            根据code查询其子项
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysDicAPI.IsExistSysDicCode(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.SysDic.IsExistSysDicCodeEntity})">
+            <summary>
+            判断字典的唯一标识是否已经存在
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysDicAPI.IsExistSysDicNameInSameLevel(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.SysDic.IsExistSysDicNameInSameLevelEntity})">
+            <summary>
+            判断字典名，在同一级别中是否存在
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysDicAPI.GetEasyUITreeByCode(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.SysDic.GetEasyUITreeByCodeEntity})">
+            <summary>
+            根据code来获取字典的easyui tree格式
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysDicAPI.GetList(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+            <summary>
+            查询所有字典列表
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysDicAPI.GetEasyUITreeByCondition(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.SysDic.GetEasyUITreeByConditionEntity})">
+            <summary>
+            根据条件获取字典的easy tree 列表
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysDicAPI.GetSystemMenuModelList(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Object})">
+            <summary>
+            获取XCLCMS管理后台系统的菜单
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysDicAPI.GetChildListByID(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+            <summary>
+            根据SysDicID查询其子项
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysDicAPI.GetLayerListBySysDicID(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.SysDic.GetLayerListBySysDicIDEntity})">
+            <summary>
+            获取当前sysDicID所属的层级list
+            如:根目录/子目录/文件
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysDicAPI.GetPassTypeDic(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Object})">
+            <summary>
+            获取证件类型
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysDicAPI.GetAllUnderListByID(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+            <summary>
+            递归获取指定SysDicID下的所有列表（不包含该SysDicID的记录）
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysDicAPI.Add(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.SysDic})">
+            <summary>
+            添加字典
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysDicAPI.Update(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.SysDic})">
+            <summary>
+            修改字典
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysDicAPI.Delete(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Collections.Generic.List{System.Int64}})">
+            <summary>
+            删除字典
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.WebAPI.SysFunctionAPI">
+            <summary>
+            功能模块 API
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysFunctionAPI.Detail(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+            <summary>
+            查询功能信息实体
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysFunctionAPI.IsExistCode(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.SysFunction.IsExistCodeEntity})">
+            <summary>
+            判断功能标识是否已经存在
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysFunctionAPI.IsExistFunctionNameInSameLevel(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.SysFunction.IsExistFunctionNameInSameLevelEntity})">
+            <summary>
+            判断功能名，在同一级别中是否存在
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysFunctionAPI.GetList(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+            <summary>
+            查询所有功能列表
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysFunctionAPI.GetAllJsonForEasyUITree(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Object})">
+            <summary>
+            获取easyui tree格式的所有功能json
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysFunctionAPI.GetLayerListBySysFunctionId(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.SysFunction.GetLayerListBySysFunctionIdEntity})">
+            <summary>
+            获取当前SysFunctionID所属的层级list
+            如:根目录/子目录/文件
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysFunctionAPI.GetListByRoleID(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+            <summary>
+            获取指定角色的所有功能
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysFunctionAPI.GetNormalMerchantFunctionTreeList(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Object})">
+            <summary>
+            获取普通商户的所有功能数据源列表
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysFunctionAPI.HasAnyPermission(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.SysFunction.HasAnyPermissionEntity})">
+            <summary>
+            判断指定用户是否至少拥有权限组中的某个权限
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysFunctionAPI.Add(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.SysFunction})">
+            <summary>
+            添加功能
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysFunctionAPI.Update(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.SysFunction})">
+            <summary>
+            修改功能
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysFunctionAPI.Delete(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Collections.Generic.List{System.Int64}})">
+            <summary>
+            删除功能
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysFunctionAPI.DelChild(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+            <summary>
+            删除指定功能的所有节点
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.WebAPI.SysLogAPI">
+            <summary>
+            系统日志 API
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysLogAPI.PageList(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.PageListConditionEntity})">
+            <summary>
+            查询系统日志信息分页列表
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysLogAPI.Delete(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.SysLog.ClearConditionEntity})">
+            <summary>
+            删除日志信息
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.WebAPI.SysRoleAPI">
+            <summary>
+            角色管理 API
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysRoleAPI.Detail(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+            <summary>
+            查询角色信息实体
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysRoleAPI.IsExistCode(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.SysRole.IsExistCodeEntity})">
+            <summary>
+            判断角色标识是否已经存在
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysRoleAPI.IsExistRoleNameInSameLevel(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.SysRole.IsExistRoleNameInSameLevelEntity})">
+            <summary>
+            判断角色名，在同一级别中是否存在
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysRoleAPI.GetList(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+            <summary>
+            查询所有角色列表
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysRoleAPI.GetAllJsonForEasyUITree(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.SysRole.GetAllJsonForEasyUITreeEntity})">
+            <summary>
+            获取easyui tree格式的所有角色json
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysRoleAPI.GetLayerListBySysRoleID(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.SysRole.GetLayerListBySysRoleIDEntity})">
+            <summary>
+            获取当前SysRoleID所属的层级list
+            如:根目录/子目录/文件
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysRoleAPI.GetRoleByUserID(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+            <summary>
+            获取指定用户的角色
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysRoleAPI.Add(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.SysRole.AddOrUpdateEntity})">
+            <summary>
+            添加角色
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysRoleAPI.Update(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.SysRole.AddOrUpdateEntity})">
+            <summary>
+            修改角色
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysRoleAPI.Delete(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Collections.Generic.List{System.Int64}})">
+            <summary>
+            删除角色
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.WebAPI.SysWebSettingAPI">
+            <summary>
+            系统配置 API
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysWebSettingAPI.Detail(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+            <summary>
+            查询系统配置信息实体
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysWebSettingAPI.PageList(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.PageListConditionEntity})">
+            <summary>
+            查询系统配置分页列表
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysWebSettingAPI.IsExistKeyName(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.SysWebSetting.IsExistKeyNameEntity})">
+            <summary>
+            判断系统配置名是否存在
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysWebSettingAPI.Add(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.SysWebSetting})">
+            <summary>
+            新增系统配置信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysWebSettingAPI.Update(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.SysWebSetting})">
+            <summary>
+            修改系统配置信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.SysWebSettingAPI.Delete(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Collections.Generic.List{System.Int64}})">
+            <summary>
+            删除系统配置信息
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.WebAPI.TagsAPI">
+            <summary>
+            标签 API
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.TagsAPI.Detail(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+            <summary>
+            查询标签信息实体
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.TagsAPI.PageList(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.PageListConditionEntity})">
+            <summary>
+            查询标签信息分页列表
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.TagsAPI.IsExistTagName(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.Tags.IsExistTagNameEntity})">
+            <summary>
+            判断标签标题是否存在
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.TagsAPI.Add(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.Tags})">
+            <summary>
+            新增标签信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.TagsAPI.Update(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.Tags})">
+            <summary>
+            修改标签信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.TagsAPI.Delete(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Collections.Generic.List{System.Int64}})">
+            <summary>
+            删除标签信息
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.WebAPI.UserInfoAPI">
+            <summary>
+            用户管理 API
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.UserInfoAPI.Detail(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+            <summary>
+            查询用户信息实体
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.UserInfoAPI.PageList(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.PageListConditionEntity})">
+            <summary>
+            查询用户信息分页列表
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.UserInfoAPI.IsExistUserName(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Object})">
+            <summary>
+            判断用户名是否存在
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.UserInfoAPI.Add(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.UserInfo.AddOrUpdateEntity})">
+            <summary>
+            新增用户信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.UserInfoAPI.Update(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.UserInfo.AddOrUpdateEntity})">
+            <summary>
+            修改用户信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.UserInfoAPI.Delete(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Collections.Generic.List{System.Int64}})">
+            <summary>
+            删除用户信息
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -215,8 +215,10 @@
         var search = function () {
             var kw = $.trim($("#txtKW").val());
             if (kw == '') return;
+            kw = encodeURIComponent(kw);
             $(".divSoContent iframe").each(function () {
                 this.src = $(this).attr('data-url') + kw;
+                window.history.pushState(null,"",'@Url.Content("~/Common/So?q=")'+kw);
             });
         };
         search();

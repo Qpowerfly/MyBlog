@@ -29,10 +29,10 @@ namespace MyBlogWeb.Controllers
         /// <summary>
         /// 搜索和导航
         /// </summary>
-        public ActionResult So(string key)
+        public ActionResult So()
         {
             var viewModel = new Models.Common.SoVM();
-            viewModel.Key = key;
+            viewModel.Key = XCLNetTools.StringHander.FormHelper.GetString("q");
             ViewBag.IsShowHeader = false;
             ViewBag.Title = "导航搜索";
             return View(viewModel);

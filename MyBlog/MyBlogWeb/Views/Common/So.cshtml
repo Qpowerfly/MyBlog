@@ -218,8 +218,8 @@
             kw = encodeURIComponent(kw);
             $(".divSoContent iframe").each(function () {
                 this.src = $(this).attr('data-url') + kw;
-                window.history.pushState(null,"",'@Url.Content("~/Common/So?q=")'+kw);
             });
+	    window.history.pushState(null,"",'@Url.Content("~/Common/So?q=")'+kw);
         };
         search();
         $("body").on("click", "#btnSearch", function () {

@@ -56,6 +56,11 @@ namespace MyBlogWeb.Controllers
                 var viewModel = new MyBlogWeb.Models.Article.ShowVM();
                 viewModel.Article = response.Body ?? new XCLCMS.Data.Model.View.v_Article();
                 viewModel.RelationDetail = relationResponse.Body ?? new XCLCMS.Data.Model.Custom.ArticleRelationDetailModel();
+
+                if (!string.IsNullOrWhiteSpace(ViewBag.Title))
+                {
+                    ViewBag.Title = string.Format("{0}—{1}", viewModel.Article.Title, ViewBag.Title);
+                }
                 return View(viewModel);
             });
         }

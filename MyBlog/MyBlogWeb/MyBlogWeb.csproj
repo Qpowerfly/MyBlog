@@ -166,7 +166,11 @@
     <Content Include="Resources\Js\highlight\highlightjs-line-numbers.min.js" />
     <Content Include="Resources\Js\highlight\tomorrow-night-bright.css" />
     <Content Include="Resources\Js\Jquery\jquery-1.11.2.js" />
+    <Content Include="Resources\Js\Jquery\jquery-1.11.2.min.js">
+      <DependentUpon>jquery-1.11.2.js</DependentUpon>
+    </Content>
     <Content Include="Resources\Js\json2.js" />
+    <Content Include="Resources\Js\LAB.min.js" />
     <Content Include="Resources\Js\lazyload\jquery.lazyload.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -220,6 +224,7 @@
     <Content Include="Config\XConfigGen.bat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="bundleconfig.json" />
     <None Include="Properties\PublishProfiles\111.pubxml" />
     <Content Include="Views\Common\So.cshtml" />
     <None Include="Web.Debug.config">

@@ -61,6 +61,9 @@ namespace MyBlogWeb.Controllers
                 {
                     ViewBag.Title = string.Format("{0}—{1}", viewModel.Article.Title, ViewBag.Title);
                 }
+
+                ViewBag.IsNeedHighlight = true;
+
                 return View(viewModel);
             });
         }

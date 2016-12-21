@@ -8,7 +8,7 @@
 
     $('pre code').each(function (i, block) {
         hljs.highlightBlock(block);
-        hljs.lineNumbersBlock(block);
+        //hljs.lineNumbersBlock(block);
     });
     
     $("img.lazy").lazyload({ effect: "fadeIn" });

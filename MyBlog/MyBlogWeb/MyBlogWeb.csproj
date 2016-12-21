@@ -169,7 +169,7 @@
     <Content Include="Resources\Js\Jquery\jquery-1.11.2.min.js">
       <DependentUpon>jquery-1.11.2.js</DependentUpon>
     </Content>
-    <Content Include="Resources\Js\json2.js" />
+    <Content Include="Resources\Js\json2.min.js" />
     <Content Include="Resources\Js\LAB.min.js" />
     <Content Include="Resources\Js\lazyload\jquery.lazyload.min.js" />
     <Content Include="Web.config" />

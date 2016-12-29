@@ -52,9 +52,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\GitHub\XCLCMS\XCLCMS.Document\Libs\EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
-      <HintPath>..\..\..\..\GitHub\XCLCMS\XCLCMS.Document\Libs\EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Dll\Newtonsoft.Json.dll</HintPath>
@@ -127,9 +124,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Dll\MvcPager\Webdiyer.MvcPager.dll" />
+    <Content Include="Dll\MvcPager\Webdiyer.MvcPager.XML" />
+    <Content Include="Dll\MvcPager\zh-CHS\Webdiyer.MvcPager.resources.dll" />
     <Content Include="Dll\Newtonsoft.Json.dll" />
-    <Content Include="Dll\Webdiyer.MvcPager.dll" />
-    <Content Include="Dll\Webdiyer.MvcPager.XML" />
     <Content Include="Dll\XCLCMS.Data.CommonHelper.dll" />
     <Content Include="Dll\XCLCMS.Data.CommonHelper.xml" />
     <Content Include="Dll\XCLCMS.Data.Model.dll" />

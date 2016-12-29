@@ -33,6 +33,7 @@ namespace MyBlogWeb.Controllers
             base.OnActionExecuting(filterContext);
             ViewBag.MainUserToken = this.MainUserToken;
             ViewBag.IsNeedHighlight = false;
+            ViewBag.IsNeedAngular = false;
         }
     }
 }

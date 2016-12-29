@@ -128,6 +128,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Dll\Newtonsoft.Json.dll" />
+    <Content Include="Dll\Webdiyer.MvcPager.dll" />
+    <Content Include="Dll\Webdiyer.MvcPager.XML" />
     <Content Include="Dll\XCLCMS.Data.CommonHelper.dll" />
     <Content Include="Dll\XCLCMS.Data.CommonHelper.xml" />
     <Content Include="Dll\XCLCMS.Data.Model.dll" />

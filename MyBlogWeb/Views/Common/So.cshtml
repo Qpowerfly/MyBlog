@@ -156,80 +156,80 @@
 </div>
 
 <script type="text/javascript" charset="gbk" src="http://www.baidu.com/js/opensug.js"></script>
-<script src="~/Resources/Js/angular.min.js"></script>
-<script type="text/javascript">
-    angular.module('soApp', []).controller('so', function ($scope) {
-
-        var menuList = [{
-            id: 1,
-            enginId: null,
-            txt: '百度谷歌'
-        }, {
-            id: 2,
-            enginId: 'Baidu',
-            txt: '百度'
-        }, {
-            id: 3,
-            enginId: 'Google',
-            txt: '谷歌'
-        }];
-
-        var enginList = [
-        {
-            id: 'Baidu',
-            txt: '百度搜索',
-            url: 'https://www.baidu.com/s?word='
-        }, {
-            id: 'Google',
-            txt: '谷歌搜索（请自行VPN，若VPN后无法显示，<a href="https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe?utm_source=chrome-app-launcher-info-dialog" target="_blank">请安装该扩展</a>）',
-            url: 'https://www.google.com.hk/search?q='
-        }];
-
-        $scope.currentMenu = null;
-        $scope.currentEnginList = [];
-
-        var changeMenu = function (id) {
-            $scope.currentMenu = ($.map(menuList, function (n) {
-                return n.id === id ? n : null;
-            }) || [])[0];
-
-            if ($scope.currentMenu.enginId) {
-                $scope.currentEnginList = $.map(enginList, function (n) {
-                    return n.id === $scope.currentMenu.enginId ? n : null;
-                }) || [];
-            } else {
-                $scope.currentEnginList = enginList;
-            }
-        };
-        changeMenu(menuList[0].id);
-
-        $scope.menuList = menuList;
-        $scope.changeMenu = function (id) {
-            changeMenu(id);
-        };
-    }).filter('htmlContent', function ($sce) { return $sce.trustAsHtml; });
-</script>
 
 <script type="text/javascript">
-    $(function () {
-        var search = function () {
-            var kw = $.trim($("#txtKW").val());
-            if (kw == '') return;
-            kw = encodeURIComponent(kw);
-            $(".divSoContent iframe").each(function () {
-                this.src = $(this).attr('data-url') + kw;
-            });
-	    window.history.pushState(null,"",'@Url.Content("~/Common/So?q=")'+kw);
-        };
-        search();
-        $("body").on("click", "#btnSearch", function () {
+    window.jsLoadedCallBack = function () {
+        $(function () {
+            var search = function () {
+                var kw = $.trim($("#txtKW").val());
+                if (kw == '') return;
+                kw = encodeURIComponent(kw);
+                $(".divSoContent iframe").each(function () {
+                    this.src = $(this).attr('data-url') + kw;
+                });
+                window.history.pushState(null, "", '@Url.Content("~/Common/So?q=")' + kw);
+            };
             search();
-            return false;
-        });
-        $("#txtKW").on("keyup", function (e) {
-            if (e.keyCode == 13) {
+            $("body").on("click", "#btnSearch", function () {
                 search();
-            }
+                return false;
+            });
+            $("#txtKW").on("keyup", function (e) {
+                if (e.keyCode == 13) {
+                    search();
+                }
+            });
         });
-    });
+
+        angular.module('soApp', []).controller('so', function ($scope) {
+
+            var menuList = [{
+                id: 1,
+                enginId: null,
+                txt: '百度谷歌'
+            }, {
+                id: 2,
+                enginId: 'Baidu',
+                txt: '百度'
+            }, {
+                id: 3,
+                enginId: 'Google',
+                txt: '谷歌'
+            }];
+
+            var enginList = [
+            {
+                id: 'Baidu',
+                txt: '百度搜索',
+                url: 'https://www.baidu.com/s?word='
+            }, {
+                id: 'Google',
+                txt: '谷歌搜索（请自行VPN，若VPN后无法显示，<a href="https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe?utm_source=chrome-app-launcher-info-dialog" target="_blank">请安装该扩展</a>）',
+                url: 'https://www.google.com.hk/search?q='
+            }];
+
+            $scope.currentMenu = null;
+            $scope.currentEnginList = [];
+
+            var changeMenu = function (id) {
+                $scope.currentMenu = ($.map(menuList, function (n) {
+                    return n.id === id ? n : null;
+                }) || [])[0];
+
+                if ($scope.currentMenu.enginId) {
+                    $scope.currentEnginList = $.map(enginList, function (n) {
+                        return n.id === $scope.currentMenu.enginId ? n : null;
+                    }) || [];
+                } else {
+                    $scope.currentEnginList = enginList;
+                }
+            };
+            changeMenu(menuList[0].id);
+
+            $scope.menuList = menuList;
+            $scope.changeMenu = function (id) {
+                changeMenu(id);
+            };
+        }).filter('htmlContent', function ($sce) { return $sce.trustAsHtml; });
+    };
 </script>

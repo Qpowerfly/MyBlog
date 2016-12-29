@@ -34,6 +34,7 @@ namespace MyBlogWeb.Controllers
             var viewModel = new Models.Common.SoVM();
             viewModel.Key = XCLNetTools.StringHander.FormHelper.GetString("q");
             ViewBag.IsShowHeader = false;
+            ViewBag.IsNeedAngular = true;
             ViewBag.Title = "导航搜索";
             return View(viewModel);
         }

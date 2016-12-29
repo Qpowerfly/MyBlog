@@ -1,0 +1,3433 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XCLCMS.Data.Model</name>
+    </assembly>
+    <members>
+        <member name="T:XCLCMS.Data.Model.Ads">
+            <summary>
+            广告表
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.AdsID">
+            <summary>
+            AdsID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.Code">
+            <summary>
+            唯一标识
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.AdsType">
+            <summary>
+            广告类型(AdsTypeEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.Title">
+            <summary>
+            广告标题
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.Contents">
+            <summary>
+            广告内容
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.AdWidth">
+            <summary>
+            宽度
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.AdHeight">
+            <summary>
+            高度
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.URL">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.URLOpenType">
+            <summary>
+            打开方式(URLOpenTypeEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.Email">
+            <summary>
+            电子邮件
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.QQ">
+            <summary>
+            QQ
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.Tel">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.OtherContact">
+            <summary>
+            其它联系方式
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.FK_MerchantID">
+            <summary>
+            所属商户号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.FK_MerchantAppID">
+            <summary>
+            所属应用号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.RecordState">
+            <summary>
+            记录状态(RecordStateEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.CreaterID">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.CreaterName">
+            <summary>
+            创建者名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.UpdaterID">
+            <summary>
+            更新人ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Ads.UpdaterName">
+            <summary>
+            更新人名
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.Article">
+            <summary>
+            文章表
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.ArticleID">
+            <summary>
+            ArticleID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.Code">
+            <summary>
+            唯一标识
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.SubTitle">
+            <summary>
+            子标题
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.AuthorName">
+            <summary>
+            所属作者
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.FromInfo">
+            <summary>
+            来源
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.ArticleContentType">
+            <summary>
+            内容类型(ArticleContentTypeEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.Contents">
+            <summary>
+            内容正文
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.Summary">
+            <summary>
+            概述
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.MainImage1">
+            <summary>
+            主图片1ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.MainImage2">
+            <summary>
+            主图片2ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.MainImage3">
+            <summary>
+            主图片3ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.ViewCount">
+            <summary>
+            浏览数
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.IsCanComment">
+            <summary>
+            是否能够评论(YesNoEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.CommentCount">
+            <summary>
+            评论数
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.GoodCount">
+            <summary>
+            点【好】数
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.MiddleCount">
+            <summary>
+            点【中】数
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.BadCount">
+            <summary>
+            点【差】数
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.HotCount">
+            <summary>
+            热度
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.URLOpenType">
+            <summary>
+            打开方式(URLOpenTypeEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.ArticleState">
+            <summary>
+            文章状态(ArticleStateEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.VerifyState">
+            <summary>
+            审核状态
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.IsRecommend">
+            <summary>
+            是否推荐
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.IsEssence">
+            <summary>
+            是否为精华
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.IsTop">
+            <summary>
+            是否置顶
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.TopBeginTime">
+            <summary>
+            置顶开始时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.TopEndTime">
+            <summary>
+            置顶结束时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.KeyWords">
+            <summary>
+            关键字(逗号分隔)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.Tags">
+            <summary>
+            标签(逗号分隔)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.Comments">
+            <summary>
+            点评
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.LinkUrl">
+            <summary>
+            链接地址(标题仅为链接时)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.PublishTime">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.FK_MerchantID">
+            <summary>
+            所属商户号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.FK_MerchantAppID">
+            <summary>
+            所属应用号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.RecordState">
+            <summary>
+            记录状态(RecordStateEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.CreaterID">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.CreaterName">
+            <summary>
+            创建者名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.UpdaterID">
+            <summary>
+            更新人ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Article.UpdaterName">
+            <summary>
+            更新人名
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.ArticleType">
+            <summary>
+            文章类别关系表
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ArticleType.FK_ArticleID">
+            <summary>
+            文章 ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ArticleType.FK_TypeID">
+            <summary>
+            分类ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ArticleType.RecordState">
+            <summary>
+            记录状态(RecordStateEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ArticleType.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ArticleType.CreaterID">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ArticleType.CreaterName">
+            <summary>
+            创建者名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ArticleType.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ArticleType.UpdaterID">
+            <summary>
+            更新人ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ArticleType.UpdaterName">
+            <summary>
+            更新人名
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.Attachment">
+            <summary>
+            附件表
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.AttachmentID">
+            <summary>
+            AttachmentID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.ParentID">
+            <summary>
+            主附件ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.OriginFileName">
+            <summary>
+            原始文件名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.FileName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.Title">
+            <summary>
+            附件标题
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.ViewType">
+            <summary>
+            附件查看类型(AttachmentViewTypeEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.FormatType">
+            <summary>
+            附件格式类型(AttachmentFormatTypeEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.Ext">
+            <summary>
+            附件扩展名(不含点)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.URL">
+            <summary>
+            相对路径
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.DownLoadCount">
+            <summary>
+            下载数
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.ViewCount">
+            <summary>
+            查看数
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.FileSize">
+            <summary>
+            附件大小（kb）
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.ImgWidth">
+            <summary>
+            图片宽度（如果是图片）
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.ImgHeight">
+            <summary>
+            图片高度（如果是图片）
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.FK_MerchantID">
+            <summary>
+            所属商户号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.RecordState">
+            <summary>
+            记录状态(RecordStateEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.CreaterID">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.CreaterName">
+            <summary>
+            创建者名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.UpdaterID">
+            <summary>
+            更新人ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Attachment.UpdaterName">
+            <summary>
+            更新人名
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.Custom.ArticleRelationDetailCondition">
+            <summary>
+            【获取指定文章的相关联的其它文章信息】的查询条件model
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.ArticleRelationDetailCondition.ArticleID">
+            <summary>
+            文章ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.ArticleRelationDetailCondition.IsASC">
+            <summary>
+            是否按主键升序排列
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.ArticleRelationDetailCondition.ArticleRecordState">
+            <summary>
+            记录状态
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.ArticleRelationDetailCondition.TopCount">
+            <summary>
+            相关文章取前几条
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.ArticleRelationDetailCondition.MerchantID">
+            <summary>
+            所在商户号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.ArticleRelationDetailCondition.MerchantAppID">
+            <summary>
+            所在应用号
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.Custom.ArticleRelationDetailModel">
+            <summary>
+            文章的相关文章 model
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.ArticleRelationDetailModel.PreArticle">
+            <summary>
+            上一篇
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.ArticleRelationDetailModel.NextArticle">
+            <summary>
+            下一篇
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.ArticleRelationDetailModel.SameTypeArticleList">
+            <summary>
+            同类其它文章
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.Custom.ArticleSearchCondition">
+            <summary>
+            文章查询条件
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.ArticleSearchCondition.ArticleTypeIDList">
+            <summary>
+            文章类型
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.ArticleSearchCondition.RecordState">
+            <summary>
+            记录状态
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.ArticleSearchCondition.VerifyState">
+            <summary>
+            文章审核状态
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.ArticleSearchCondition.ArticleState">
+            <summary>
+            文章状态
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.ArticleSearchCondition.MerchantID">
+            <summary>
+            商户号
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.Custom.ContextModel">
+            <summary>
+            上下文
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.ContextModel.UserInfoID">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.ContextModel.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.Custom.MerchantAppInfoModel">
+            <summary>
+            商户应用信息实体
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.MerchantAppInfoModel.MerchantApp">
+            <summary>
+            商户应用信息
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.MerchantAppInfoModel.Merchant">
+            <summary>
+            所在商户的基本信息
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.Custom.ProcedureResultModel">
+            <summary>
+            存储过程执行结果model
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.ProcedureResultModel.IsSuccess">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.ProcedureResultModel.ResultCode">
+            <summary>
+            执行结果状态（1：成功，其它为失败）
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.ProcedureResultModel.ResultMessage">
+            <summary>
+            执行结果返回的消息
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.Custom.SysDicSimple">
+            <summary>
+            字典库简版实体
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.SysDicSimple.SysDicID">
+            <summary>
+            字典ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.SysDicSimple.ParentID">
+            <summary>
+            父ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.SysDicSimple.DicName">
+            <summary>
+            字典名
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.Custom.SysFunctionSimple">
+            <summary>
+            功能模块简版实体
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.SysFunctionSimple.SysFunctionID">
+            <summary>
+            功能ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.SysFunctionSimple.ParentID">
+            <summary>
+            父ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.SysFunctionSimple.FunctionName">
+            <summary>
+            功能名
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.Custom.SysRoleSimple">
+            <summary>
+            角色简版实体
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.SysRoleSimple.SysRoleID">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.SysRoleSimple.ParentID">
+            <summary>
+            父ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.SysRoleSimple.RoleName">
+            <summary>
+            角色名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.Tags_AddMethodResult.ExistTagIdList">
+            <summary>
+            已存在的tagId
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.Tags_AddMethodResult.AddedTagIdList">
+            <summary>
+            刚新加的tagId
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.Tags_AddMethodResult.TagIdList">
+            <summary>
+            tagId汇总
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.Custom.UserInfoDetailModel">
+            <summary>
+            用户信息详情 实体
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.UserInfoDetailModel.UserInfo">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.UserInfoDetailModel.Token">
+            <summary>
+            登录令牌
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.UserInfoDetailModel.Merchant">
+            <summary>
+            用户所属商户
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.UserInfoDetailModel.MerchantApp">
+            <summary>
+            用户所属商户应用
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.Custom.UserNamePwd">
+            <summary>
+            用户名和密码 实体
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.UserNamePwd.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.UserNamePwd.Pwd">
+            <summary>
+            密码（密文）
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.FriendLinks">
+            <summary>
+            友情链接表
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.FriendLinks.FriendLinkID">
+            <summary>
+            FriendLinkID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.FriendLinks.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.FriendLinks.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.FriendLinks.URL">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.FriendLinks.ContactName">
+            <summary>
+            联系人名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.FriendLinks.Email">
+            <summary>
+            电子邮件
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.FriendLinks.QQ">
+            <summary>
+            QQ
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.FriendLinks.Tel">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.FriendLinks.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.FriendLinks.OtherContact">
+            <summary>
+            其它联系方式
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.FriendLinks.FK_MerchantID">
+            <summary>
+            所属商户号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.FriendLinks.FK_MerchantAppID">
+            <summary>
+            所属应用号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.FriendLinks.RecordState">
+            <summary>
+            记录状态(RecordStateEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.FriendLinks.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.FriendLinks.CreaterID">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.FriendLinks.CreaterName">
+            <summary>
+            创建者名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.FriendLinks.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.FriendLinks.UpdaterID">
+            <summary>
+            更新人ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.FriendLinks.UpdaterName">
+            <summary>
+            更新人名
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.GenerateID">
+            <summary>
+            ID生成表
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.GenerateID.IDType">
+            <summary>
+            ID类型(IDTypeEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.GenerateID.IDValue">
+            <summary>
+            生成的ID值
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.GenerateID.IDCode">
+            <summary>
+            唯一值
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.GenerateID.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.GenerateID.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.Merchant">
+            <summary>
+            商户表
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.MerchantID">
+            <summary>
+            商户ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.MerchantName">
+            <summary>
+            商户名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.FK_MerchantType">
+            <summary>
+            商户类型(参见字典库)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.MerchantSystemType">
+            <summary>
+            商户系统类型(MerchantSystemTypeEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.Domain">
+            <summary>
+            绑定的域名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.LogoURL">
+            <summary>
+            logo图片地址
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.ContactName">
+            <summary>
+            联系人
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.Tel">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.Landline">
+            <summary>
+            固话
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.Email">
+            <summary>
+            电子邮件
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.QQ">
+            <summary>
+            qq
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.FK_PassType">
+            <summary>
+            证件类型（参见字典库）
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.PassNumber">
+            <summary>
+            证件号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.OtherContact">
+            <summary>
+            其它联系信息
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.MerchantRemark">
+            <summary>
+            商户备注信息
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.RegisterTime">
+            <summary>
+            注册时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.MerchantState">
+            <summary>
+            商户状态(MerchantStateEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.RecordState">
+            <summary>
+            记录状态(RecordStateEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.CreaterID">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.CreaterName">
+            <summary>
+            创建者名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.UpdaterID">
+            <summary>
+            更新人ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Merchant.UpdaterName">
+            <summary>
+            更新人名
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.MerchantApp">
+            <summary>
+            商户应用表
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.MerchantApp.MerchantAppID">
+            <summary>
+            商户应用ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.MerchantApp.MerchantAppName">
+            <summary>
+            商户应用名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.MerchantApp.FK_MerchantID">
+            <summary>
+            所属商户ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.MerchantApp.AppKey">
+            <summary>
+            商户应用key
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.MerchantApp.ResourceVersion">
+            <summary>
+            静态资源版本号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.MerchantApp.Email">
+            <summary>
+            联系人邮箱
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.MerchantApp.CopyRight">
+            <summary>
+            底部版权信息
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.MerchantApp.MetaDescription">
+            <summary>
+            Meta描述
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.MerchantApp.MetaKeyWords">
+            <summary>
+            MetaKey关键字
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.MerchantApp.MetaTitle">
+            <summary>
+            Meta标题
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.MerchantApp.WebURL">
+            <summary>
+            站点网址
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.MerchantApp.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.MerchantApp.RecordState">
+            <summary>
+            记录状态(RecordStateEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.MerchantApp.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.MerchantApp.CreaterID">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.MerchantApp.CreaterName">
+            <summary>
+            创建者名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.MerchantApp.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.MerchantApp.UpdaterID">
+            <summary>
+            更新人ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.MerchantApp.UpdaterName">
+            <summary>
+            更新人名
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.ObjectAttachment">
+            <summary>
+            所有附件关系表
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ObjectAttachment.ObjectType">
+            <summary>
+            附件所属主体类别(ObjectTypeEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ObjectAttachment.FK_ObjectID">
+            <summary>
+            附件所属主体ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ObjectAttachment.FK_AttachmentID">
+            <summary>
+            附件ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ObjectAttachment.RecordState">
+            <summary>
+            记录状态(RecordStateEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ObjectAttachment.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ObjectAttachment.CreaterID">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ObjectAttachment.CreaterName">
+            <summary>
+            创建者名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ObjectAttachment.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ObjectAttachment.UpdaterID">
+            <summary>
+            更新人ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ObjectAttachment.UpdaterName">
+            <summary>
+            更新人名
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.ObjectTag">
+            <summary>
+            所有标签关系表
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ObjectTag.ObjectType">
+            <summary>
+            标签所属主体类别(ObjectTypeEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ObjectTag.FK_ObjectID">
+            <summary>
+            所属主体ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ObjectTag.FK_TagsID">
+            <summary>
+            所属标签
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ObjectTag.RecordState">
+            <summary>
+            记录状态(RecordStateEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ObjectTag.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ObjectTag.CreaterID">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ObjectTag.CreaterName">
+            <summary>
+            创建者名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ObjectTag.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ObjectTag.UpdaterID">
+            <summary>
+            更新人ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.ObjectTag.UpdaterName">
+            <summary>
+            更新人名
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.SysDic">
+            <summary>
+            系统字典表
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysDic.SysDicID">
+            <summary>
+            SysDicID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysDic.Code">
+            <summary>
+            字典标识
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysDic.ParentID">
+            <summary>
+            父ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysDic.DicName">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysDic.DicValue">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysDic.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysDic.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysDic.FK_FunctionID">
+            <summary>
+            所属功能ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysDic.FK_MerchantID">
+            <summary>
+            所属商户号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysDic.FK_MerchantAppID">
+            <summary>
+            所属应用号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysDic.RecordState">
+            <summary>
+            记录状态(RecordStateEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysDic.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysDic.CreaterID">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysDic.CreaterName">
+            <summary>
+            创建者名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysDic.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysDic.UpdaterID">
+            <summary>
+            更新人ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysDic.UpdaterName">
+            <summary>
+            更新人名
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.SysFunction">
+            <summary>
+            系统功能表
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysFunction.SysFunctionID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysFunction.ParentID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysFunction.FunctionName">
+            <summary>
+            功能名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysFunction.Code">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysFunction.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysFunction.RecordState">
+            <summary>
+            记录状态(RecordStateEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysFunction.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysFunction.CreaterID">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysFunction.CreaterName">
+            <summary>
+            创建者名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysFunction.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysFunction.UpdaterID">
+            <summary>
+            更新人ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysFunction.UpdaterName">
+            <summary>
+            更新人名
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.SysLog">
+            <summary>
+            系统日志记录
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysLog.SysLogID">
+            <summary>
+            SysLogID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysLog.LogLevel">
+            <summary>
+            日志级别
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysLog.LogType">
+            <summary>
+            日志类别(LogTypeEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysLog.RefferUrl">
+            <summary>
+            来源URL
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysLog.Url">
+            <summary>
+            Url
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysLog.Code">
+            <summary>
+            日志代码
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysLog.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysLog.Contents">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysLog.ClientIP">
+            <summary>
+            客户端IP
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysLog.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysLog.FK_MerchantID">
+            <summary>
+            所属商户号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysLog.FK_MerchantAppID">
+            <summary>
+            所属应用号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysLog.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.SysRole">
+            <summary>
+            角色表
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRole.SysRoleID">
+            <summary>
+            SysRoleID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRole.ParentID">
+            <summary>
+            父ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRole.RoleName">
+            <summary>
+            角色名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRole.Code">
+            <summary>
+            角色标识
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRole.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRole.Weight">
+            <summary>
+            权重
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRole.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRole.FK_MerchantID">
+            <summary>
+            所属商户号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRole.RecordState">
+            <summary>
+            记录状态(RecordStateEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRole.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRole.CreaterID">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRole.CreaterName">
+            <summary>
+            创建者名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRole.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRole.UpdaterID">
+            <summary>
+            更新人ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRole.UpdaterName">
+            <summary>
+            更新人名
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.SysRoleFunction">
+            <summary>
+            角色功能关系表
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRoleFunction.FK_SysRoleID">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRoleFunction.FK_SysFunctionID">
+            <summary>
+            功能ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRoleFunction.RecordState">
+            <summary>
+            记录状态(RecordStateEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRoleFunction.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRoleFunction.CreaterID">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRoleFunction.CreaterName">
+            <summary>
+            创建者名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRoleFunction.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRoleFunction.UpdaterID">
+            <summary>
+            更新人ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysRoleFunction.UpdaterName">
+            <summary>
+            更新人名
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.SysUserRole">
+            <summary>
+            用户角色关系表
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysUserRole.FK_UserInfoID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysUserRole.FK_SysRoleID">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysUserRole.RecordState">
+            <summary>
+            记录状态(RecordStateEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysUserRole.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysUserRole.CreaterID">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysUserRole.CreaterName">
+            <summary>
+            创建者名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysUserRole.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysUserRole.UpdaterID">
+            <summary>
+            更新人ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysUserRole.UpdaterName">
+            <summary>
+            更新人名
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.SysWebSetting">
+            <summary>
+            网站配置表
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysWebSetting.SysWebSettingID">
+            <summary>
+            SysWebSettingID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysWebSetting.KeyName">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysWebSetting.KeyValue">
+            <summary>
+            开发环境值
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysWebSetting.TestKeyValue">
+            <summary>
+            测试环境值
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysWebSetting.UATKeyValue">
+            <summary>
+            UAT环境值
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysWebSetting.PrdKeyValue">
+            <summary>
+            生产环境值
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysWebSetting.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysWebSetting.FK_MerchantID">
+            <summary>
+            所属商户号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysWebSetting.FK_MerchantAppID">
+            <summary>
+            所属应用号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysWebSetting.RecordState">
+            <summary>
+            记录状态(RecordStateEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysWebSetting.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysWebSetting.CreaterID">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysWebSetting.CreaterName">
+            <summary>
+            创建者名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysWebSetting.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysWebSetting.UpdaterID">
+            <summary>
+            更新人ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.SysWebSetting.UpdaterName">
+            <summary>
+            更新人名
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.Tags">
+            <summary>
+            标签表
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Tags.TagsID">
+            <summary>
+            TagsID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Tags.TagName">
+            <summary>
+            标签名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Tags.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Tags.FK_MerchantID">
+            <summary>
+            所属商户号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Tags.FK_MerchantAppID">
+            <summary>
+            所属应用号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Tags.RecordState">
+            <summary>
+            记录状态(RecordStateEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Tags.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Tags.CreaterID">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Tags.CreaterName">
+            <summary>
+            创建者名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Tags.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Tags.UpdaterID">
+            <summary>
+            更新人ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Tags.UpdaterName">
+            <summary>
+            更新人名
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.UserInfo">
+            <summary>
+            用户信息表
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.UserInfoID">
+            <summary>
+            UserInfoID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.FK_MerchantID">
+            <summary>
+            所属商户号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.FK_MerchantAppID">
+            <summary>
+            所属应用号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.RealName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.Pwd">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.SexType">
+            <summary>
+            性别(UserSexTypeEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.Birthday">
+            <summary>
+            出生日期
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.Tel">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.QQ">
+            <summary>
+            QQ
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.Email">
+            <summary>
+            电子邮件
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.OtherContact">
+            <summary>
+            其实联系方式
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.AccessType">
+            <summary>
+            访问方式
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.AccessToken">
+            <summary>
+            访问token
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.UserState">
+            <summary>
+            用户状态(UserStateEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.RoleName">
+            <summary>
+            角色名(逗号分隔)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.RoleMaxWeight">
+            <summary>
+            角色最大权重
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.RecordState">
+            <summary>
+            记录状态(RecordStateEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.CreaterID">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.CreaterName">
+            <summary>
+            创建者名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.UpdaterID">
+            <summary>
+            更新人ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.UpdaterName">
+            <summary>
+            更新人名
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.View.v_Ads">
+            <summary>
+            v_Ads:实体类(属性说明自动提取数据库字段的描述信息)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.AdsID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.Code">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.AdsType">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.Title">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.Contents">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.AdWidth">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.AdHeight">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.URL">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.URLOpenType">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.StartTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.EndTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.NickName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.Email">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.QQ">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.Tel">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.OtherContact">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.Remark">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.FK_MerchantID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.FK_MerchantAppID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.RecordState">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.CreateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.CreaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.CreaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.UpdateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.UpdaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.UpdaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.MerchantName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Ads.MerchantAppName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.View.v_Article">
+            <summary>
+            v_Article:实体类(属性说明自动提取数据库字段的描述信息)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.ArticleID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.Code">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.Title">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.SubTitle">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.AuthorName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.FromInfo">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.ArticleContentType">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.Contents">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.Summary">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.MainImage1">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.MainImage2">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.MainImage3">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.ViewCount">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.IsCanComment">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.CommentCount">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.GoodCount">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.MiddleCount">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.BadCount">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.HotCount">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.URLOpenType">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.ArticleState">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.VerifyState">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.IsRecommend">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.IsEssence">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.IsTop">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.TopBeginTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.TopEndTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.KeyWords">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.Tags">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.Comments">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.LinkUrl">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.PublishTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.RecordState">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.CreateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.CreaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.CreaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.UpdateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.UpdaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.UpdaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.FK_MerchantID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.FK_MerchantAppID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.MerchantName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.MerchantSystemType">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.MerchantAppName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.ArticleTypeIDs">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Article.ArticleTypeNames">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.View.v_Attachment">
+            <summary>
+            v_Attachment:实体类(属性说明自动提取数据库字段的描述信息)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.AttachmentID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.ParentID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.OriginFileName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.FileName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.Title">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.ViewType">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.FormatType">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.Ext">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.URL">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.Description">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.DownLoadCount">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.ViewCount">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.FileSize">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.ImgWidth">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.ImgHeight">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.FK_MerchantID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.RecordState">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.CreateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.CreaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.CreaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.UpdateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.UpdaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.UpdaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Attachment.MerchantName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.View.v_FriendLinks">
+            <summary>
+            v_FriendLinks:实体类(属性说明自动提取数据库字段的描述信息)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_FriendLinks.FriendLinkID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_FriendLinks.Title">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_FriendLinks.Description">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_FriendLinks.URL">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_FriendLinks.ContactName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_FriendLinks.Email">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_FriendLinks.QQ">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_FriendLinks.Tel">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_FriendLinks.Remark">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_FriendLinks.OtherContact">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_FriendLinks.FK_MerchantID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_FriendLinks.FK_MerchantAppID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_FriendLinks.RecordState">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_FriendLinks.CreateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_FriendLinks.CreaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_FriendLinks.CreaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_FriendLinks.UpdateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_FriendLinks.UpdaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_FriendLinks.UpdaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_FriendLinks.MerchantName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_FriendLinks.MerchantAppName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.View.v_Merchant">
+            <summary>
+            v_Merchant:实体类(属性说明自动提取数据库字段的描述信息)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.MerchantID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.MerchantName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.FK_MerchantType">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.MerchantSystemType">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.Domain">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.LogoURL">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.ContactName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.Tel">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.Landline">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.Email">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.QQ">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.FK_PassType">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.PassNumber">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.Address">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.OtherContact">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.MerchantRemark">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.RegisterTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.MerchantState">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.Remark">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.RecordState">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.CreateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.CreaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.CreaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.UpdateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.UpdaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.UpdaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.MerchantTypeName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Merchant.PassTypeName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.View.v_MerchantApp">
+            <summary>
+            v_MerchantApp:实体类(属性说明自动提取数据库字段的描述信息)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_MerchantApp.MerchantAppID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_MerchantApp.MerchantAppName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_MerchantApp.FK_MerchantID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_MerchantApp.AppKey">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_MerchantApp.ResourceVersion">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_MerchantApp.Email">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_MerchantApp.CopyRight">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_MerchantApp.MetaDescription">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_MerchantApp.MetaKeyWords">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_MerchantApp.MetaTitle">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_MerchantApp.WebURL">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_MerchantApp.Remark">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_MerchantApp.RecordState">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_MerchantApp.CreateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_MerchantApp.CreaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_MerchantApp.CreaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_MerchantApp.UpdateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_MerchantApp.UpdaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_MerchantApp.UpdaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_MerchantApp.MerchantName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_MerchantApp.MerchantSystemType">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.View.v_SysDic">
+            <summary>
+            v_SysDic:实体类(属性说明自动提取数据库字段的描述信息)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysDic.SysDicID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysDic.Code">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysDic.ParentID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysDic.DicName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysDic.DicValue">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysDic.Sort">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysDic.Remark">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysDic.FK_FunctionID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysDic.FK_MerchantID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysDic.FK_MerchantAppID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysDic.RecordState">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysDic.CreateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysDic.CreaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysDic.CreaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysDic.UpdateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysDic.UpdaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysDic.UpdaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysDic.NodeLevel">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysDic.IsLeaf">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysDic.IsRoot">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysDic.MerchantName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.View.v_SysFunction">
+            <summary>
+            v_SysFunction:实体类(属性说明自动提取数据库字段的描述信息)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysFunction.SysFunctionID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysFunction.ParentID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysFunction.FunctionName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysFunction.Code">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysFunction.Remark">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysFunction.RecordState">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysFunction.CreateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysFunction.CreaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysFunction.CreaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysFunction.UpdateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysFunction.UpdaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysFunction.UpdaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysFunction.NodeLevel">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysFunction.IsLeaf">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysFunction.IsRoot">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.View.v_SysRole">
+            <summary>
+            v_SysRole:实体类(属性说明自动提取数据库字段的描述信息)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysRole.SysRoleID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysRole.ParentID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysRole.RoleName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysRole.Code">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysRole.Sort">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysRole.Weight">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysRole.Remark">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysRole.FK_MerchantID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysRole.RecordState">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysRole.CreateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysRole.CreaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysRole.CreaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysRole.UpdateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysRole.UpdaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysRole.UpdaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysRole.NodeLevel">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysRole.IsLeaf">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysRole.IsRoot">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysRole.MerchantName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysRole.MerchantSystemType">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.View.v_SysWebSetting">
+            <summary>
+            v_SysWebSetting:实体类(属性说明自动提取数据库字段的描述信息)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysWebSetting.SysWebSettingID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysWebSetting.KeyName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysWebSetting.KeyValue">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysWebSetting.TestKeyValue">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysWebSetting.UATKeyValue">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysWebSetting.PrdKeyValue">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysWebSetting.Remark">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysWebSetting.FK_MerchantID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysWebSetting.FK_MerchantAppID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysWebSetting.RecordState">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysWebSetting.CreateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysWebSetting.CreaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysWebSetting.CreaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysWebSetting.UpdateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysWebSetting.UpdaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysWebSetting.UpdaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysWebSetting.MerchantName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysWebSetting.MerchantAppName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.View.v_Tags">
+            <summary>
+            v_Tags:实体类(属性说明自动提取数据库字段的描述信息)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Tags.TagsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Tags.TagName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Tags.Description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Tags.FK_MerchantID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Tags.FK_MerchantAppID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Tags.RecordState">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Tags.CreateTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Tags.CreaterID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Tags.CreaterName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Tags.UpdateTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Tags.UpdaterID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Tags.UpdaterName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Tags.MerchantName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Tags.MerchantAppName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Data.Model.View.v_UserInfo">
+            <summary>
+            v_UserInfo:实体类(属性说明自动提取数据库字段的描述信息)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.UserInfoID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.UserName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.FK_MerchantID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.FK_MerchantAppID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.RealName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.NickName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.Pwd">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.Age">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.SexType">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.Birthday">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.Tel">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.QQ">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.Email">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.OtherContact">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.AccessType">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.AccessToken">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.UserState">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.Remark">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.RoleName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.RoleMaxWeight">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.RecordState">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.CreateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.CreaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.CreaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.UpdateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.UpdaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.UpdaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.MerchantName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.MerchantSystemType">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.MerchantAppName">
+             <summary>
+            
+             </summary>
+        </member>
+    </members>
+</doc>

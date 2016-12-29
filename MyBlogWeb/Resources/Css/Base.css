@@ -1,0 +1,222 @@
+﻿html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+html, body {
+    height: 100%;
+    font-family: "Microsoft YaHei",Sans-Serif !important;
+    width: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.XCLIndent p {
+    text-indent: 2em;
+}
+
+a:not(.btn) {
+    color: #16392B !important;
+}
+
+    a:not(.btn):hover {
+        text-decoration: none !important;
+        color: #388F6C !important;
+    }
+
+.XCLRed {
+    color: #f00;
+}
+
+.XCLRedBolder {
+    color: #f00;
+    font-weight: bolder;
+}
+
+.XCLBolder {
+    font-weight: bolder;
+}
+
+.XCLGray {
+    color: #888;
+}
+
+.XCLNoWrap {
+    white-space: nowrap;
+}
+
+.XCLMainDiv {
+    height: auto;
+    min-height: 100%;
+}
+
+.XCLBanner {
+    /*height: 450px;*/
+    background-color: #000 !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    color: #eee !important;
+    animation: XCLBannerKF 10s linear infinite alternate;
+}
+
+.XCLBottomDiv, .XCLBottomDiv a {
+    height: 140px;
+    background-color: #1f1f20 !important;
+    color: #eee !important;
+}
+
+.pagination .active a {
+    background: #1f1f20 !important;
+    border: solid 1px #ccc !important;
+    color: #fff !important;
+}
+
+/*article list image  begin*/
+.XCLArticleImage:hover {
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transition: transform 1s ease 0s;
+    -moz-transition: transform 1s ease 0s;
+    -webkit-transition: transform 1s ease 0s;
+    -o-transition: transform 1s ease 0s;
+}
+
+.XCLSummary {
+    -ms-word-break: break-all;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/*article list image  end*/
+
+/*menu  begin*/
+
+ul.XCLMenu li {
+    min-width: 130px;
+    width: auto;
+    text-align: center;
+}
+
+    ul.XCLMenu li a {
+        display: block;
+        transition: background-color 1s linear;
+    }
+
+        ul.XCLMenu li a:hover {
+            background: #333 !important;
+        }
+
+    ul.XCLMenu li.XCLMenuActive, ul.XCLMenu li.XCLMenuActive a {
+        background: #000 !important;
+        font-weight: bold;
+        color: #eee !important;
+        transition: background-color 1s linear;
+    }
+
+.navbar-nav > li > a, .navbar-brand {
+    padding-top: 5px !important;
+    padding-bottom: 0 !important;
+    height: 95px;
+    line-height: 95px;
+}
+
+.navbar {
+    min-height: 90px !important;
+}
+
+    .navbar .formSearch {
+        line-height: 90px;
+        margin: 0px;
+    }
+
+/*menu  end*/
+
+.XCLResizeImage {
+    width: 80% !important;
+    height: auto !important;
+}
+
+@keyframes XCLBannerKF {
+    0% {
+        color: #fff;
+    }
+
+    25% {
+        color: #f60;
+    }
+
+    50% {
+        color: #f00;
+    }
+
+    75% {
+        color: #0f0;
+    }
+
+    100% {
+        color: #00f;
+    }
+}
+
+@-webkit-keyframes XCLBannerKF {
+    0% {
+        color: #fff;
+    }
+
+    25% {
+        color: #f60;
+    }
+
+    50% {
+        color: #f00;
+    }
+
+    75% {
+        color: #0f0;
+    }
+
+    100% {
+        color: #00f;
+    }
+}
+
+@-moz-keyframes XCLBannerKF {
+    0% {
+        color: #fff;
+    }
+
+    25% {
+        color: #f60;
+    }
+
+    50% {
+        color: #f00;
+    }
+
+    75% {
+        color: #0f0;
+    }
+
+    100% {
+        color: #00f;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .XCLBanner {
+        height: 45rem;
+    }
+}

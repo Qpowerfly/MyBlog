@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "~/Views/Layout/Main.cshtml";
+}
+@model XCLNetTools.Message.MessageModel
+
+<h3 class="text-center alert alert-danger">
+    非常抱歉，您访问的页面出错啦！
+</h3>
+<div class="alert alert-warning">
+    <p>
+        错误码：@Model.ErrorCode
+    </p>
+    <hr />
+    <p>
+        来源：@Model.FromUrl
+    </p>
+    <hr />
+    <p>
+        出错页面：@Model.Url
+    </p>
+    <hr />
+    <p>
+        错误信息：@Model.Message
+    </p>
+    @*<hr />
+    <p>
+        详细错误信息：@Model.MessageMore
+    </p>*@
+    <hr />
+    <p class="text-right">
+        如有疑问，请联系：@XCLCMS.Lib.Common.Comm.GetCurrentApplicationMerchantApp().Email
+    </p>
+</div>

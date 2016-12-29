@@ -1,0 +1,20 @@
+﻿<div class="text-center">
+    <small>
+        @Html.Raw(XCLCMS.Lib.Common.Comm.GetCurrentApplicationMerchantApp().CopyRight)
+    </small>
+</div>
+
+@if (null != ViewBag.IsNeedHighlight && ViewBag.IsNeedHighlight)
+{
+    <link href="~/Resources/Js/highlight/tomorrow-night-bright.css?v=@(ViewBag.ResourceVersion)" rel="stylesheet" />
+}
+<!--[if lt IE 9]>
+    <script src="@Url.Content("~/Resources/Js/json2.min.js")?v=@(ViewBag.ResourceVersion)"></script>
+ <![endif]-->
+<script type="text/javascript">
+    $LAB.script("@Url.Content("~/Resources/Js/Jquery/jquery-1.11.2.min.js")?v=@(ViewBag.ResourceVersion)").wait()
+    .script("@Url.Content("~/Resources/Js/bootstrap/js/bootstrap.min.js")?v=@(ViewBag.ResourceVersion)",
+    "@Url.Content("~/Resources/Js/lazyload/jquery.lazyload.min.js")?v=@(ViewBag.ResourceVersion)"
+    @Html.Raw(null != ViewBag.IsNeedHighlight && ViewBag.IsNeedHighlight?string.Format(@",""{0}""",Url.Content("~/Resources/Js/highlight/highlight.min.js?v="+ViewBag.ResourceVersion)):"")
+    ).wait().script("@Url.Content("~/Resources/Js/App.js")?v=@(ViewBag.ResourceVersion)");
+</script>

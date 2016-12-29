@@ -1,0 +1,29 @@
+﻿@using Webdiyer.WebControls.Mvc;
+@model  XCLNetTools.Entity.PagerInfo
+
+
+@if (Model.PageCount > 1)
+{
+    <nav class="text-center">
+        @(Html.Pager(Model.RecordCount, Model.PageSize, Model.PageIndex)
+        .Options(o => o.SetPageIndexParameterName("page")
+        .SetRouteName("PagerRouter").SetCssClass("pagination")
+        .SetPagerItemTemplate("<li>{0}</li>").SetContainerTagName("ul").SetDisabledPagerItemTemplate("<li class='disabled'><a href='javascript:void(0);'>{0}</a></li>")
+        .SetCurrentPagerItemTemplate("<li class='active'><a href='javascript:void(0);'>{0}</a></li>")
+        )    )
+    </nav>
+
+    <div class="text-right">
+        <small>
+            共@(Model.RecordCount)条记录，当前为第<span style="color:#f00;">@(Model.PageIndex)</span>/@(Model.PageCount)页
+        </small>
+    </div>
+}
+
+@if (Model.PageCount == 0)
+{
+    <p class="text-center">暂时没有任何数据哦！</p>
+}
+
+
+

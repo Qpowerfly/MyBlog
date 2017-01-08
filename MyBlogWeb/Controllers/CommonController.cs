@@ -35,6 +35,7 @@ namespace MyBlogWeb.Controllers
             viewModel.Key = XCLNetTools.StringHander.FormHelper.GetString("q");
             ViewBag.IsShowHeader = false;
             ViewBag.IsNeedAngular = true;
+            ViewBag.IsNeedBaiduSug = true;
             ViewBag.Title = "导航搜索";
             return View(viewModel);
         }

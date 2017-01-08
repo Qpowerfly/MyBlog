@@ -16,12 +16,16 @@
         js.push("@Url.Content("~/Resources/Js/lazyload/jquery.lazyload.min.js")?v=@(ViewBag.ResourceVersion)");
         @if (null != ViewBag.IsNeedHighlight && ViewBag.IsNeedHighlight) {
             @:js.push("@Url.Content("~/Resources/Js/highlight/highlight.min.js")?v=@(ViewBag.ResourceVersion)");
-                }
+                                                }
         @if (null != ViewBag.IsNeedAngular && ViewBag.IsNeedAngular) {
             @:js.push("@Url.Content("~/Resources/Js/angular.min.js")?v=@(ViewBag.ResourceVersion)");
-        }
+                                        }
         $LAB.script(jq).wait().script(js).wait().script("@Url.Content("~/Resources/Js/App.js")?v=@(ViewBag.ResourceVersion)").wait(function () {
             window.jsLoadedCallBack && window.jsLoadedCallBack();
         });
+        @if (null != ViewBag.IsNeedBaiduSug && ViewBag.IsNeedBaiduSug)
+        {
+            @:$LAB.script({ src: "http://www.baidu.com/js/opensug.js", charset: "gbk" });
+                 }
     })();
 </script>

@@ -797,15 +797,5 @@
             默认角色名
             </summary>
         </member>
-        <member name="T:XCLCMS.Data.CommonHelper.SystemDataConst">
-            <summary>
-            系统级别的常量（固定的，不能更改的）
-            </summary>
-        </member>
-        <member name="F:XCLCMS.Data.CommonHelper.SystemDataConst.XInnerUserName">
-            <summary>
-            系统内置用户的用户名
-            </summary>
-        </member>
     </members>
 </doc>

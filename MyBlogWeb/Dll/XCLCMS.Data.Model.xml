@@ -1871,7 +1871,7 @@
         </member>
         <member name="P:XCLCMS.Data.Model.UserInfo.OtherContact">
             <summary>
-            其实联系方式
+            其它联系方式
             </summary>
         </member>
         <member name="P:XCLCMS.Data.Model.UserInfo.AccessType">

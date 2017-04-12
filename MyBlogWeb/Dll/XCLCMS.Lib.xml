@@ -405,16 +405,6 @@
             获取指定用户的角色
             </summary>
         </member>
-        <member name="M:XCLCMS.Lib.Permission.PerHelper.GetNormalMerchantFunctionTreeList">
-            <summary>
-            获取普通商户的所有功能数据源列表
-            </summary>
-        </member>
-        <member name="M:XCLCMS.Lib.Permission.PerHelper.GetNormalMerchantFunctionIDList">
-            <summary>
-            获取普通商户的所有功能id List
-            </summary>
-        </member>
         <member name="M:XCLCMS.Lib.Permission.PerHelper.HasAnyPermission(System.Int64,System.Collections.Generic.List{XCLCMS.Data.CommonHelper.Function.FunctionEnum})">
             <summary>
             判断指定用户是否至少拥有权限组中的某个权限
@@ -1046,6 +1036,21 @@
         <member name="M:XCLCMS.Lib.WebAPI.TagsAPI.Delete(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Collections.Generic.List{System.Int64}})">
             <summary>
             删除标签信息
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.WebAPI.UserCenterAPI">
+            <summary>
+            个人中心 API
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.UserCenterAPI.UpdateUserInfo(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.UserCenter.UserBaseInfoEntity})">
+            <summary>
+            修改用户基本信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.UserCenterAPI.UpdatePassword(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.UserCenter.PasswordEntity})">
+            <summary>
+            修改密码
             </summary>
         </member>
         <member name="T:XCLCMS.Lib.WebAPI.UserInfoAPI">

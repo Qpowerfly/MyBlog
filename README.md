@@ -4,7 +4,7 @@
 
 ### 项目结构
 
-- 基于.NET Framework 4.5
+- 基于.NET Framework 4.6
 - asp.net mvc5
 - css框架：bootstrap
 

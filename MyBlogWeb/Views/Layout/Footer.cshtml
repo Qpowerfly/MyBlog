@@ -3,29 +3,15 @@
         @Html.Raw(XCLCMS.Lib.Common.Comm.GetCurrentApplicationMerchantApp().CopyRight)
     </small>
 </div>
-
 @if (null != ViewBag.IsNeedHighlight && ViewBag.IsNeedHighlight)
 {
-    <link href="~/Resources/Js/highlight/tomorrow-night-bright.css?v=@(ViewBag.ResourceVersion)" rel="stylesheet" />
+    <script src="~/Resources/Js/highlight/highlight.min.js?v=@(ViewBag.ResourceVersion)"></script>
 }
+<script src="~/Resources/Js/lazyload/jquery.lazyload.min.js?v=@(ViewBag.ResourceVersion)"></script>
+<script src="~/Resources/Js/App.js?v=@(ViewBag.ResourceVersion)"></script>
 <script type="text/javascript">
-    (function () {
-        var jq = "@Url.Content("~/Resources/Js/Jquery/jquery-1.11.2.min.js")?v=@(ViewBag.ResourceVersion)";
-        var js = [];
-        js.push("@Url.Content("~/Resources/Js/bootstrap/js/bootstrap.min.js")?v=@(ViewBag.ResourceVersion)");
-        js.push("@Url.Content("~/Resources/Js/lazyload/jquery.lazyload.min.js")?v=@(ViewBag.ResourceVersion)");
-        @if (null != ViewBag.IsNeedHighlight && ViewBag.IsNeedHighlight) {
-            @:js.push("@Url.Content("~/Resources/Js/highlight/highlight.min.js")?v=@(ViewBag.ResourceVersion)");
-                                                }
-        @if (null != ViewBag.IsNeedAngular && ViewBag.IsNeedAngular) {
-            @:js.push("@Url.Content("~/Resources/Js/angular.min.js")?v=@(ViewBag.ResourceVersion)");
-                                        }
-        $LAB.script(jq).wait().script(js).wait().script("@Url.Content("~/Resources/Js/App.js")?v=@(ViewBag.ResourceVersion)").wait(function () {
-            window.jsLoadedCallBack && window.jsLoadedCallBack();
-        });
         @if (null != ViewBag.IsNeedBaiduSug && ViewBag.IsNeedBaiduSug)
         {
             @:$LAB.script({ src: "http://www.baidu.com/js/opensug.js", charset: "gbk" });
-                 }
-    })();
+             }
 </script>

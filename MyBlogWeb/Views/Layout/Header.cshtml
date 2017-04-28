@@ -3,5 +3,15 @@
 <meta name="description" content="@ViewBag.Description" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 <link href="~/Resources/Js/bootstrap/css/bootstrap.min.css?v=@(ViewBag.ResourceVersion)" rel="stylesheet" />
+@if (null != ViewBag.IsNeedHighlight && ViewBag.IsNeedHighlight)
+{
+    <link href="~/Resources/Js/highlight/tomorrow-night-bright.css?v=@(ViewBag.ResourceVersion)" rel="stylesheet" />
+}
 <link href="~/Resources/Css/Base.css?v=@(ViewBag.ResourceVersion)" rel="stylesheet" />
 <script src="~/Resources/Js/LAB.min.js?v=@(ViewBag.ResourceVersion)"></script>
+<script src="~/Resources/Js/Jquery/jquery-1.11.2.min.js?v=@(ViewBag.ResourceVersion)"></script>
+<script src="~/Resources/Js/bootstrap/js/bootstrap.min.js?v=@(ViewBag.ResourceVersion)"></script>
+@if (null != ViewBag.IsNeedAngular && ViewBag.IsNeedAngular)
+{
+    <script src="~/Resources/Js/angular.min.js?v=@(ViewBag.ResourceVersion)"></script>
+}

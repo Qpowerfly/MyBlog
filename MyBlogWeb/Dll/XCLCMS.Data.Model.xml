@@ -1889,6 +1889,11 @@
             用户状态(UserStateEnum)
             </summary>
         </member>
+        <member name="P:XCLCMS.Data.Model.UserInfo.UserType">
+            <summary>
+            用户类型(UserTypeEnum)
+            </summary>
+        </member>
         <member name="P:XCLCMS.Data.Model.UserInfo.Remark">
             <summary>
             备注
@@ -3360,6 +3365,11 @@
              </summary>
         </member>
         <member name="P:XCLCMS.Data.Model.View.v_UserInfo.UserState">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_UserInfo.UserType">
              <summary>
             
              </summary>

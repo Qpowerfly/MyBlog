@@ -623,11 +623,6 @@
             根据SysDicID查询其子项
             </summary>
         </member>
-        <member name="M:XCLCMS.Lib.WebAPI.Library.SysDicAPI_GetAllUnderListByID(System.String,System.Int64)">
-            <summary>
-            递归获取指定SysDicID下的所有列表（不包含该SysDicID的记录）
-            </summary>
-        </member>
         <member name="M:XCLCMS.Lib.WebAPI.Library.SysFunctionAPI_GetLayerListBySysFunctionId(System.String,XCLCMS.Data.WebAPIEntity.RequestEntity.SysFunction.GetLayerListBySysFunctionIdEntity)">
             <summary>
             获取当前SysFunctionID所属的层级list
@@ -643,11 +638,6 @@
             <summary>
             获取当前SysRoleID所属的层级list
             如:根目录/子目录/文件
-            </summary>
-        </member>
-        <member name="M:XCLCMS.Lib.WebAPI.Library.SysRoleAPI_Add(System.String,XCLCMS.Data.WebAPIEntity.RequestEntity.SysRole.AddOrUpdateEntity)">
-            <summary>
-            添加角色
             </summary>
         </member>
         <member name="T:XCLCMS.Lib.WebAPI.MerchantAPI">
@@ -1051,6 +1041,11 @@
         <member name="M:XCLCMS.Lib.WebAPI.UserCenterAPI.UpdatePassword(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.UserCenter.PasswordEntity})">
             <summary>
             修改密码
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.UserCenterAPI.UpdateMerchantInfo(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.UserCenter.MerchantInfoEntity})">
+            <summary>
+            修改商户资料
             </summary>
         </member>
         <member name="T:XCLCMS.Lib.WebAPI.UserInfoAPI">

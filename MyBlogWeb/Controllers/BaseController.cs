@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Web.Mvc;
 
 namespace MyBlogWeb.Controllers
@@ -34,6 +35,12 @@ namespace MyBlogWeb.Controllers
             ViewBag.MainUserToken = this.MainUserToken;
             ViewBag.IsNeedHighlight = false;
             ViewBag.IsNeedAngular = false;
+
+            //获取文章分类
+            var request = XCLCMS.Lib.WebAPI.Library.CreateRequest<long>(this.MainUserToken);
+            request.Body = XCLNetTools.XML.ConfigClass.GetConfigInt("ArticleTypeRootID");
+            var response = XCLCMS.Lib.WebAPI.SysDicAPI.GetAllUnderListByID(request);
+            ViewBag.TypeList = response?.Body?.Where(k => k.IsLeaf == 1).OrderByDescending(k => k.Sort).ToList();
         }
     }
 }

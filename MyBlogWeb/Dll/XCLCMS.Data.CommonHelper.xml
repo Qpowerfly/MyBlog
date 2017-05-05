@@ -312,6 +312,21 @@
             禁用 Disabled
             </summary>
         </member>
+        <member name="T:XCLCMS.Data.CommonHelper.EnumType.UserTypeEnum">
+            <summary>
+            用户类型
+            </summary>
+        </member>
+        <member name="F:XCLCMS.Data.CommonHelper.EnumType.UserTypeEnum.NON">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:XCLCMS.Data.CommonHelper.EnumType.UserTypeEnum.MAI">
+            <summary>
+            商户主账号
+            </summary>
+        </member>
         <member name="T:XCLCMS.Data.CommonHelper.EnumType.LogTypeEnum">
             <summary>
             日志类型  (该类型varchar(50))
@@ -460,6 +475,11 @@
         <member name="F:XCLCMS.Data.CommonHelper.Function.FunctionEnum.SysFun_SetUserRole">
              <summary>
             用户管理-用户角色分配
+             </summary>
+        </member>
+        <member name="F:XCLCMS.Data.CommonHelper.Function.FunctionEnum.SysFun_SetUserType">
+             <summary>
+            用户管理-用户类别修改
              </summary>
         </member>
         <member name="F:XCLCMS.Data.CommonHelper.Function.FunctionEnum.SysFun_UserAdmin_UserAdd">

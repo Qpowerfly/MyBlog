@@ -5,13 +5,6 @@
     {
         CurrentUserModel = ViewBag.CommonModel.CurrentUserModel as XCLCMS.Data.Model.UserInfo;
     }
-    //获取文章分类
-    string userToken = Convert.ToString(ViewBag.MainUserToken);
-    var typeList = XCLCMS.Lib.WebAPI.Library.SysDicAPI_GetAllUnderListByID(userToken, XCLNetTools.XML.ConfigClass.GetConfigInt("ArticleTypeRootID"));
-    if (null != typeList && typeList.Count > 0)
-    {
-        typeList = typeList.Where(k => k.IsLeaf == 1).OrderByDescending(k => k.Sort).ToList();
-    }
 }
 <!DOCTYPE html>
 <html>
@@ -40,9 +33,9 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav XCLMenu">
                             <li activeReg="(/Article/Index/t0/)|(@Url.RouteUrl("DefaultRouter",new { controller="article",action="index" })$)"><a href="@Url.RouteUrl("DefaultRouter",new { controller="article",action="index" })">头条</a></li>
-                            @if (null != typeList && typeList.Count > 0)
+                            @if (null != ViewBag.TypeList && ViewBag.TypeList.Count > 0)
                         {
-                            foreach (var tp in typeList)
+                            foreach (var tp in ViewBag.TypeList)
                             {
                         <li activeReg="/Article/Index/t@(tp.SysDicID)/"><a href="@Url.Action("Index","Article",new { ArticleType=tp.SysDicID,Page=1})">@tp.DicName</a></li>
                             }

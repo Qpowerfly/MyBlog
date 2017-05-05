@@ -81,6 +81,66 @@
             已有令牌
             </summary>
         </member>
+        <member name="T:XCLCMS.Data.WebAPIEntity.RequestEntity.UserCenter.MerchantInfoEntity">
+            <summary>
+            商户信息
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.WebAPIEntity.RequestEntity.UserCenter.MerchantInfoEntity.MerchantID">
+            <summary>
+            商户ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.WebAPIEntity.RequestEntity.UserCenter.MerchantInfoEntity.Domain">
+            <summary>
+            绑定的域名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.WebAPIEntity.RequestEntity.UserCenter.MerchantInfoEntity.ContactName">
+            <summary>
+            联系人
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.WebAPIEntity.RequestEntity.UserCenter.MerchantInfoEntity.Tel">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.WebAPIEntity.RequestEntity.UserCenter.MerchantInfoEntity.Landline">
+            <summary>
+            固话
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.WebAPIEntity.RequestEntity.UserCenter.MerchantInfoEntity.Email">
+            <summary>
+            电子邮件
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.WebAPIEntity.RequestEntity.UserCenter.MerchantInfoEntity.QQ">
+            <summary>
+            qq
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.WebAPIEntity.RequestEntity.UserCenter.MerchantInfoEntity.FK_PassType">
+            <summary>
+            证件类型（参见字典库）
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.WebAPIEntity.RequestEntity.UserCenter.MerchantInfoEntity.PassNumber">
+            <summary>
+            证件号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.WebAPIEntity.RequestEntity.UserCenter.MerchantInfoEntity.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.WebAPIEntity.RequestEntity.UserCenter.MerchantInfoEntity.OtherContact">
+            <summary>
+            其它联系信息
+            </summary>
+        </member>
         <member name="T:XCLCMS.Data.WebAPIEntity.RequestEntity.UserCenter.PasswordEntity">
             <summary>
             密码信息

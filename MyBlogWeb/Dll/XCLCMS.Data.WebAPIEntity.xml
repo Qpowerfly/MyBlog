@@ -59,6 +59,21 @@
             返回结果（如果TBody与IsSuccess属性均为bool，则Body与IsSuccess一致）
             </summary>
         </member>
+        <member name="P:XCLCMS.Data.WebAPIEntity.RequestEntity.Attachment.DetailEntity.AttachmentID">
+            <summary>
+            附件ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.WebAPIEntity.RequestEntity.Attachment.DetailEntity.IsContainsSubAttachmentList">
+            <summary>
+            是否需要包含相关附件信息
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.WebAPIEntity.RequestEntity.FileInfo.DiskFileListEntity.CurrentDirectory">
+            <summary>
+            当前目录（物理路径）
+            </summary>
+        </member>
         <member name="T:XCLCMS.Data.WebAPIEntity.RequestEntity.Open.LogonCheckEntity">
             <summary>
             登录检测

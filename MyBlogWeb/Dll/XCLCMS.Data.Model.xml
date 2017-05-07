@@ -604,6 +604,21 @@
             商户号
             </summary>
         </member>
+        <member name="T:XCLCMS.Data.Model.Custom.AttachmentWithSubModel">
+            <summary>
+            带有相关联的附件信息的附件实体
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.AttachmentWithSubModel.Attachment">
+            <summary>
+            主附件
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.AttachmentWithSubModel.SubAttachmentList">
+            <summary>
+            相关附件列表
+            </summary>
+        </member>
         <member name="T:XCLCMS.Data.Model.Custom.ContextModel">
             <summary>
             上下文

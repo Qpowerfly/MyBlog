@@ -505,7 +505,7 @@
             附件API
             </summary>
         </member>
-        <member name="M:XCLCMS.Lib.WebAPI.AttachmentAPI.Detail(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+        <member name="M:XCLCMS.Lib.WebAPI.AttachmentAPI.Detail(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.Attachment.DetailEntity})">
             <summary>
             查询附件信息实体
             </summary>
@@ -518,6 +518,26 @@
         <member name="M:XCLCMS.Lib.WebAPI.AttachmentAPI.GetAttachmentListByIDList(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.Attachment.GetAttachmentListByIDListEntity})">
             <summary>
             根据文件id，查询文件详情列表
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.AttachmentAPI.PageList(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.PageListConditionEntity})">
+            <summary>
+            附件分页列表
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.AttachmentAPI.Add(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.Attachment})">
+            <summary>
+            添加附件信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.AttachmentAPI.Update(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.Attachment})">
+            <summary>
+            修改附件信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.AttachmentAPI.Delete(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.FileInfo.DeleteEntity})">
+            <summary>
+            删除附件信息
             </summary>
         </member>
         <member name="T:XCLCMS.Lib.WebAPI.CommonAPI">
@@ -533,6 +553,16 @@
         <member name="M:XCLCMS.Lib.WebAPI.CommonAPI.ClearRubbishData(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Object})">
             <summary>
             垃圾数据清理
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.WebAPI.FileInfoAPI">
+            <summary>
+            文件管理API
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.FileInfoAPI.DiskFileList(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.FileInfo.DiskFileListEntity})">
+            <summary>
+            磁盘文件列表
             </summary>
         </member>
         <member name="T:XCLCMS.Lib.WebAPI.FriendLinksAPI">

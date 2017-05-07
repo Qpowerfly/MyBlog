@@ -154,6 +154,8 @@
     <Content Include="Dll\XCLCMS.Lib.xml" />
     <Content Include="Dll\XCLNetLogger.dll" />
     <Content Include="Dll\XCLNetLogger.xml" />
+    <Content Include="Dll\XCLNetSearch.dll" />
+    <Content Include="Dll\XCLNetSearch.xml" />
     <Content Include="Dll\XCLNetTools.dll" />
     <Content Include="Dll\XCLNetTools.xml" />
     <Content Include="favicon.ico" />

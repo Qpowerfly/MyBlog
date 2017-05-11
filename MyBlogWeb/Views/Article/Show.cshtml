@@ -124,20 +124,6 @@
 
             <hr />
 
-            <div class="ds-share" data-thread-key="@Model.Article.ArticleID" data-title="@Model.Article.Title" data-content="@Model.Article.Summary" data-url="@string.Format("{0}Article/Show/{1}",XCLNetTools.StringHander.Common.RootUri,Model.Article.ArticleID)">
-                <div class="ds-share-inline">
-                    <ul class="ds-share-icons-32">
-                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);"></a></li>
-                        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo"></a></li>
-                        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone"></a></li>
-                        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt"></a></li>
-                        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat"></a></li>
-                    </ul>
-                    <div class="ds-share-icons-more">
-                    </div>
-                </div>
-            </div>
-
             <!--PC和WAP自适应版-->
             <div id="SOHUCS" sid="@Model.Article.ArticleID"></div>
             <script type="text/javascript">

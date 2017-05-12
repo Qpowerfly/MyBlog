@@ -31,10 +31,15 @@ namespace MyBlogWeb.Controllers
             return View(viewModel);
         }
 
-        public ActionResult Show(long id)
+        public ActionResult Show(long? id)
         {
+            if (!id.HasValue)
+            {
+                return RedirectToAction("Index");
+            }
+
             var request = XCLCMS.Lib.WebAPI.Library.CreateRequest<long>(base.MainUserToken);
-            request.Body = id;
+            request.Body = id.Value;
             var response = XCLCMS.Lib.WebAPI.ArticleAPI.Detail(request) ?? new XCLCMS.Data.WebAPIEntity.APIResponseEntity<XCLCMS.Data.Model.View.v_Article>();
             if (null == response || null == response.Body)
             {
@@ -44,7 +49,7 @@ namespace MyBlogWeb.Controllers
 
             //查询相关文章
             var relationRequest = XCLCMS.Lib.WebAPI.Library.CreateRequest<long>(base.MainUserToken);
-            relationRequest.Body = id;
+            relationRequest.Body = id.Value;
             var relationResponse = XCLCMS.Lib.WebAPI.ArticleAPI.RelationDetail(relationRequest) ?? new XCLCMS.Data.WebAPIEntity.APIResponseEntity<XCLCMS.Data.Model.Custom.ArticleRelationDetailModel>();
 
             var viewModel = new MyBlogWeb.Models.Article.ShowVM();

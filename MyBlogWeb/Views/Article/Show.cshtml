@@ -43,6 +43,17 @@
 
             <hr />
 
+            <!--广告-->
+            if (!string.IsNullOrWhiteSpace(Model.AdsBottomCode))
+            {
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.Raw(Model.AdsBottomCode)
+                    </div>
+                </div>
+                <hr />
+            }
+
             <div class="row">
                 <div class="col-md-6">
                     <blockquote>
@@ -79,7 +90,7 @@
                 }
             </div>
 
-            <!-- Modal -->
+                    <!-- Modal -->
             <div class="modal fade" id="myPayModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -98,7 +109,7 @@
                 </div>
             </div>
 
-            <!--相关文章-->
+                    <!--相关文章-->
             if (null != Model.RelationDetail && null != Model.RelationDetail.SameTypeArticleList && Model.RelationDetail.SameTypeArticleList.Count > 0)
             {
                 <hr />
@@ -122,20 +133,20 @@
                 </small>
             </p>
 
-            <hr />
+                    <hr />
 
-            <!--PC和WAP自适应版-->
-            <div id="SOHUCS" sid="@Model.Article.ArticleID"></div>
-            <script type="text/javascript">
-                (function () {
-                    var appid = 'cysYWPUpD';
-                    var conf = 'prod_8eb09138b3a32fa9b5e12016dccddfa7';
-                    var width = window.innerWidth || document.documentElement.clientWidth;
-                    if (width < 960) {
-                        window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
-                    } else { var loadJs = function (d, a) { var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement; var b = document.createElement("script"); b.setAttribute("type", "text/javascript"); b.setAttribute("charset", "UTF-8"); b.setAttribute("src", d); if (typeof a === "function") { if (window.attachEvent) { b.onreadystatechange = function () { var e = b.readyState; if (e === "loaded" || e === "complete") { b.onreadystatechange = null; a() } } } else { b.onload = a } } c.appendChild(b) }; loadJs("https://changyan.sohu.com/upload/changyan.js", function () { window.changyan.api.config({ appid: appid, conf: conf }) }); }
-                })();
-            </script>
+                    <!--PC和WAP自适应版-->
+                    <div id="SOHUCS" sid="@Model.Article.ArticleID"></div>
+                    <script type="text/javascript">
+                        (function () {
+                            var appid = 'cysYWPUpD';
+                            var conf = 'prod_8eb09138b3a32fa9b5e12016dccddfa7';
+                            var width = window.innerWidth || document.documentElement.clientWidth;
+                            if (width < 960) {
+                                window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
+                            } else { var loadJs = function (d, a) { var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement; var b = document.createElement("script"); b.setAttribute("type", "text/javascript"); b.setAttribute("charset", "UTF-8"); b.setAttribute("src", d); if (typeof a === "function") { if (window.attachEvent) { b.onreadystatechange = function () { var e = b.readyState; if (e === "loaded" || e === "complete") { b.onreadystatechange = null; a() } } } else { b.onload = a } } c.appendChild(b) }; loadJs("https://changyan.sohu.com/upload/changyan.js", function () { window.changyan.api.config({ appid: appid, conf: conf }) }); }
+                        })();
+                    </script>
 
         }
         else

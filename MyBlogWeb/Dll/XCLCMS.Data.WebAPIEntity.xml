@@ -21,6 +21,11 @@
         </member>
         <member name="P:XCLCMS.Data.WebAPIEntity.APIRequestEntity`1.Url">
             <summary>
+            url
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.WebAPIEntity.APIRequestEntity`1.Reffer">
+            <summary>
             来源url
             </summary>
         </member>

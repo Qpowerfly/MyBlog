@@ -462,6 +462,31 @@
             广告位 Ads
             </summary>
         </member>
+        <member name="T:XCLCMS.Data.CommonHelper.EnumType.SysWebSettingValueTypeEnum">
+            <summary>
+            配置值的类型
+            </summary>
+        </member>
+        <member name="F:XCLCMS.Data.CommonHelper.EnumType.SysWebSettingValueTypeEnum.STR">
+            <summary>
+            字符串 String
+            </summary>
+        </member>
+        <member name="F:XCLCMS.Data.CommonHelper.EnumType.SysWebSettingValueTypeEnum.NUM">
+            <summary>
+            数字 Number
+            </summary>
+        </member>
+        <member name="F:XCLCMS.Data.CommonHelper.EnumType.SysWebSettingValueTypeEnum.JON">
+            <summary>
+            Json
+            </summary>
+        </member>
+        <member name="F:XCLCMS.Data.CommonHelper.EnumType.SysWebSettingValueTypeEnum.SWH">
+            <summary>
+            开关 Switch
+            </summary>
+        </member>
         <member name="T:XCLCMS.Data.CommonHelper.Function">
             <summary>
             系统功能相关
@@ -755,6 +780,26 @@
         <member name="F:XCLCMS.Data.CommonHelper.Function.FunctionEnum.Ads_Edit">
              <summary>
             广告位管理-广告位修改
+             </summary>
+        </member>
+        <member name="F:XCLCMS.Data.CommonHelper.Function.FunctionEnum.Comments_View">
+             <summary>
+            评论管理-评论查看
+             </summary>
+        </member>
+        <member name="F:XCLCMS.Data.CommonHelper.Function.FunctionEnum.Comments_Del">
+             <summary>
+            评论管理-评论删除
+             </summary>
+        </member>
+        <member name="F:XCLCMS.Data.CommonHelper.Function.FunctionEnum.Comments_Add">
+             <summary>
+            评论管理-评论添加
+             </summary>
+        </member>
+        <member name="F:XCLCMS.Data.CommonHelper.Function.FunctionEnum.Comments_Edit">
+             <summary>
+            评论管理-评论修改
              </summary>
         </member>
         <member name="F:XCLCMS.Data.CommonHelper.Function.NormalMerchantFixedFunctionIDList">

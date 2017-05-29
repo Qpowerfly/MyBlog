@@ -149,6 +149,11 @@
             将指定code的SysDic的子项转为options
             </summary>
         </member>
+        <member name="F:XCLCMS.Lib.Common.Comm.AllowUploadExtInfo">
+            <summary>
+            允许上传的附件扩展名信息（小写）
+            </summary>
+        </member>
         <member name="M:XCLCMS.Lib.Common.Comm.GetAttachmentAbsoluteURL(System.Int64)">
             <summary>
             根据文件id，返回用于网站上显示的文件地址
@@ -350,6 +355,21 @@
             web api服务地址
             </summary>
         </member>
+        <member name="P:XCLCMS.Lib.Model.PageGlobalConfig.ClientIP">
+            <summary>
+            clientip
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.PageGlobalConfig.Url">
+            <summary>
+            url
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.PageGlobalConfig.Reffer">
+            <summary>
+            来源url
+            </summary>
+        </member>
         <member name="T:XCLCMS.Lib.Model.SettingModel">
             <summary>
             站点配置model
@@ -428,6 +448,11 @@
         <member name="M:XCLCMS.Lib.WebAPI.AdsAPI.Detail(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
             <summary>
             查询广告信息实体
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.AdsAPI.DetailByCode(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.String})">
+            <summary>
+            根据code来查询广告信息实体
             </summary>
         </member>
         <member name="M:XCLCMS.Lib.WebAPI.AdsAPI.PageList(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.PageListConditionEntity})">
@@ -538,6 +563,36 @@
         <member name="M:XCLCMS.Lib.WebAPI.AttachmentAPI.Delete(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.FileInfo.DeleteEntity})">
             <summary>
             删除附件信息
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.WebAPI.CommentsAPI">
+            <summary>
+            评论管理 API
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.CommentsAPI.Detail(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Int64})">
+            <summary>
+            查询评论信息实体
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.CommentsAPI.PageList(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.PageListConditionEntity})">
+            <summary>
+            查询评论信息分页列表
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.CommentsAPI.Add(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.Comments})">
+            <summary>
+            新增评论信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.CommentsAPI.Update(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.Comments})">
+            <summary>
+            修改评论信息
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.WebAPI.CommentsAPI.Delete(XCLCMS.Data.WebAPIEntity.APIRequestEntity{System.Collections.Generic.List{System.Int64}})">
+            <summary>
+            删除评论信息
             </summary>
         </member>
         <member name="T:XCLCMS.Lib.WebAPI.CommonAPI">

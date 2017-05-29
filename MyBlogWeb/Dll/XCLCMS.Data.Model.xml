@@ -519,6 +519,116 @@
             更新人名
             </summary>
         </member>
+        <member name="T:XCLCMS.Data.Model.Comments">
+            <summary>
+            评论表
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Comments.CommentsID">
+            <summary>
+            CommentsID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Comments.ObjectType">
+            <summary>
+            被评论对象类别(ObjectTypeEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Comments.FK_ObjectID">
+            <summary>
+            被评论对象ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Comments.UserName">
+            <summary>
+            评论者名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Comments.Email">
+            <summary>
+            评论者电子邮件
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Comments.ParentCommentID">
+            <summary>
+            上级评论
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Comments.GoodCount">
+            <summary>
+            点【好】数
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Comments.MiddleCount">
+            <summary>
+            点【中】数
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Comments.BadCount">
+            <summary>
+            点【差】数
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Comments.Contents">
+            <summary>
+            评论内容
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Comments.VerifyState">
+            <summary>
+            审核状态(VerifyStateEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Comments.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Comments.FK_MerchantID">
+            <summary>
+            所属商户号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Comments.FK_MerchantAppID">
+            <summary>
+            所属应用号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Comments.RecordState">
+            <summary>
+            记录状态(RecordStateEnum)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Comments.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Comments.CreaterID">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Comments.CreaterName">
+            <summary>
+            创建者名
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Comments.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Comments.UpdaterID">
+            <summary>
+            更新人ID
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Comments.UpdaterName">
+            <summary>
+            更新人名
+            </summary>
+        </member>
         <member name="T:XCLCMS.Data.Model.Custom.ArticleRelationDetailCondition">
             <summary>
             【获取指定文章的相关联的其它文章信息】的查询条件model
@@ -1699,6 +1809,11 @@
             生产环境值
             </summary>
         </member>
+        <member name="P:XCLCMS.Data.Model.SysWebSetting.ValueType">
+            <summary>
+            值类型（SysWebSettingValueTypeEnum）
+            </summary>
+        </member>
         <member name="P:XCLCMS.Data.Model.SysWebSetting.Remark">
             <summary>
             备注
@@ -2464,6 +2579,126 @@
             
              </summary>
         </member>
+        <member name="T:XCLCMS.Data.Model.View.v_Comments">
+            <summary>
+            v_Comments:实体类(属性说明自动提取数据库字段的描述信息)
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.CommentsID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.ObjectType">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.FK_ObjectID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.UserName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.Email">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.ParentCommentID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.GoodCount">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.MiddleCount">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.BadCount">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.Contents">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.VerifyState">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.Remark">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.FK_MerchantID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.FK_MerchantAppID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.RecordState">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.CreateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.CreaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.CreaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.UpdateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.UpdaterID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.UpdaterName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.MerchantName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_Comments.MerchantAppName">
+             <summary>
+            
+             </summary>
+        </member>
         <member name="T:XCLCMS.Data.Model.View.v_FriendLinks">
             <summary>
             v_FriendLinks:实体类(属性说明自动提取数据库字段的描述信息)
@@ -3155,6 +3390,11 @@
              </summary>
         </member>
         <member name="P:XCLCMS.Data.Model.View.v_SysWebSetting.PrdKeyValue">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.View.v_SysWebSetting.ValueType">
              <summary>
             
              </summary>

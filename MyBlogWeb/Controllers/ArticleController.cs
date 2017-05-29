@@ -38,6 +38,7 @@ namespace MyBlogWeb.Controllers
                 return RedirectToAction("Index");
             }
 
+            //查询当前文章
             var request = XCLCMS.Lib.WebAPI.Library.CreateRequest<long>(base.MainUserToken);
             request.Body = id.Value;
             var response = XCLCMS.Lib.WebAPI.ArticleAPI.Detail(request) ?? new XCLCMS.Data.WebAPIEntity.APIResponseEntity<XCLCMS.Data.Model.View.v_Article>();
@@ -51,17 +52,23 @@ namespace MyBlogWeb.Controllers
             var relationRequest = XCLCMS.Lib.WebAPI.Library.CreateRequest<long>(base.MainUserToken);
             relationRequest.Body = id.Value;
             var relationResponse = XCLCMS.Lib.WebAPI.ArticleAPI.RelationDetail(relationRequest) ?? new XCLCMS.Data.WebAPIEntity.APIResponseEntity<XCLCMS.Data.Model.Custom.ArticleRelationDetailModel>();
-
+            
             var viewModel = new MyBlogWeb.Models.Article.ShowVM();
             viewModel.Article = response.Body ?? new XCLCMS.Data.Model.View.v_Article();
             viewModel.RelationDetail = relationResponse.Body ?? new XCLCMS.Data.Model.Custom.ArticleRelationDetailModel();
-
+            
             if (!string.IsNullOrWhiteSpace(ViewBag.Title))
             {
                 ViewBag.Title = string.Format("{0}—{1}", viewModel.Article.Title, ViewBag.Title);
             }
 
             ViewBag.IsNeedHighlight = true;
+
+            //广告信息
+            var adsRequest = XCLCMS.Lib.WebAPI.Library.CreateRequest<string>(base.MainUserToken);
+            adsRequest.Body = "ABC_ArticleShowBottom";
+            var adsResponse = XCLCMS.Lib.WebAPI.AdsAPI.DetailByCode(adsRequest);
+            viewModel.AdsBottomCode = adsResponse?.Body?.Contents;
 
             return View(viewModel);
         }

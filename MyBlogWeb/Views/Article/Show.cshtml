@@ -43,17 +43,6 @@
 
             <hr />
 
-            <!--广告-->
-            if (!string.IsNullOrWhiteSpace(Model.AdsBottomCode))
-            {
-                <div class="row">
-                    <div class="col-md-12">
-                        @Html.Raw(Model.AdsBottomCode)
-                    </div>
-                </div>
-                <hr />
-            }
-
             <div class="row">
                 <div class="col-md-6">
                     <blockquote>
@@ -108,6 +97,18 @@
                     </div>
                 </div>
             </div>
+
+
+            <!--广告-->
+            if (!string.IsNullOrWhiteSpace(Model.AdsBottomCode))
+            {
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        @Html.Raw(Model.AdsBottomCode)
+                    </div>
+                </div>
+            }
+
 
                     <!--相关文章-->
             if (null != Model.RelationDetail && null != Model.RelationDetail.SameTypeArticleList && Model.RelationDetail.SameTypeArticleList.Count > 0)

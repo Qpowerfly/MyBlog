@@ -462,6 +462,11 @@
             广告位 Ads
             </summary>
         </member>
+        <member name="F:XCLCMS.Data.CommonHelper.EnumType.IDTypeEnum.CMT">
+            <summary>
+            评论 Comments
+            </summary>
+        </member>
         <member name="T:XCLCMS.Data.CommonHelper.EnumType.SysWebSettingValueTypeEnum">
             <summary>
             配置值的类型

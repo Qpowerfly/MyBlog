@@ -654,16 +654,6 @@
             相关文章取前几条
             </summary>
         </member>
-        <member name="P:XCLCMS.Data.Model.Custom.ArticleRelationDetailCondition.MerchantID">
-            <summary>
-            所在商户号
-            </summary>
-        </member>
-        <member name="P:XCLCMS.Data.Model.Custom.ArticleRelationDetailCondition.MerchantAppID">
-            <summary>
-            所在应用号
-            </summary>
-        </member>
         <member name="T:XCLCMS.Data.Model.Custom.ArticleRelationDetailModel">
             <summary>
             文章的相关文章 model

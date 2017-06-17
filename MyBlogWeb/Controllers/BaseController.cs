@@ -18,14 +18,12 @@ namespace MyBlogWeb.Controllers
         {
             get
             {
-                var request = XCLCMS.Lib.WebAPI.Library.CreateRequest<XCLCMS.Data.Model.Custom.UserNamePwd>(null);
-                request.Body = new XCLCMS.Data.Model.Custom.UserNamePwd()
-                {
-                    UserName = XCLNetTools.XML.ConfigClass.GetConfigString("MainUserName"),
-                    Pwd = XCLNetTools.XML.ConfigClass.GetConfigString("MainPwd")
-                };
-                var response = XCLCMS.Lib.WebAPI.OpenAPI.CreateUserToken(request);
-                return null == response ? string.Empty : Convert.ToString(response.Body);
+                var request = XCLCMS.Lib.WebAPI.Library.CreateRequest<XCLCMS.Data.WebAPIEntity.RequestEntity.Open.LogonCheckEntity>(null);
+                request.Body = new XCLCMS.Data.WebAPIEntity.RequestEntity.Open.LogonCheckEntity();
+                request.Body.UserName = XCLNetTools.XML.ConfigClass.GetConfigString("MainUserName");
+                request.Body.Pwd = XCLNetTools.XML.ConfigClass.GetConfigString("MainPwd");
+                var response = XCLCMS.Lib.WebAPI.OpenAPI.LogonCheck(request);
+                return response?.Body?.Token;
             }
         }
 

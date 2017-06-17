@@ -15,7 +15,7 @@
           "ArticleTypeRootID": 300286,
           "MainUserName": "myweb",
           "MainPwd": "67192FB9BEB8A00F714F665E1DBD7022",
-          "WebAPIServiceURL": "http://localhost/XCLCMS.WebAPI/api/"
+          "WebAPIServiceURL": "http://localhost/XCLCMS.WebAPI/v1/"
         },
         "PRD": {
           "AppID": 900115,
@@ -23,7 +23,7 @@
           "ArticleTypeRootID": 300286,
           "MainUserName": "myweb",
           "MainPwd": "E9156AD29C25EEC7ADF4A1D6EC23C0E3",
-          "WebAPIServiceURL": "http://cms.wodeabc.com/api/api/"
+          "WebAPIServiceURL": "http://cms.wodeabc.com/api/v1/"
         }
       }
     },

@@ -815,11 +815,6 @@
             登录检查
             </summary>
         </member>
-        <member name="M:XCLCMS.Lib.WebAPI.OpenAPI.CreateUserToken(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.Custom.UserNamePwd})">
-            <summary>
-            根据用户名和密码生成登录令牌
-            </summary>
-        </member>
         <member name="T:XCLCMS.Lib.WebAPI.SysDicAPI">
             <summary>
             系统字典 API

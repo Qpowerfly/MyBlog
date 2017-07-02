@@ -114,7 +114,7 @@
     <div class="row divSoContent">
         <div class="col-md-{{currentEnginList.length==1?12:6}}" ng-repeat="m in currentEnginList">
             <div class="panel panel-{{$index%2==0?'info':'success'}}">
-                <div class="panel-heading" ng-bind-html="m.txt | htmlContent"></div>
+                <div class="panel-heading"><span ng-bind-html="m.txt | htmlContent"></span><a href="{{m.url}}" class="linkFullScreen" target="_blank"><div class="glyphicon glyphicon-fullscreen" style="float:right;"></div></a></div>
                 <div class="panel-body">
                     <iframe data-url="{{m.url}}" src=""></iframe>
                 </div>
@@ -164,6 +164,7 @@
             kw = encodeURIComponent(kw);
             $(".divSoContent iframe").each(function () {
                 this.src = $(this).attr('data-url') + kw;
+                $(this).closest(".panel").find(".linkFullScreen").attr({ "href": this.src });
             });
             window.history.pushState(null, "", '@Url.Content("~/Common/So?q=")' + kw);
         };

@@ -108,12 +108,10 @@
       <HintPath>Dll\XCLCMS.Lib.dll</HintPath>
     </Reference>
     <Reference Include="XCLNetLogger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Dll\XCLNetLogger.dll</HintPath>
+      <HintPath>..\packages\XCLNetLogger.1.0.0\lib\net40\XCLNetLogger.dll</HintPath>
     </Reference>
-    <Reference Include="XCLNetTools, Version=2.6.6101.42291, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Dll\XCLNetTools.dll</HintPath>
+    <Reference Include="XCLNetTools, Version=2.6.4.39836, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\XCLNetTools.2.6.4\lib\net40\XCLNetTools.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -152,12 +150,6 @@
     <Content Include="Dll\XCLCMS.Data.WebAPIEntity.xml" />
     <Content Include="Dll\XCLCMS.Lib.dll" />
     <Content Include="Dll\XCLCMS.Lib.xml" />
-    <Content Include="Dll\XCLNetLogger.dll" />
-    <Content Include="Dll\XCLNetLogger.xml" />
-    <Content Include="Dll\XCLNetSearch.dll" />
-    <Content Include="Dll\XCLNetSearch.xml" />
-    <Content Include="Dll\XCLNetTools.dll" />
-    <Content Include="Dll\XCLNetTools.xml" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Resources\Css\Base.css" />

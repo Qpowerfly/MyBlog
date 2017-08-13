@@ -70,6 +70,9 @@ namespace MyBlogWeb.Controllers
             var adsResponse = XCLCMS.Lib.WebAPI.AdsAPI.DetailByCode(adsRequest);
             viewModel.AdsBottomCode = adsResponse?.Body?.Contents;
 
+            ViewBag.KeyWords = viewModel.Article.KeyWords;
+            ViewBag.Description = viewModel.Article.Summary;
+
             return View(viewModel);
         }
     }

@@ -27,5 +27,8 @@
     $(window).on("resize", function () {
         resizeArticleImages();
     });
+    $(".XCLArticleContent img").on("load", function () {
+        resizeArticleImages();
+    });
     resizeArticleImages();
 });

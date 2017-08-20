@@ -149,6 +149,10 @@ ul.XCLMenu li {
     height: auto !important;
 }
 
+.divAdsBottom > div {
+overflow:hidden;
+}
+
 @keyframes XCLBannerKF {
     0% {
         color: #fff;

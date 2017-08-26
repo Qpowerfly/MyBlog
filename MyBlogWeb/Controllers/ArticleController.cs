@@ -23,7 +23,7 @@ namespace MyBlogWeb.Controllers
                     RecordState = XCLCMS.Data.CommonHelper.EnumType.RecordStateEnum.N.ToString(),
                     VerifyState = XCLCMS.Data.CommonHelper.EnumType.VerifyStateEnum.YES.ToString(),
                     MerchantID = base.CurrentApplicationMerchant.MerchantID,
-                    MaxPublishTime = DateTime.Now.Date
+                    MaxPublishTime = DateTime.Now
                 }
             };
             var response = XCLCMS.Lib.WebAPI.ArticleAPI.SimplePageList(request).Body ?? new XCLCMS.Data.WebAPIEntity.ResponseEntity.PageListResponseEntity<XCLCMS.Data.Model.View.v_Article>();

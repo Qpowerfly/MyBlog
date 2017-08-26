@@ -280,6 +280,26 @@
             功能权限验证
             </summary>
         </member>
+        <member name="T:XCLCMS.Lib.Model.ActionContextInfoEntity">
+            <summary>
+            请求上下文基本信息实体
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.ActionContextInfoEntity.AppID">
+            <summary>
+            应用号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.ActionContextInfoEntity.AppKey">
+            <summary>
+            应用key
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Lib.Model.ActionContextInfoEntity.UserToken">
+            <summary>
+            用户token令牌
+            </summary>
+        </member>
         <member name="T:XCLCMS.Lib.Model.CommonModel">
             <summary>
             全局公共model

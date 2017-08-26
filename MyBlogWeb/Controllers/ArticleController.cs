@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
 
 namespace MyBlogWeb.Controllers
@@ -21,7 +22,8 @@ namespace MyBlogWeb.Controllers
                     ArticleState = XCLCMS.Data.CommonHelper.EnumType.ArticleStateEnum.PUB.ToString(),
                     RecordState = XCLCMS.Data.CommonHelper.EnumType.RecordStateEnum.N.ToString(),
                     VerifyState = XCLCMS.Data.CommonHelper.EnumType.VerifyStateEnum.YES.ToString(),
-                    MerchantID = base.CurrentApplicationMerchant.MerchantID
+                    MerchantID = base.CurrentApplicationMerchant.MerchantID,
+                    MaxPublishTime = DateTime.Now.Date
                 }
             };
             var response = XCLCMS.Lib.WebAPI.ArticleAPI.SimplePageList(request).Body ?? new XCLCMS.Data.WebAPIEntity.ResponseEntity.PageListResponseEntity<XCLCMS.Data.Model.View.v_Article>();

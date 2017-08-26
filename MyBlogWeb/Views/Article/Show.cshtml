@@ -11,7 +11,7 @@
         {
             <div class="page-header text-center" style="margin-top:10px;">
                 <h2>@Model.Article.Title</h2>
-                <small class="text-muted">分类：@Model.Article.ArticleTypeNames 来源：@Model.Article.FromInfo 作者：@Model.Article.AuthorName  @string.Format("{0:yyyy-MM-dd HH:mm}", Model.Article.CreateTime)</small>
+                <small class="text-muted">分类：@Model.Article.ArticleTypeNames 来源：@Model.Article.FromInfo 作者：@Model.Article.AuthorName  @string.Format("{0:yyyy-MM-dd HH:mm}", Model.Article.PublishTime)</small>
             </div>
 
             if (!string.IsNullOrWhiteSpace(Model.Article.Summary))

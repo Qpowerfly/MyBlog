@@ -26,7 +26,7 @@
                                 分类：@m.ArticleTypeNames
                                 <span class="hidden-xs">来源：@m.FromInfo</span>
                                 <span class="hidden-xs">作者：@m.AuthorName</span>
-                                @string.Format("{0:yyyy-MM-dd HH:mm}", m.CreateTime)
+                                @string.Format("{0:yyyy-MM-dd HH:mm}", m.PublishTime)
                                 <a class="hidden-xs" href="@Url.RouteUrl("DefaultRouter",new { controller="article",action="show",id=m.ArticleID })"><span class="glyphicon glyphicon-hand-right"></span>&nbsp;阅读</a>
                             </div>
                         </blockquote>

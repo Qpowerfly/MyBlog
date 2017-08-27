@@ -129,16 +129,16 @@ ul.XCLMenu li {
 .navbar-nav > li > a, .navbar-brand {
     padding-top: 5px !important;
     padding-bottom: 0 !important;
-    height: 95px;
-    line-height: 95px;
+    height: 85px;
+    line-height: 85px;
 }
 
 .navbar {
-    min-height: 90px !important;
+    min-height: 80px !important;
 }
 
     .navbar .formSearch {
-        line-height: 90px;
+        line-height: 80px;
         margin: 0px;
     }
 
@@ -221,6 +221,6 @@ overflow:hidden;
 
 @media screen and (min-width: 1024px) {
     .XCLBanner {
-        height: 45rem;
+        height: 40rem;
     }
 }

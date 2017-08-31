@@ -4,6 +4,8 @@
 
 body {
     font-size: 1.6rem;
+	word-wrap: break-word; 
+	word-break: normal; 
 }
 
 html, body {
@@ -150,6 +152,10 @@ ul.XCLMenu li {
 }
 
 .divAdsBottom > div {
+overflow:hidden;
+}
+.divAdsBottom ins{
+width:70%!important;
 overflow:hidden;
 }
 

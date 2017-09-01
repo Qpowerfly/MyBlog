@@ -230,3 +230,9 @@ overflow:hidden;
         height: 40rem;
     }
 }
+
+iframe.XCLCodePen {
+    width:90%!important;
+    border:solid 15px #ccc;
+    border-radius:10px;
+}

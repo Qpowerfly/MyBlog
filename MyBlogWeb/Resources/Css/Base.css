@@ -63,7 +63,7 @@ a:not(.btn) {
     background-color: #000 !important;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: conver;
     color: #eee !important;
     animation: XCLBannerKF 10s linear infinite alternate;
 }

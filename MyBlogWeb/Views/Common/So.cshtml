@@ -17,6 +17,26 @@
 </style>
 
 <style type="text/css">
+    body {
+        position: relative;
+    }
+
+    .panel {
+        margin-bottom: 10px;
+    }
+
+    .XCLMainDiv {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .hrBottom, .XCLBottomDiv {
+        display: none;
+    }
+
     .inputbox {
         height: 40px;
         font-size: 18px;
@@ -53,15 +73,23 @@
 
         .divSoContent iframe {
             width: 100%;
-            height: 750px;
             border: none;
         }
 
     .divLinks {
-        font-size: 18px;
+        font-size: 14px;
         word-spacing: 5px;
         letter-spacing: 5px;
         color: #888;
+    }
+
+        .divLinks .panel-body {
+            padding: 5px;
+        }
+
+    .divSoBottom {
+        text-align: center;
+        font-size: 14px;
     }
 </style>
 
@@ -124,7 +152,7 @@
 </div>
 
 <div class="panel  panel-warning divLinks">
-    <div class="panel-heading"><span class="glyphicon glyphicon-globe"></span>Internet</div>
+    @*<div class="panel-heading"><span class="glyphicon glyphicon-globe"></span>Internet</div>*@
     <div class="panel-body">
         <div class="col-md-1">门户：</div>
         <div class="col-md-1"><a href="http://www.qq.com/" target="_blank">腾讯网</a></div>
@@ -145,7 +173,7 @@
         <div class="col-md-1">节目：</div>
         <div class="col-md-1"><a href="http://list.youku.com/show/spm_a2hww.20023042.search.4_id_zd5c211ba91af11e5a080.html" target="_blank">CX六点半</a></div>
         <div class="col-md-1"><a href="http://www.iqiyi.com/a_19rrgifngp.html#vfrm=2-3-0-1" target="_blank">晓说</a></div>
-	<div class="col-md-1"><a href="http://list.youku.com/show/id_z6e782defbfbd0d4e11ef.html?spm=a2h0j.8191423.subscription_wrap.DD~A">晓说2017</a></div>
+        <div class="col-md-1"><a href="http://list.youku.com/show/id_z6e782defbfbd0d4e11ef.html?spm=a2h0j.8191423.subscription_wrap.DD~A">晓说2017</a></div>
         <div class="col-md-1"><a href="http://list.youku.com/show/spm_a2hww.20023042.search.4_id_z5bdbf57c947311e3b8b7.html" target="_blank">罗辑思维</a></div>
 
         <div class="col-md-12"></div>
@@ -154,6 +182,10 @@
         <div class="col-md-1"><a href="http://jd.com" target="_blank">京东</a></div>
         <div class="col-md-1"><a href="http://taobao.com" target="_blank">淘宝</a></div>
     </div>
+</div>
+
+<div class="divSoBottom">
+    <a href="~/">&copy;@(DateTime.Now.Year.ToString()) 我的ABC</a>
 </div>
 
 <script type="text/javascript">
@@ -178,6 +210,13 @@
                 search();
             }
         });
+        var resizeIframe = function () {
+            $(".divSoContent iframe").height($("body").height() - $(".divLinks").height()-220);
+        };
+        $(window).on("resize", function () {
+            resizeIframe();
+        });
+        resizeIframe();
     });
 
     angular.module('soApp', []).controller('so', function ($scope) {
@@ -203,7 +242,7 @@
             url: 'https://www.baidu.com/s?word='
         }, {
             id: 'Google',
-            txt: '谷歌搜索（请自行VPN，若VPN后无法显示，<a href="https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe?utm_source=chrome-app-launcher-info-dialog" target="_blank">请安装该扩展</a>）',
+            txt: '谷歌搜索（请自行<a href="//www.wodeabc.com/article/show/8002015" target="_blank">翻墙</a>，若翻墙后无法显示，<a href="https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe?utm_source=chrome-app-launcher-info-dialog" target="_blank">请安装该扩展</a>）',
             url: 'https://www.google.com.hk/search?q='
         }];
 

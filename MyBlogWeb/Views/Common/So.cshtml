@@ -93,6 +93,8 @@
     }
 </style>
 
+<style stype="text/css" id="styleIframe"></style>
+
 <div ng-app="soApp" ng-controller="so">
     <div class="divSo row">
         <div class="form-horizontal" role="form">
@@ -211,7 +213,8 @@
             }
         });
         var resizeIframe = function () {
-            $(".divSoContent iframe").height($("body").height() - $(".divLinks").height()-220);
+            var h = $("body").height() - $(".divLinks").height() - 220;
+            $("#styleIframe").html(".divSoContent iframe{height:"+h+"px;}");
         };
         $(window).on("resize", function () {
             resizeIframe();

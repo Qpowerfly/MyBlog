@@ -5,9 +5,10 @@
 </div>
 @if (null != ViewBag.IsNeedHighlight && ViewBag.IsNeedHighlight)
 {
-    <script src="~/Resources/Js/highlight/highlight.min.js?v=@(ViewBag.ResourceVersion)"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js?v=@(ViewBag.ResourceVersion)"></script>
 }
-<script src="~/Resources/Js/lazyload/jquery.lazyload.min.js?v=@(ViewBag.ResourceVersion)"></script>
+<script src="https://cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js?v=@(ViewBag.ResourceVersion)"></script>
+
 <script src="~/Resources/Js/App.js?v=@(ViewBag.ResourceVersion)"></script>
 <script type="text/javascript">
         @if (null != ViewBag.IsNeedBaiduSug && ViewBag.IsNeedBaiduSug)

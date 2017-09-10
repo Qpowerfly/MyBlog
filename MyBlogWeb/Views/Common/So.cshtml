@@ -120,7 +120,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="input-group">
-                                <input type="text" class="form-control inputbox" id="txtKW" name="q" baiduSug="1" placeholder="输入您要搜索的内容..." value="@Model.Key" />
+                                <input type="text" class="form-control inputbox" id="txtKW" name="q" autocomplete="off" placeholder="输入您要搜索的内容..." value="@Model.Key" />
                                 <div class="input-group-btn">
                                     <button type="button" class="btn btn-warning searchBtn" id="btnSearch" tabindex="-1">{{currentMenu.txt}}搜索</button>
                                     <button type="button" class="btn btn-success dropdown-toggle searchBtnMenu" data-toggle="dropdown" tabindex="-1">
@@ -154,7 +154,6 @@
 </div>
 
 <div class="panel  panel-warning divLinks">
-    @*<div class="panel-heading"><span class="glyphicon glyphicon-globe"></span>Internet</div>*@
     <div class="panel-body">
         <div class="col-md-1">门户：</div>
         <div class="col-md-1"><a href="http://www.qq.com/" target="_blank">腾讯网</a></div>
@@ -191,6 +190,23 @@
 </div>
 
 <script type="text/javascript">
+    var bingSoCallBackResult = [];
+    var bingSoCallBack = function (m) {
+        bingSoCallBackResult = [];
+        if (!m) {
+            return;
+        }
+        for (var k in m) {
+            if (!m[k] || !m[k].Results || m[k].Results.length == 0 || !m[k].Results[0].Suggests) {
+                return;
+            }
+            bingSoCallBackResult= $.map(m[k].Results[0].Suggests, function (x) {
+                return x.Txt;
+            });
+            return;
+        };
+        return;
+    };
     $(function () {
         var search = function () {
             var kw = $.trim($("#txtKW").val());
@@ -210,6 +226,21 @@
         $("#txtKW").on("keyup", function (e) {
             if (e.keyCode == 13) {
                 search();
+            }
+        }).autoComplete({
+            minChars: 1,
+            source: function (term, response) {
+                $.ajax({
+                    type:"get",
+                    dataType: "jsonp",
+                    data: { "q": term },
+                    url: "https://api.bing.com/qsonhs.aspx?type=cb",
+                    jsonp: "cb",
+                    jsonpCallback:"bingSoCallBack",
+                    success: function (data) {
+                        response(bingSoCallBackResult);
+                    }
+                });
             }
         });
         var resizeIframe = function () {

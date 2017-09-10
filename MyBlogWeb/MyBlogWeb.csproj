@@ -25,6 +25,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TargetFrameworkProfile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -162,26 +163,9 @@
     <Content Include="Resources\Images\banners\6.jpg" />
     <Content Include="Resources\Images\logo.gif" />
     <Content Include="Resources\Images\wxpay.jpg" />
-    <Content Include="Resources\Js\angular.min.js" />
     <Content Include="Resources\Js\App.js" />
-    <Content Include="Resources\Js\bootstrap\css\bootstrap-theme.css" />
-    <Content Include="Resources\Js\bootstrap\css\bootstrap-theme.min.css" />
-    <Content Include="Resources\Js\bootstrap\css\bootstrap.css" />
-    <Content Include="Resources\Js\bootstrap\css\bootstrap.min.css" />
-    <Content Include="Resources\Js\bootstrap\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Resources\Js\bootstrap\js\bootstrap.js" />
-    <Content Include="Resources\Js\bootstrap\js\bootstrap.min.js" />
-    <Content Include="Resources\Js\bootstrap\js\npm.js" />
-    <Content Include="Resources\Js\highlight\highlight.min.js" />
     <Content Include="Resources\Js\highlight\highlightjs-line-numbers.min.js" />
     <Content Include="Resources\Js\highlight\tomorrow-night-bright.css" />
-    <Content Include="Resources\Js\Jquery\jquery-1.11.2.js" />
-    <Content Include="Resources\Js\Jquery\jquery-1.11.2.min.js">
-      <DependentUpon>jquery-1.11.2.js</DependentUpon>
-    </Content>
-    <Content Include="Resources\Js\json2.min.js" />
-    <Content Include="Resources\Js\LAB.min.js" />
-    <Content Include="Resources\Js\lazyload\jquery.lazyload.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -202,12 +186,6 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
-    <Content Include="Resources\Js\bootstrap\css\bootstrap-theme.css.map" />
-    <Content Include="Resources\Js\bootstrap\css\bootstrap.css.map" />
-    <Content Include="Resources\Js\bootstrap\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Resources\Js\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Resources\Js\bootstrap\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Resources\Js\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Layout\Footer.cshtml" />
     <Content Include="Views\Layout\Header.cshtml" />
     <Content Include="Views\Layout\Main.cshtml" />

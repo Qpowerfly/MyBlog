@@ -209,6 +209,7 @@
     };
     $(function () {
         var search = function () {
+            $(".autocomplete-suggestions").hide();
             var kw = $.trim($("#txtKW").val());
             if (kw == '') return;
             kw = encodeURIComponent(kw);

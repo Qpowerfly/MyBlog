@@ -191,8 +191,8 @@
 
 <script type="text/javascript">
     var bingSoCallBackResult = [];
+    var bingSoAjaxObject = null;
     var bingSoCallBack = function (m) {
-        bingSoCallBackResult = [];
         if (!m) {
             return;
         }
@@ -231,7 +231,9 @@
         }).autoComplete({
             minChars: 1,
             source: function (term, response) {
-                $.ajax({
+                bingSoCallBackResult = [];
+                bingSoAjaxObject && bingSoAjaxObject.abort();
+                bingSoAjaxObject=$.ajax({
                     type:"get",
                     dataType: "jsonp",
                     data: { "q": term },

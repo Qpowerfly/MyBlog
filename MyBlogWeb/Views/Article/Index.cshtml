@@ -17,6 +17,12 @@
                                 <img class="media-object img-rounded lazy" data-original="@XCLCMS.Lib.Common.Comm.GetAttachmentAbsoluteURL(m.MainImage1.GetValueOrDefault())" alt="@m.Title" style="width:250px;height:160px;">
                             </a>
                         </div>
+
+                        <div class="media-left visible-xs-block XCLArticleImage" style="padding:0;">
+                            <a href="@Url.RouteUrl("DefaultRouter",new { controller="article",action="show",id=m.ArticleID })" class="thumbnail" title="@m.Title">
+                                <img class="media-object img-rounded lazy" data-original="@XCLCMS.Lib.Common.Comm.GetAttachmentAbsoluteURL(m.MainImage1.GetValueOrDefault())" alt="@m.Title" style="width:100%;">
+                            </a>
+                        </div>
                     }
                     <div class="media-body">
                         <h3 class="media-heading"><a href="@Url.RouteUrl("DefaultRouter",new { controller="article",action="show",id=m.ArticleID })">@m.Title</a></h3>

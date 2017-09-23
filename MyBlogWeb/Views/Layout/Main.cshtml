@@ -42,9 +42,9 @@
                         }
                             <li activeReg="/Common/So"><a href="@Url.RouteUrl("DefaultRouter",new { controller="Common",action="So" })">导航搜索</a></li>
                         </ul>
-                        <form class="navbar-form navbar-right formSearch" role="search">
+                        <form class="navbar-form navbar-right formSearch" role="search" action="" onsubmit="this.action = 'https://cn.bing.com/search?q=site%3Awodeabc.com+' + encodeURIComponent($.trim($('#txtSearch').val())); return true;" method="post" target="_blank">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="bdcsMain" />
+                                <input type="text" class="form-control" id="txtSearch"/>
                             </div>
                             <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span>站内搜索</button>
                         </form>
@@ -67,7 +67,5 @@
     <div class="jumbotron container-fluid XCLBottomDiv" style="margin:0px;">
         @Html.Partial("~/Views/Layout/Footer.cshtml")
     </div>
-    <!--百度站内搜索-->
-    <script type="text/javascript">(function () { document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E')); var bdcs = document.createElement('script'); bdcs.type = 'text/javascript'; bdcs.async = true; bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=7975922809277711567' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date() / 3600000); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(bdcs, s); })();</script>
 </body>
 </html>

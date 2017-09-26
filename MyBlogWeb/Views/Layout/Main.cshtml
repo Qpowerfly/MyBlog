@@ -40,7 +40,6 @@
                         <li activeReg="/Article/Index/t@(tp.SysDicID)/"><a href="@Url.Action("Index","Article",new { ArticleType=tp.SysDicID,Page=1})">@tp.DicName</a></li>
                             }
                         }
-                            <li activeReg="/Common/Ctrip"><a href="@Url.RouteUrl("DefaultRouter",new { controller="Common",action="Ctrip" })"><span class="XCLRed">特价机酒</span></a></li>
                             <li activeReg="/Common/So"><a href="@Url.RouteUrl("DefaultRouter",new { controller="Common",action="So" })">导航搜索</a></li>
                         </ul>
                         <form class="navbar-form navbar-right formSearch" role="search" action="" onsubmit="this.action = 'https://cn.bing.com/search?q=site%3Awodeabc.com+' + encodeURIComponent($.trim($('#txtSearch').val())); return true;" method="post" target="_blank">

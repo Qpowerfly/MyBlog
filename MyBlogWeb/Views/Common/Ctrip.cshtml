@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "~/Views/Layout/Main.cshtml";
+}
+<script src="https://cdn.bootcss.com/iframe-resizer/3.5.14/iframeResizer.min.js"></script>
+<style type="text/css">
+    iframe {
+        width: 100%;
+        border: none;
+    }
+</style>
+
+<iframe src="http://u.ctrip.com/HotelCSPSit/PhoenixPage/index.html?allianceid=698455&Sid=1236041"></iframe>
+
+<script type="text/javascript">
+    $(function () {
+        $('iframe').iFrameResize({
+            minHeight: 1500
+        });
+    });
+</script>

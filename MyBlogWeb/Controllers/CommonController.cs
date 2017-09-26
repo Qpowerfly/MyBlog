@@ -39,5 +39,10 @@ namespace MyBlogWeb.Controllers
             ViewBag.Title = "导航搜索";
             return View(viewModel);
         }
+
+        public ActionResult Ctrip()
+        {
+            return View();
+        }
     }
 }

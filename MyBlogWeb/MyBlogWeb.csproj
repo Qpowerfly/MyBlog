@@ -215,7 +215,6 @@
     <None Include="Properties\PublishProfiles\111.pubxml" />
     <Content Include="Views\Common\So.cshtml" />
     <None Include="Properties\PublishProfiles\publish.pubxml" />
-    <Content Include="Views\Common\Ctrip.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

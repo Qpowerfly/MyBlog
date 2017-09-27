@@ -75,6 +75,16 @@ namespace MyBlogWeb.Controllers
             var adsResponse = XCLCMS.Lib.WebAPI.AdsAPI.DetailByCode(adsRequest);
             viewModel.AdsBottomCode = adsResponse?.Body?.Contents;
 
+            //标签信息
+            var tagsRequest = XCLCMS.Lib.WebAPI.Library.CreateRequest<XCLCMS.Data.Model.Custom.Tags_ObjectTagsCondition>(base.MainUserToken);
+            tagsRequest.Body = new XCLCMS.Data.Model.Custom.Tags_ObjectTagsCondition();
+            tagsRequest.Body.ObjectID = viewModel.Article.ArticleID;
+            tagsRequest.Body.ObjectType = XCLCMS.Data.CommonHelper.EnumType.ObjectTypeEnum.ART.ToString();
+            tagsRequest.Body.FK_MerchantAppID = base.CurrentApplicationMerchantApp.MerchantAppID;
+            tagsRequest.Body.FK_MerchantID = base.CurrentApplicationMerchantApp.FK_MerchantID;
+            var tagsResponse = XCLCMS.Lib.WebAPI.TagsAPI.GetObjectTags(tagsRequest);
+            viewModel.TagList = tagsResponse?.Body;
+
             ViewBag.KeyWords = viewModel.Article.KeyWords;
             ViewBag.Description = viewModel.Article.Summary;
 

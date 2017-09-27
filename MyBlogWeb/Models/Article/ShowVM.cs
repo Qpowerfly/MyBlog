@@ -13,5 +13,7 @@ namespace MyBlogWeb.Models.Article
         public XCLCMS.Data.Model.Custom.ArticleRelationDetailModel RelationDetail { get; set; }
 
         public string AdsBottomCode { get; set; }
+
+        public List<XCLCMS.Data.Model.Tags> TagList { get; set; }
     }
 }

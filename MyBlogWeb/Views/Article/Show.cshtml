@@ -27,6 +27,17 @@
                 @Html.Raw(Model.Article.Contents)
             </div>
 
+            if (null != Model.TagList && Model.TagList.Count > 0)
+            {
+                <p>
+                    <span class="glyphicon glyphicon-tag XCLGray"></span>
+                    @foreach (var tag in Model.TagList)
+                    {
+                        <span class="label label-success">@tag.TagName</span>
+                    }
+                </p>
+            }
+
             <p class="text-right text-muted">
                 编辑：@Model.Article.UpdaterName
                 最后更新于：@string.Format("{0:yyyy-MM-dd HH:mm}", Model.Article.UpdateTime)
@@ -98,7 +109,6 @@
                 </div>
             </div>
 
-
             <!--广告-->
             if (!string.IsNullOrWhiteSpace(Model.AdsBottomCode))
             {
@@ -108,7 +118,6 @@
                     </div>
                 </div>
             }
-
 
                     <!--相关文章-->
             if (null != Model.RelationDetail && null != Model.RelationDetail.SameTypeArticleList && Model.RelationDetail.SameTypeArticleList.Count > 0)
@@ -134,10 +143,10 @@
                 </small>
             </p>
 
-                    <hr />
+            <hr />
 
                     <!--PC和WAP自适应版-->
-                    <div id="SOHUCS" sid="@Model.Article.ArticleID"></div>
+            <div id="SOHUCS" sid="@Model.Article.ArticleID"></div>
                     <script type="text/javascript">
                         (function () {
                             var appid = 'cysYWPUpD';

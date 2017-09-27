@@ -1108,6 +1108,11 @@
             查询标签信息分页列表
             </summary>
         </member>
+        <member name="M:XCLCMS.Lib.WebAPI.TagsAPI.GetObjectTags(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.Model.Custom.Tags_ObjectTagsCondition})">
+            <summary>
+            查询指定对象的所有标签列表
+            </summary>
+        </member>
         <member name="M:XCLCMS.Lib.WebAPI.TagsAPI.IsExistTagName(XCLCMS.Data.WebAPIEntity.APIRequestEntity{XCLCMS.Data.WebAPIEntity.RequestEntity.Tags.IsExistTagNameEntity})">
             <summary>
             判断标签标题是否存在

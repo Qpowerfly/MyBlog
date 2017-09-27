@@ -639,11 +639,6 @@
             文章ID
             </summary>
         </member>
-        <member name="P:XCLCMS.Data.Model.Custom.ArticleRelationDetailCondition.IsASC">
-            <summary>
-            是否按主键升序排列
-            </summary>
-        </member>
         <member name="P:XCLCMS.Data.Model.Custom.ArticleRelationDetailCondition.ArticleRecordState">
             <summary>
             记录状态
@@ -702,6 +697,11 @@
         <member name="P:XCLCMS.Data.Model.Custom.ArticleSearchCondition.MerchantID">
             <summary>
             商户号
+            </summary>
+        </member>
+        <member name="P:XCLCMS.Data.Model.Custom.ArticleSearchCondition.MaxPublishTime">
+            <summary>
+            发布时间的最大值
             </summary>
         </member>
         <member name="T:XCLCMS.Data.Model.Custom.AttachmentWithSubModel">

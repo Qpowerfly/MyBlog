@@ -6,6 +6,7 @@ namespace MyBlogWeb.Controllers
 {
     public class ArticleController : BaseController
     {
+        [OutputCache(Duration = 300, VaryByParam = "page;articleType")]
         public ActionResult Index(int? page, long? articleType)
         {
             var viewModel = new MyBlogWeb.Models.Article.ListVM();
@@ -33,6 +34,7 @@ namespace MyBlogWeb.Controllers
             return View(viewModel);
         }
 
+        [OutputCache(Duration =300,VaryByParam ="id")]
         public ActionResult Show(long? id)
         {
             if (!id.HasValue)

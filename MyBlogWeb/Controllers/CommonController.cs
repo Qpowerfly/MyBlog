@@ -29,6 +29,7 @@ namespace MyBlogWeb.Controllers
         /// <summary>
         /// 搜索和导航
         /// </summary>
+        [OutputCache(Duration = 3600)]
         public ActionResult So()
         {
             var viewModel = new Models.Common.SoVM();

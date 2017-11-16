@@ -180,8 +180,17 @@
         <div class="col-md-12"></div>
 
         <div class="col-md-1">购物：</div>
-        <div class="col-md-1"><a href="http://jd.com" target="_blank">京东</a></div>
-        <div class="col-md-1"><a href="http://taobao.com" target="_blank">淘宝</a></div>
+        <div class="col-md-1">
+            @if (this.Request.Url.Scheme.ToUpper() == "HTTP")
+            {
+                <a href="http://union-click.jd.com/jdc?e=0&p=AyIPZRprFDJWWA1FBCVbV0IUEEULRFRBSkAOClBMW2VyJWxWZF8CazhtSnl8MF4sEFAVTyldVxlsEQZVHUcVAg4HUgpbHQkXBF4YUiUCEwRRHF8VBxUHZRtaFAMQD1EaWB0yIgdUKxB7AyIHVBJbEQATAlUdaxUGEgZcGVgRBxsGVR9rEjJbQwdFBENfSgdWGWslMiI3ZRprFA%3D%3D&t=W1dCFBBFC0RUQUpADgpQTFs%3D" target="_blank">京东</a>
+            }
+            else
+            {
+                <a href="https://union-click.jd.com/jdc?e=0&p=AyIPZRprFDJWWA1FBCVbV0IUEEULRFRBSkAOClBMW2VzDhJRdnFdSD5iRkdsVX4TU0tSABRrVxlsEQZVHUcVAg4HUgpbHQkXD14ZWiUCEwRRHF8VBxUHZRtaFAMQD1EaWB0yIgdUKxB7AyIHVBJaHAcaA1UZaxUGEgZcGVgdBBMPVRhrEjJbQwdFBENfSgdWGWslMiI3ZRprFA%3D%3D&t=W1dCFBBFC0RUQUpADgpQTFs%3D" target="_blank">京东</a>
+            }
+        </div>
+        <div class="col-md-1"><a href="https://ai.taobao.com/search/index.htm?fcat=50102996&key=女装&pid=mm_24125707_36080531_149642272" target="_blank">淘宝</a></div>
         <div class="col-md-1"><a href="http://u.ctrip.com/union/CtripRedirect.aspx?TypeID=2&AllianceID=698455&sid=1236041&ouid=&app=0101B00&jumpUrl=http://e.ctrip.com/flight/eflightonline/SearchFlights.aspx" target="_blank">机票</a></div>
         <div class="col-md-1"><a href="http://u.ctrip.com/union/CtripRedirect.aspx?TypeID=2&AllianceID=698455&sid=1236041&ouid=&app=0101A00&jumpUrl=http://hotels.ctrip.com/domestic/searchhotel.aspx" target="_blank">酒店</a></div>
     </div>

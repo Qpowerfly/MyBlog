@@ -6,7 +6,6 @@
     <add key="UnobtrusiveJavaScriptEnabled" value="true" />
 
     <!--应用号-->
-    <add key="AppID" value="${config.AppID}" />
     <add key="AppKey" value="${config.AppKey}" />
     <!--文章分类根节点ID-->
     <add key="ArticleTypeRootID" value="${config.ArticleTypeRootID}" />

@@ -257,6 +257,11 @@
             视频 Video
             </summary>
         </member>
+        <member name="F:XCLCMS.Data.CommonHelper.EnumType.AttachmentFormatTypeEnum.MUS">
+            <summary>
+            音频 Music
+            </summary>
+        </member>
         <member name="F:XCLCMS.Data.CommonHelper.EnumType.AttachmentFormatTypeEnum.RAR">
             <summary>
             压缩包 RAR

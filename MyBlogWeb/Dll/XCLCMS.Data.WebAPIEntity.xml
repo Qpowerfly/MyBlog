@@ -39,11 +39,6 @@
             request的数据
             </summary>
         </member>
-        <member name="P:XCLCMS.Data.WebAPIEntity.APIRequestEntity`1.AppID">
-            <summary>
-            应用程序商户应用号
-            </summary>
-        </member>
         <member name="P:XCLCMS.Data.WebAPIEntity.APIRequestEntity`1.AppKey">
             <summary>
             应用程序AppKey

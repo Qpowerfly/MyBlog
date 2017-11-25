@@ -124,11 +124,6 @@
             获取当前系统所处环境
             </summary>
         </member>
-        <member name="P:XCLCMS.Lib.Common.Comm.AppID">
-            <summary>
-            获取当前应用ID
-            </summary>
-        </member>
         <member name="P:XCLCMS.Lib.Common.Comm.AppKey">
             <summary>
             获取当前应用AppKey
@@ -188,6 +183,59 @@
         <member name="M:XCLCMS.Lib.Common.Comm.GetCurrentApplicationMerchantAppInfo">
             <summary>
             获取当前应用程序的商户应用信息
+            </summary>
+        </member>
+        <member name="T:XCLCMS.Lib.Common.FastAPI">
+            <summary>
+            web api 快速调用
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Common.FastAPI.CommonAPI_GenerateID(System.String,XCLCMS.Data.WebAPIEntity.RequestEntity.Common.GenerateIDEntity)">
+            <summary>
+            生成ID
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Common.FastAPI.MerchantAPI_GetMerchantTypeDic(System.String)">
+            <summary>
+            获取商户类型
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Common.FastAPI.SysDicAPI_GetPassTypeDic(System.String)">
+            <summary>
+            获取证件类型
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Common.FastAPI.SysDicAPI_GetLayerListBySysDicID(System.String,XCLCMS.Data.WebAPIEntity.RequestEntity.SysDic.GetLayerListBySysDicIDEntity)">
+            <summary>
+            获取当前sysDicID所属的层级list
+            如:根目录/子目录/文件
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Common.FastAPI.SysDicAPI_GetSystemMenuModelList(System.String)">
+            <summary>
+            获取XCLCMS管理后台系统的菜单
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Common.FastAPI.SysDicAPI_GetChildListByID(System.String,System.Int64)">
+            <summary>
+            根据SysDicID查询其子项
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Common.FastAPI.SysFunctionAPI_GetLayerListBySysFunctionId(System.String,XCLCMS.Data.WebAPIEntity.RequestEntity.SysFunction.GetLayerListBySysFunctionIdEntity)">
+            <summary>
+            获取当前SysFunctionID所属的层级list
+            如:根目录/子目录/文件
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Common.FastAPI.SysFunctionAPI_GetListByRoleID(System.String,System.Int64)">
+            <summary>
+            获取指定角色的所有功能
+            </summary>
+        </member>
+        <member name="M:XCLCMS.Lib.Common.FastAPI.SysRoleAPI_GetLayerListBySysRoleID(System.String,XCLCMS.Data.WebAPIEntity.RequestEntity.SysRole.GetLayerListBySysRoleIDEntity)">
+            <summary>
+            获取当前SysRoleID所属的层级list
+            如:根目录/子目录/文件
             </summary>
         </member>
         <member name="T:XCLCMS.Lib.Common.LoginHelper">
@@ -285,11 +333,6 @@
             请求上下文基本信息实体
             </summary>
         </member>
-        <member name="P:XCLCMS.Lib.Model.ActionContextInfoEntity.AppID">
-            <summary>
-            应用号
-            </summary>
-        </member>
         <member name="P:XCLCMS.Lib.Model.ActionContextInfoEntity.AppKey">
             <summary>
             应用key
@@ -318,11 +361,6 @@
         <member name="T:XCLCMS.Lib.Model.PageGlobalConfig">
             <summary>
             页面全局配置（序列化为json）
-            </summary>
-        </member>
-        <member name="P:XCLCMS.Lib.Model.PageGlobalConfig.AppID">
-            <summary>
-            当前应用程序的应用号
             </summary>
         </member>
         <member name="P:XCLCMS.Lib.Model.PageGlobalConfig.AppKey">
@@ -677,7 +715,7 @@
         </member>
         <member name="T:XCLCMS.Lib.WebAPI.Library">
             <summary>
-            WEB API 公共库
+            WEB API Client
             </summary>
         </member>
         <member name="M:XCLCMS.Lib.WebAPI.Library.Request``2(XCLCMS.Data.WebAPIEntity.APIRequestEntity{``0},System.String,System.Boolean)">
@@ -696,54 +734,6 @@
             创建request对象
             </summary>
             <returns>request对象</returns>
-        </member>
-        <member name="M:XCLCMS.Lib.WebAPI.Library.CommonAPI_GenerateID(System.String,XCLCMS.Data.WebAPIEntity.RequestEntity.Common.GenerateIDEntity)">
-            <summary>
-            生成ID
-            </summary>
-        </member>
-        <member name="M:XCLCMS.Lib.WebAPI.Library.MerchantAPI_GetMerchantTypeDic(System.String)">
-            <summary>
-            获取商户类型
-            </summary>
-        </member>
-        <member name="M:XCLCMS.Lib.WebAPI.Library.SysDicAPI_GetPassTypeDic(System.String)">
-            <summary>
-            获取证件类型
-            </summary>
-        </member>
-        <member name="M:XCLCMS.Lib.WebAPI.Library.SysDicAPI_GetLayerListBySysDicID(System.String,XCLCMS.Data.WebAPIEntity.RequestEntity.SysDic.GetLayerListBySysDicIDEntity)">
-            <summary>
-            获取当前sysDicID所属的层级list
-            如:根目录/子目录/文件
-            </summary>
-        </member>
-        <member name="M:XCLCMS.Lib.WebAPI.Library.SysDicAPI_GetSystemMenuModelList(System.String)">
-            <summary>
-            获取XCLCMS管理后台系统的菜单
-            </summary>
-        </member>
-        <member name="M:XCLCMS.Lib.WebAPI.Library.SysDicAPI_GetChildListByID(System.String,System.Int64)">
-            <summary>
-            根据SysDicID查询其子项
-            </summary>
-        </member>
-        <member name="M:XCLCMS.Lib.WebAPI.Library.SysFunctionAPI_GetLayerListBySysFunctionId(System.String,XCLCMS.Data.WebAPIEntity.RequestEntity.SysFunction.GetLayerListBySysFunctionIdEntity)">
-            <summary>
-            获取当前SysFunctionID所属的层级list
-            如:根目录/子目录/文件
-            </summary>
-        </member>
-        <member name="M:XCLCMS.Lib.WebAPI.Library.SysFunctionAPI_GetListByRoleID(System.String,System.Int64)">
-            <summary>
-            获取指定角色的所有功能
-            </summary>
-        </member>
-        <member name="M:XCLCMS.Lib.WebAPI.Library.SysRoleAPI_GetLayerListBySysRoleID(System.String,XCLCMS.Data.WebAPIEntity.RequestEntity.SysRole.GetLayerListBySysRoleIDEntity)">
-            <summary>
-            获取当前SysRoleID所属的层级list
-            如:根目录/子目录/文件
-            </summary>
         </member>
         <member name="T:XCLCMS.Lib.WebAPI.MerchantAPI">
             <summary>

@@ -10,7 +10,6 @@
       ],
       "val": {
         "DEV": {
-          "AppID": 900115,
           "AppKey": "ABBCABF58A396B4BD696F837BFA2A3EA",
           "ArticleTypeRootID": 300286,
           "MainUserName": "myweb",
@@ -18,7 +17,6 @@
           "WebAPIServiceURL": "http://localhost/XCLCMS.WebAPI/v1/"
         },
         "PRD": {
-          "AppID": 900115,
           "AppKey": "ABBCABF58A396B4BD696F837BFA2A3EA",
           "ArticleTypeRootID": 300286,
           "MainUserName": "myweb",

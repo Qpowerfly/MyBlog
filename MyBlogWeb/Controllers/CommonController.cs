@@ -39,5 +39,14 @@ namespace MyBlogWeb.Controllers
             ViewBag.Title = "导航搜索";
             return View(viewModel);
         }
+
+        /// <summary>
+        /// react版的导航搜索
+        /// </summary>
+        public ActionResult So2()
+        {
+            ViewBag.IsShowHeader = false;
+            return View();
+        }
     }
 }

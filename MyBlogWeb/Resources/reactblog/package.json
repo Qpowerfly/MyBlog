@@ -1,0 +1,22 @@
+{
+  "name": "reactblog",
+  "version": "1.0.0",
+  "description": "my blog via react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "XCL",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^16.0.31",
+    "@types/react-dom": "^16.0.3",
+    "@types/react-redux": "^5.0.14",
+    "awesome-typescript-loader": "^3.4.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "source-map-loader": "^0.2.3",
+    "typescript": "^2.6.2"
+  }
+}

@@ -952,7 +952,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(2);
 var ReactDOM = __webpack_require__(18);
-var inputSo_1 = __webpack_require__(27);
+var soContainer_1 = __webpack_require__(27);
 var So = /** @class */ (function (_super) {
     __extends(So, _super);
     function So() {
@@ -960,7 +960,7 @@ var So = /** @class */ (function (_super) {
     }
     So.prototype.render = function () {
         return React.createElement("div", null,
-            React.createElement(inputSo_1.default, null));
+            React.createElement(soContainer_1.default, null));
     };
     return So;
 }(React.Component));
@@ -18283,6 +18283,7 @@ module.exports = camelize;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(2);
+var engineSelect_1 = __webpack_require__(28);
 var InputSo = function () {
     return React.createElement("div", { className: "divSo row" },
         React.createElement("div", { className: "form-horizontal", role: "form" },
@@ -18290,31 +18291,76 @@ var InputSo = function () {
                 React.createElement("label", { className: "col-md-3 control-label" }),
                 React.createElement("div", { className: "col-md-6" },
                     React.createElement("a", { href: "http://news.baidu.com/", className: "label label-info", target: "_blank" }, "\u767E\u5EA6\u65B0\u95FB"),
+                    "\u00A0",
                     React.createElement("a", { href: "http://zhidao.baidu.com/", className: "label label-info", target: "_blank" }, "\u767E\u5EA6\u77E5\u9053"),
+                    "\u00A0",
                     React.createElement("a", { href: "http://music.baidu.com/", className: "label label-info", target: "_blank" }, "\u767E\u5EA6\u97F3\u4E50"),
+                    "\u00A0",
                     React.createElement("a", { href: "http://baike.baidu.com/", className: "label label-info", target: "_blank" }, "\u767E\u5EA6\u767E\u79D1"),
+                    "\u00A0",
                     React.createElement("a", { href: "http://ditu.baidu.com/", className: "label label-info", target: "_blank" }, "\u767E\u5EA6\u5730\u56FE"),
+                    "\u00A0",
                     React.createElement("a", { href: "http://news.google.com/", className: "label label-success", target: "_blank" }, "\u8C37\u6B4C\u65B0\u95FB"),
+                    "\u00A0",
                     React.createElement("a", { href: "http://music.google.com/", className: "label label-success", target: "_blank" }, "\u8C37\u6B4C\u97F3\u4E50"),
+                    "\u00A0",
                     React.createElement("a", { href: "http://images.google.com/", className: "label label-success", target: "_blank" }, "\u8C37\u6B4C\u56FE\u7247"),
-                    React.createElement("a", { href: "http://maps.google.com/", className: "label label-success", target: "_blank" }, "\u8C37\u6B4C\u5730\u56FE")),
+                    "\u00A0",
+                    React.createElement("a", { href: "http://maps.google.com/", className: "label label-success", target: "_blank" }, "\u8C37\u6B4C\u5730\u56FE"),
+                    "\u00A0"),
                 React.createElement("div", { className: "col-md-3" })),
             React.createElement("div", { className: "form-group" },
                 React.createElement("label", { className: "col-md-3 control-label" }),
                 React.createElement("div", { className: "col-md-6" },
                     React.createElement("div", { className: "row" },
                         React.createElement("div", { className: "col-md-12" },
-                            React.createElement("div", { className: "input-group" },
-                                React.createElement("input", { type: "text", className: "form-control inputbox", id: "txtKW", name: "q", autoComplete: "off", placeholder: "输入您要搜索的内容...", value: "" }),
-                                React.createElement("div", { className: "input-group-btn" },
-                                    React.createElement("button", { type: "button", className: "btn btn-warning searchBtn ng-binding", id: "btnSearch" }, "\u767E\u5EA6\u8C37\u6B4C\u641C\u7D22"),
-                                    React.createElement("button", { type: "button", className: "btn btn-success dropdown-toggle searchBtnMenu", "data-toggle": "dropdown" },
-                                        React.createElement("span", { className: "caret" }),
-                                        React.createElement("span", { className: "sr-only" }, "Toggle Dropdown")),
-                                    React.createElement("ul", { className: "dropdown-menu dropdown-menu-right", role: "menu" })))))),
+                            React.createElement(engineSelect_1.default, null)))),
                 React.createElement("div", { className: "col-md-3" }))));
 };
-exports.default = InputSo; //connect()(InputSo);
+exports.default = InputSo;
+
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(2);
+var EngineSelect = /** @class */ (function (_super) {
+    __extends(EngineSelect, _super);
+    function EngineSelect() {
+        var _this = _super.call(this, {}, {}) || this;
+        _this.searchClick = _this.searchClick.bind(_this);
+        return _this;
+    }
+    EngineSelect.prototype.searchClick = function () {
+        alert(11111);
+    };
+    EngineSelect.prototype.render = function () {
+        return React.createElement("div", { className: "input-group" },
+            React.createElement("input", { type: "text", className: "form-control inputbox", id: "txtKW", name: "q", autoComplete: "off", placeholder: "输入您要搜索的内容...", value: "" }),
+            React.createElement("div", { className: "input-group-btn" },
+                React.createElement("button", { type: "button", className: "btn btn-warning searchBtn ng-binding", id: "btnSearch", onClick: this.searchClick }, "\u767E\u5EA6\u8C37\u6B4C\u641C\u7D22"),
+                React.createElement("button", { type: "button", className: "btn btn-success dropdown-toggle searchBtnMenu", "data-toggle": "dropdown" },
+                    React.createElement("span", { className: "caret" }),
+                    React.createElement("span", { className: "sr-only" }, "Toggle Dropdown")),
+                React.createElement("ul", { className: "dropdown-menu dropdown-menu-right", role: "menu" })));
+    };
+    return EngineSelect;
+}(React.Component));
+exports.default = EngineSelect;
 
 
 /***/ })

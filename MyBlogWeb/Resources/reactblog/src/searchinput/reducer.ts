@@ -7,7 +7,10 @@ export default (state: ISearchStore, action: ISearchAction): ISearchStore => {
         case actionTypes.ChangeEngineOption:
             state = { ...state }
             break
+        case actionTypes.SearchButtonClick:
+            break;
+        case actionTypes.SearchKeyWordsChange:
+            break;
     }
     return state;
 };
-

@@ -8,6 +8,8 @@ interface IStateProps {
 }
 interface IDispatchProps {
     searchClick: () => void
+    keyWordChange: () => void
+    searchEngineChange: () => void
 }
 
 class EngineSelect extends React.Component<IStateProps & IDispatchProps> {
@@ -18,11 +20,11 @@ class EngineSelect extends React.Component<IStateProps & IDispatchProps> {
 
         let engineListStr = '';
         (this.props.engineList || []).forEach((v, idx) => {
-            engineListStr += `<li><a href="javascript:void(0);"><span class="glyphicon glyphicon-ok ng-scope"></span>${v}</a></li>`;
+            engineListStr += <li><a href="javascript:void(0);" onClick={this.props.searchEngineChange}><span className="glyphicon glyphicon-ok ng-scope"></span>{v}</a></li>;
         });
 
         return <div className="input-group">
-            <input type="text" className="form-control inputbox" id="txtKW" name="q" autoComplete="off" placeholder="输入您要搜索的内容..." value="" />
+            <input type="text" className="form-control inputbox" id="txtKW" name="q" autoComplete="off" placeholder="输入您要搜索的内容..." value="" onChange={this.props.keyWordChange} />
             <div className="input-group-btn">
                 <button type="button" className="btn btn-warning searchBtn ng-binding" id="btnSearch" onClick={this.props.searchClick}>百度谷歌搜索</button>
                 <button type="button" className="btn btn-success dropdown-toggle searchBtnMenu" data-toggle="dropdown">
@@ -43,7 +45,9 @@ const mapProps = (state: ISearchStore): IStateProps => {
 
 const mapDispatch = (dispatch: Dispatch<ISearchAction>): IDispatchProps => {
     return {
-        searchClick: () => dispatch(actions.searchButtonClick())
+        searchClick: () => dispatch(actions.searchButtonClick()),
+        keyWordChange: () => dispatch(actions.searchKeyWordsChange()),
+        searchEngineChange: () => dispatch(actions.changeEngine())
     }
 }
 

@@ -5,7 +5,8 @@ import { ISearchAction, ISearchStore } from './base';
 export default (state: ISearchStore, action: ISearchAction): ISearchStore => {
     switch (action.type) {
         case actionTypes.ChangeEngineOption:
-            state = { ...state }
+            let id = action['currentEngineID'];
+            state = { ...state, currentEngine: state.engineList.find(k => k.id == id) }
             break
         case actionTypes.SearchButtonClick:
             break;

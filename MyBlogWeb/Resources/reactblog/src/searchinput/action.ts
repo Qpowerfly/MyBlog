@@ -1,9 +1,16 @@
 import actionTypes from './actionTypes'
-import { IAction } from './base';
+import { ISearchAction } from './base';
+import { AnyAction } from 'redux';
 
-const changeEngine = (): IAction => {
+export const changeEngine = (): ISearchAction => {
     return {
         type: actionTypes.ChangeEngineOption,
-        idx:1
+        idx: 1
     }
-};
+}
+
+export const searchButtonClick = (): ISearchAction => {
+    return {
+        type: actionTypes.SearchButtonClick
+    }
+}

@@ -1,6 +1,7 @@
 
 const ActionTypes = {
-    ChangeEngineOption: "ChangeEngineOption"
+    ChangeEngineOption: "ChangeEngineOption",
+    SearchButtonClick:"SearchButtonClick"
 }
 
 

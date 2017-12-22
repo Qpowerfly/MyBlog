@@ -1,12 +1,11 @@
 import actionTypes from './actionTypes'
 import { Reducer, AnyAction } from 'redux';
-import { IAction } from './base'
+import { ISearchAction, ISearchStore } from './base';
 
-
-export default (state: any, action: IAction): any => {
+export default (state: ISearchStore, action: ISearchAction): ISearchStore => {
     switch (action.type) {
         case actionTypes.ChangeEngineOption:
-            state = { ...state, idx: state.idx + 1 }
+            state = { ...state }
             break
     }
     return state;

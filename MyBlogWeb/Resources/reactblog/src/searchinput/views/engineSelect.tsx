@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { connect, Dispatch } from 'react-redux'
-import { ISearchStore, ISearchAction, EngineEntity } from '../base';
+import * as baseInfo from '../base';
 import * as actions from '../action'
 
 interface IStateProps {
-    engineList?: Array<EngineEntity>
-    currentEngine: EngineEntity
+    engineList?: Array<baseInfo.EngineEntity>
+    currentEngine: baseInfo.EngineEntity
 }
 interface IDispatchProps {
     searchClick: () => void
@@ -19,9 +19,9 @@ class EngineSelect extends React.Component<IStateProps & IDispatchProps> {
     }
     render() {
         return <div className="input-group">
-            <input type="text" className="form-control inputbox" id="txtKW" name="q" autoComplete="off" placeholder="输入您要搜索的内容..." value="" onChange={this.props.keyWordChange} />
+            <input type="text" className="form-control inputbox" id="txtKW" name="q" autoComplete="off" placeholder="输入您要搜索的内容..." onChange={this.props.keyWordChange} />
             <div className="input-group-btn">
-                <button type="button" className="btn btn-warning searchBtn ng-binding" id="btnSearch" onClick={this.props.searchClick}>{this.props.currentEngine.name}搜索</button>
+                <button type="button" className="btn btn-warning searchBtn" id="btnSearch" onClick={this.props.searchClick}>{this.props.currentEngine.name}搜索</button>
                 <button type="button" className="btn btn-success dropdown-toggle searchBtnMenu" data-toggle="dropdown">
                     <span className="caret"></span>
                     <span className="sr-only">Toggle Dropdown</span>
@@ -38,14 +38,14 @@ class EngineSelect extends React.Component<IStateProps & IDispatchProps> {
     }
 }
 
-const mapProps = (state: ISearchStore): IStateProps => {
+const mapProps = (state: baseInfo.ISearchStore): IStateProps => {
     return {
         engineList: state.engineList,
         currentEngine: state.currentEngine
     };
 };
 
-const mapDispatch = (dispatch: Dispatch<ISearchAction>): IDispatchProps => {
+const mapDispatch = (dispatch: Dispatch<baseInfo.IAllActionType>): IDispatchProps => {
     return {
         searchClick: () => dispatch(actions.searchButtonClick()),
         keyWordChange: () => dispatch(actions.searchKeyWordsChange()),

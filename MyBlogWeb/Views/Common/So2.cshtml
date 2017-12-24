@@ -1,6 +1,7 @@
 ﻿@{
     Layout = "~/Views/Layout/Main.cshtml";
 }
+@model MyBlogWeb.Models.Common.SoVM
 <style type="text/css">
     .divSo {
         position: fixed;
@@ -90,6 +91,78 @@
         font-size: 14px;
     }
 </style>
+<style stype="text/css" id="styleIframe"></style>
 
 <div id="divSoContainer"></div>
+<div class="divSoBottom">
+    <a href="~/">&copy;@(DateTime.Now.Year.ToString()) 我的ABC</a>
+</div>
 <script src="~/Resources/reactblog/dist/bundle.js"></script>
+<script type="text/javascript">
+    var bingSoCallBackResult = [];
+    var bingSoAjaxObject = null;
+    var bingSoCallBack = function (m) {
+        if (!m) {
+            return;
+        }
+        for (var k in m) {
+            if (!m[k] || !m[k].Results || m[k].Results.length == 0 || !m[k].Results[0].Suggests) {
+                return;
+            }
+            bingSoCallBackResult= $.map(m[k].Results[0].Suggests, function (x) {
+                return x.Txt;
+            });
+            return;
+        };
+        return;
+    };
+    $(function () {
+        $("#txtKW").val("@(Model.Key)");
+        var search = function () {
+            $(".autocomplete-suggestions").hide();
+            var kw = $.trim($("#txtKW").val());
+            if (kw == '') return;
+            kw = encodeURIComponent(kw);
+            $(".divSoContent iframe").each(function () {
+                this.src = $(this).attr('data-src') + kw;
+                $(this).closest(".panel").find(".linkFullScreen").attr({ "href": this.src });
+            });
+            window.history.pushState(null, "", '@Url.Content("~/Common/So?q=")' + kw);
+        };
+        search();
+        $("body").on("click", "#btnSearch", function () {
+            search();
+            return false;
+        });
+        $("#txtKW").on("keyup", function (e) {
+            if (e.keyCode == 13) {
+                search();
+            }
+        }).autoComplete({
+            minChars: 1,
+            source: function (term, response) {
+                bingSoCallBackResult = [];
+                bingSoAjaxObject && bingSoAjaxObject.abort();
+                bingSoAjaxObject=$.ajax({
+                    type:"get",
+                    dataType: "jsonp",
+                    data: { "q": term },
+                    url: "https://api.bing.com/qsonhs.aspx?type=cb",
+                    jsonp: "cb",
+                    jsonpCallback:"bingSoCallBack",
+                    success: function (data) {
+                        response(bingSoCallBackResult);
+                    }
+                });
+            }
+        });
+        var resizeIframe = function () {
+            var h = $("body").height() - $(".divLinks").height() - 220;
+            $("#styleIframe").html(".divSoContent iframe{height:"+h+"px;}");
+        };
+        $(window).on("resize", function () {
+            resizeIframe();
+        });
+        resizeIframe();
+    });
+</script>

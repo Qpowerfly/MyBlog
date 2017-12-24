@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace MyBlogWeb.Controllers
 {
@@ -26,27 +22,32 @@ namespace MyBlogWeb.Controllers
             return View("~/Views/Common/Error.cshtml", viewModel);
         }
 
+        ///// <summary>
+        ///// 搜索和导航
+        ///// </summary>
+        //[OutputCache(Duration = 3600)]
+        //public ActionResult So()
+        //{
+        //    var viewModel = new Models.Common.SoVM();
+        //    viewModel.Key = XCLNetTools.StringHander.FormHelper.GetString("q");
+        //    ViewBag.IsShowHeader = false;
+        //    ViewBag.IsNeedAngular = true;
+        //    ViewBag.Title = "导航搜索";
+        //    return View(viewModel);
+        //}
+
         /// <summary>
-        /// 搜索和导航
+        /// react版的导航搜索
         /// </summary>
-        [OutputCache(Duration = 3600)]
         public ActionResult So()
         {
             var viewModel = new Models.Common.SoVM();
             viewModel.Key = XCLNetTools.StringHander.FormHelper.GetString("q");
             ViewBag.IsShowHeader = false;
-            ViewBag.IsNeedAngular = true;
-            ViewBag.Title = "导航搜索";
-            return View(viewModel);
-        }
-
-        /// <summary>
-        /// react版的导航搜索
-        /// </summary>
-        public ActionResult So2()
-        {
+            ViewBag.IsNeedAngular = false;
             ViewBag.IsShowHeader = false;
-            return View();
+            ViewBag.Title = "导航搜索";
+            return View("~/Views/Common/So2.cshtml", viewModel);
         }
     }
 }

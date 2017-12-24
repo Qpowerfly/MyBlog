@@ -1,21 +1,27 @@
 import actionTypes from './actionTypes'
-import { ISearchAction, EngineEntity } from './base';
+import * as baseInfo from './base';
 import { AnyAction } from 'redux';
 
-export const changeEngine = (id: number): ISearchAction => {
+
+
+
+
+
+
+export const changeEngine = (id: number): baseInfo.IChangeEngineAction => {
     return {
         type: actionTypes.ChangeEngineOption,
         currentEngineID: id
     }
 }
 
-export const searchButtonClick = (): ISearchAction => {
+export const searchButtonClick = (): baseInfo.ISearchButtonClickAction => {
     return {
         type: actionTypes.SearchButtonClick
     }
 }
 
-export const searchKeyWordsChange = (): ISearchAction => {
+export const searchKeyWordsChange = (): baseInfo.ISearchKeyWordsChangeAction => {
     return {
         type: actionTypes.SearchKeyWordsChange
     }

@@ -30,7 +30,7 @@ initStore.engineList.push(engine);
 
 let eId = Number(localStorage.getItem("currentEngineId"));
 if (eId > 0) {
-    initStore.currentEngine = initStore.engineList.find(k => k.id == eId);
+    initStore.currentEngine = initStore.engineList.filter(k => k.id == eId)[0];
 } else {
     initStore.currentEngine = initStore.engineList[0];
 }

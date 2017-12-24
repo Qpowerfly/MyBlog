@@ -7,7 +7,7 @@ export default (state: baseInfo.ISearchStore, action: baseInfo.IAllActionType): 
     switch (action.type) {
         case actionTypes.ChangeEngineOption:
             let id = (<baseInfo.IChangeEngineAction>action).currentEngineID;
-            state = { ...state, currentEngine: state.engineList.find(k => k.id == id) }
+            state = { ...state, currentEngine: state.engineList.filter(k => k.id == id)[0] }
             localStorage.setItem("currentEngineId", String(id))
             break
         case actionTypes.SearchButtonClick:

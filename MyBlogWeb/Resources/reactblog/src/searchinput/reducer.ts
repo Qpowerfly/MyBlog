@@ -13,6 +13,11 @@ export default (state: baseInfo.ISearchStore, action: baseInfo.IAllActionType): 
         case actionTypes.SearchButtonClick:
             break;
         case actionTypes.SearchKeyWordsChange:
+            state = {
+                ...state,
+                currentSearchKey: (<baseInfo.ISearchKeyWordsChangeAction>action).keyWord
+            }
+            console.log(state.currentSearchKey);
             break;
     }
     return state;

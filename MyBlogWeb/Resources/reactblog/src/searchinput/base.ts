@@ -31,6 +31,7 @@ export interface ISearchButtonClickAction extends Action {
  */
 export interface ISearchKeyWordsChangeAction extends Action {
     type: string
+    keyWord:string
 }
 
 /**
@@ -44,4 +45,5 @@ export type IAllActionType = IChangeEngineAction | ISearchButtonClickAction | IS
 export interface ISearchStore {
     engineList: Array<EngineEntity>
     currentEngine: EngineEntity
+    currentSearchKey:string
 }

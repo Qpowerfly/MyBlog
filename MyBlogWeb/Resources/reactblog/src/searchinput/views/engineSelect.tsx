@@ -9,7 +9,7 @@ interface IStateProps {
 }
 interface IDispatchProps {
     searchClick: () => void
-    keyWordChange: () => void
+    keyWordChange: (e: any) => void
     searchEngineChange: (id: number) => void
 }
 
@@ -48,9 +48,9 @@ const mapProps = (state: baseInfo.ISearchStore): IStateProps => {
 const mapDispatch = (dispatch: Dispatch<baseInfo.IAllActionType>): IDispatchProps => {
     return {
         searchClick: () => dispatch(actions.searchButtonClick()),
-        keyWordChange: () => dispatch(actions.searchKeyWordsChange()),
+        keyWordChange: (e) => dispatch(actions.searchKeyWordsChangeAsync(e.target.value)),
         searchEngineChange: (id: number) => dispatch(actions.changeEngine(id))
     }
 }
 
-export default connect(mapProps, mapDispatch)(EngineSelect);
+export default connect(mapProps, mapDispatch)(EngineSelect); 

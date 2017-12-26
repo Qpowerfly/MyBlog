@@ -1,11 +1,13 @@
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import rds from './reducer'
 import * as baseInfo from './base';
 import { EngineEntity } from './base';
+import thunk from 'redux-thunk';
 
 const initStore: baseInfo.ISearchStore = {
     engineList: [],
-    currentEngine: null
+    currentEngine: null,
+    currentSearchKey:''
 };
 
 
@@ -35,6 +37,6 @@ if (eId > 0) {
     initStore.currentEngine = initStore.engineList[0];
 }
 
-const store = createStore<baseInfo.ISearchStore>(rds, initStore);
+const store = createStore<baseInfo.ISearchStore>(rds, initStore, applyMiddleware(thunk));
 
 export default store;

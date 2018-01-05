@@ -138,7 +138,7 @@ module.exports = g;
 /***/ (function(module, exports, __webpack_require__) {
 
 var Parser = __webpack_require__(36),
-    DomHandler = __webpack_require__(106);
+    DomHandler = __webpack_require__(105);
 
 function defineProp(name, value){
 	delete module.exports[name];
@@ -152,22 +152,22 @@ module.exports = {
 	ElementType: __webpack_require__(5),
 	DomHandler: DomHandler,
 	get FeedHandler(){
-		return defineProp("FeedHandler", __webpack_require__(108));
+		return defineProp("FeedHandler", __webpack_require__(107));
 	},
 	get Stream(){
-		return defineProp("Stream", __webpack_require__(109));
+		return defineProp("Stream", __webpack_require__(108));
 	},
 	get WritableStream(){
 		return defineProp("WritableStream", __webpack_require__(41));
 	},
 	get ProxyHandler(){
-		return defineProp("ProxyHandler", __webpack_require__(124));
+		return defineProp("ProxyHandler", __webpack_require__(123));
 	},
 	get DomUtils(){
-		return defineProp("DomUtils", __webpack_require__(125));
+		return defineProp("DomUtils", __webpack_require__(124));
 	},
 	get CollectingHandler(){
-		return defineProp("CollectingHandler", __webpack_require__(137));
+		return defineProp("CollectingHandler", __webpack_require__(136));
 	},
 	// For legacy support
 	DefaultHandler: DomHandler,
@@ -1262,7 +1262,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = processNodes;
 
-var _isEmptyTextNode = __webpack_require__(103);
+var _isEmptyTextNode = __webpack_require__(102);
 
 var _isEmptyTextNode2 = _interopRequireDefault(_isEmptyTextNode);
 
@@ -1321,7 +1321,7 @@ exports.Readable = exports;
 exports.Writable = __webpack_require__(20);
 exports.Duplex = __webpack_require__(4);
 exports.Transform = __webpack_require__(46);
-exports.PassThrough = __webpack_require__(118);
+exports.PassThrough = __webpack_require__(117);
 
 
 /***/ }),
@@ -1339,8 +1339,8 @@ exports.PassThrough = __webpack_require__(118);
 
 
 
-var base64 = __webpack_require__(111)
-var ieee754 = __webpack_require__(112)
+var base64 = __webpack_require__(110)
+var ieee754 = __webpack_require__(111)
 var isArray = __webpack_require__(43)
 
 exports.Buffer = Buffer
@@ -3198,7 +3198,7 @@ util.inherits = __webpack_require__(1);
 
 /*<replacement>*/
 var internalUtil = {
-  deprecate: __webpack_require__(117)
+  deprecate: __webpack_require__(116)
 };
 /*</replacement>*/
 
@@ -3790,7 +3790,7 @@ Writable.prototype._destroy = function (err, cb) {
   this.end();
   cb(err);
 };
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9), __webpack_require__(115).setImmediate, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9), __webpack_require__(114).setImmediate, __webpack_require__(2)))
 
 /***/ }),
 /* 21 */
@@ -5049,7 +5049,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = convertNodeToElement;
 
-var _elementTypes = __webpack_require__(104);
+var _elementTypes = __webpack_require__(103);
 
 var _elementTypes2 = _interopRequireDefault(_elementTypes);
 
@@ -6342,7 +6342,7 @@ Tokenizer.prototype._emitPartial = function(value){
 /* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var decodeMap = __webpack_require__(105);
+var decodeMap = __webpack_require__(104);
 
 module.exports = decodeCodePoint;
 
@@ -6433,7 +6433,7 @@ Object.keys(domLvl1).forEach(function(key) {
 module.exports = Stream;
 
 var Parser = __webpack_require__(36),
-    WritableStream = __webpack_require__(110).Writable || __webpack_require__(123).Writable,
+    WritableStream = __webpack_require__(109).Writable || __webpack_require__(122).Writable,
     StringDecoder = __webpack_require__(21).StringDecoder,
     Buffer = __webpack_require__(19).Buffer;
 
@@ -6532,7 +6532,7 @@ util.inherits = __webpack_require__(1);
 /*</replacement>*/
 
 /*<replacement>*/
-var debugUtil = __webpack_require__(113);
+var debugUtil = __webpack_require__(112);
 var debug = void 0;
 if (debugUtil && debugUtil.debuglog) {
   debug = debugUtil.debuglog('stream');
@@ -6541,7 +6541,7 @@ if (debugUtil && debugUtil.debuglog) {
 }
 /*</replacement>*/
 
-var BufferList = __webpack_require__(114);
+var BufferList = __webpack_require__(113);
 var destroyImpl = __webpack_require__(45);
 var StringDecoder;
 
@@ -7801,11 +7801,11 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 exports.default = generatePropsFromAttributes;
 
-var _htmlAttributesToReact = __webpack_require__(140);
+var _htmlAttributesToReact = __webpack_require__(139);
 
 var _htmlAttributesToReact2 = _interopRequireDefault(_htmlAttributesToReact);
 
-var _inlineStyleToObject = __webpack_require__(143);
+var _inlineStyleToObject = __webpack_require__(142);
 
 var _inlineStyleToObject2 = _interopRequireDefault(_inlineStyleToObject);
 
@@ -10478,7 +10478,8 @@ var redux_thunk_1 = __webpack_require__(95);
 var initStore = {
     engineList: [],
     currentEngine: null,
-    currentSearchKey: ''
+    currentSearchKey: '',
+    currentSearchKeySugList: []
 };
 var engine = new baseInfo.EngineEntity();
 engine.id = 1;
@@ -10535,7 +10536,8 @@ exports.default = function (state, action) {
         case actionTypes_1.default.SearchButtonClick:
             break;
         case actionTypes_1.default.SearchKeyWordsChange:
-            state = __assign({}, state, { currentSearchKey: action.keyWord });
+            var searchAction = action;
+            state = __assign({}, state, { currentSearchKey: searchAction.keyWord, currentSearchKeySugList: searchAction.keyWordMatchList });
             console.log(state.currentSearchKey);
             break;
     }
@@ -10599,8 +10601,8 @@ exports['default'] = thunk;
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var inputSo_1 = __webpack_require__(97);
-var resultFrame_1 = __webpack_require__(101);
-var links_1 = __webpack_require__(148);
+var resultFrame_1 = __webpack_require__(100);
+var links_1 = __webpack_require__(147);
 var IndexView = function () {
     return React.createElement("div", null,
         React.createElement(inputSo_1.default, null),
@@ -10703,7 +10705,8 @@ var EngineSelect = /** @class */ (function (_super) {
 var mapProps = function (state) {
     return {
         engineList: state.engineList,
-        currentEngine: state.currentEngine
+        currentEngine: state.currentEngine,
+        currentSearchKeySugList: state.currentSearchKeySugList
     };
 };
 var mapDispatch = function (dispatch) {
@@ -10724,10 +10727,7 @@ exports.default = react_redux_1.connect(mapProps, mapDispatch)(EngineSelect);
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var actionTypes_1 = __webpack_require__(34);
-var xPromiseQueue = __webpack_require__(100);
-var xq = xPromiseQueue['default'];
-var xqueue = new xq.Queue();
-xqueue.run();
+var win = window;
 exports.changeEngine = function (id) {
     return {
         type: actionTypes_1.default.ChangeEngineOption,
@@ -10739,530 +10739,53 @@ exports.searchButtonClick = function () {
         type: actionTypes_1.default.SearchButtonClick
     };
 };
-exports.searchKeyWordsChange = function (kw) {
+exports.searchKeyWordsChange = function (kw, kwMatchs) {
     return {
         type: actionTypes_1.default.SearchKeyWordsChange,
-        keyWord: kw
+        keyWord: kw,
+        keyWordMatchList: kwMatchs
     };
 };
+var keySugXHRObj = null;
 exports.searchKeyWordsChangeAsync = function (kw) {
+    win.bingSoCallBackResult = [];
+    if (!win.bingSoCallBack) {
+        win.bingSoCallBack = function (m) {
+            if (!m) {
+                return;
+            }
+            for (var k in m) {
+                if (!m[k] || !m[k].Results || m[k].Results.length == 0 || !m[k].Results[0].Suggests) {
+                    return;
+                }
+                win.bingSoCallBackResult = $.map(m[k].Results[0].Suggests, function (x) {
+                    return x.Txt;
+                });
+                return;
+            }
+            ;
+            return;
+        };
+    }
     return function (dispatch) {
-        xqueue.regUnique(new xq.QItem(function () {
-            var _this = this;
-            var encodeKw = encodeURIComponent(kw);
-            var fet = fetch("https://api.bing.com/qsonhs.aspx?type=cb&cb=bingSoCallBack&q=" + encodeKw + "&_=1514293293180", {
-                mode: "no-cors"
-            }).then(function (res) {
-                return res.text();
-            }).then(function (res) {
-                _this.resolve();
-                return dispatch(exports.searchKeyWordsChange(res));
-            }).catch(function () {
-                _this.resolve();
-            });
-            this.destroyCallback = function () {
-                fet.terminate();
-            };
-        }));
+        keySugXHRObj && keySugXHRObj.abort();
+        keySugXHRObj = $.ajax({
+            type: "get",
+            dataType: "jsonp",
+            data: { "q": kw },
+            url: "https://api.bing.com/qsonhs.aspx?type=cb",
+            jsonp: "cb",
+            jsonpCallback: "bingSoCallBack"
+        });
+        keySugXHRObj.then(function () {
+            dispatch(exports.searchKeyWordsChange(kw, win.bingSoCallBackResult));
+        });
     };
 };
 
 
 /***/ }),
 /* 100 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
- * ******************************************************************************************
- * 开源协议：https://github.com/xucongli1989/xPromiseQueue/blob/master/LICENSE
- * 项目地址：https://github.com/xucongli1989/xPromiseQueue
- * 电子邮件：80213876@qq.com
- * By XCL 2017.08 in Shenzhen. China
- ********************************************************************************************
- */
-!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports], __WEBPACK_AMD_DEFINE_RESULT__ = (function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    /**
-     * Promise状态
-     */
-    var PromiseStatus;
-    (function (PromiseStatus) {
-        PromiseStatus[PromiseStatus["None"] = 0] = "None";
-        PromiseStatus[PromiseStatus["Pending"] = 1] = "Pending";
-        PromiseStatus[PromiseStatus["Fulfilled"] = 2] = "Fulfilled";
-        PromiseStatus[PromiseStatus["Rejected"] = 3] = "Rejected";
-    })(PromiseStatus || (PromiseStatus = {}));
-    /**
-     * 优先级
-     */
-    var Priority;
-    (function (Priority) {
-        Priority[Priority["Low"] = 0] = "Low";
-        Priority[Priority["High"] = 1] = "High";
-        Priority[Priority["Highest"] = 2] = "Highest";
-    })(Priority || (Priority = {}));
-    class QueuePromiseContext {
-        constructor() {
-            this.init();
-        }
-        init() {
-            this.queuePms = new Promise((r, j) => {
-                this.resolve = r;
-            });
-        }
-    }
-    class QItemInitOptions {
-    }
-    /**
-     * 执行项
-     */
-    class QItem {
-        constructor(fun) {
-            this._pmsStatus = PromiseStatus.None;
-            /**
-            * 初始化时的选项
-            */
-            this.initOptions = new QItemInitOptions();
-            /**
-            * 唯一标识
-            */
-            this.id = null;
-            /**
-             * 名称
-             */
-            this.name = null;
-            /**
-             * 下一个执行项
-             */
-            this.next = null;
-            /**
-            * 队列Promise上下文
-            */
-            this.queuePromiseContext = null;
-            this.initOptions.initFun = fun;
-        }
-        /**
-         * 执行该队列项
-         */
-        run() {
-            if (this._pms) {
-                return this._pms;
-            }
-            this._pmsStatus = PromiseStatus.Pending;
-            this._pms = new Promise((rs, rj) => {
-                this._resolve = rs;
-                this._reject = rj;
-                this.initOptions.initFun.call(this);
-            }).then(() => {
-                if (!this.next) {
-                    return {};
-                }
-                return this.next.run();
-            }, () => {
-                this.next = null;
-            }).catch(() => {
-                this._pmsStatus = PromiseStatus.Rejected;
-            }).then(() => {
-                if (null == this.next) {
-                    this.queuePromiseContext.resolve();
-                }
-            });
-            return this._pms;
-        }
-        /**
-         * resolve
-         */
-        resolve() {
-            this._resolve.apply(this, arguments);
-            this._pmsStatus = PromiseStatus.Fulfilled;
-        }
-        /**
-         * reject
-         */
-        reject() {
-            this._reject.apply(this, arguments);
-            this._pmsStatus = PromiseStatus.Rejected;
-        }
-        /**
-         * 获取该Promise状态
-         */
-        getPmsStatus() {
-            return this._pmsStatus;
-        }
-        /**
-         * 是否已完成（已解决或已拒绝）
-         */
-        isComplete() {
-            return this._pmsStatus == PromiseStatus.Fulfilled || this._pmsStatus == PromiseStatus.Rejected;
-        }
-        /**
-         * 是否在处理中（Pending）
-         */
-        isPending() {
-            return this._pmsStatus == PromiseStatus.Pending;
-        }
-        /**
-         * 是否已拒绝（Rejected）
-         */
-        isRejected() {
-            return this._pmsStatus == PromiseStatus.Rejected;
-        }
-        /**
-         * clone队列项
-         */
-        clone() {
-            let q = new QItem(this.initOptions.initFun);
-            q.destroyCallback = this.destroyCallback;
-            q.id = this.id;
-            q.initOptions = this.initOptions;
-            q.name = this.name;
-            q.next = this.next;
-            q.queuePromiseContext = this.queuePromiseContext;
-            return q;
-        }
-    }
-    /**
-     * 模块主体
-     */
-    class Queue {
-        constructor() {
-            this._promiseContext = new QueuePromiseContext();
-            /**
-             * 是否为监听中
-             */
-            this._isWatching = false;
-            /**
-             * 当前队列是否已锁定（true:不允许再注册新的执行项）
-             */
-            this._isLock = false;
-            /**
-             * 待执行的Promise队列
-             */
-            this._qList = [];
-        }
-        /**
-         * 将当前队列中的每一项按实际执行顺序重新排列
-         */
-        _reSortQList() {
-            let first = this._qList[0];
-            if (!first)
-                return;
-            let start = null;
-            this._qList = [];
-            let fun = (m) => {
-                if (!start && !m.isComplete()) {
-                    start = m;
-                }
-                if (start) {
-                    this._qList.push(m);
-                }
-                m.next && fun(m.next);
-            };
-            fun(first);
-        }
-        /**
-         * 注册一个Promise项到执行队列中。
-         * 如果当前队列未运行，则仅仅是将该项添加至队列中而已。
-         * 如果当前队列处于运行中，则不仅仅是将该项添加到队列中，还会根据该项实际所在的位置来判断是否立刻运行此项。
-         * @param item 执行项
-         * @param priority 优先级（默认为低。【低】：添加到队列的末尾；【高】：添加到紧挨着当前正在执行的队列项的后面；【最高】：添加到当前正在执行的队列项的前面）
-         */
-        reg(item, priority = Priority.Low) {
-            if (this._isLock) {
-                return this;
-            }
-            item.queuePromiseContext = this._promiseContext;
-            //#region 监听状态
-            if (this._isWatching) {
-                let cur = this.getCur();
-                //队列全部执行完毕
-                if (!cur) {
-                    this._qList = [item];
-                    this._isWatching = false;
-                    this.run();
-                    return this;
-                }
-                switch (priority) {
-                    case Priority.High:
-                        //高优先级
-                        item.next = cur.next;
-                        cur.next = item;
-                        break;
-                    case Priority.Highest:
-                        //最高优先级
-                        for (let i = 0; i < this._qList.length; i++) {
-                            let m = this._qList[i];
-                            if (m != cur) {
-                                continue;
-                            }
-                            cur.destroyCallback && cur.destroyCallback();
-                            item.next = cur.clone();
-                            item.run();
-                            if (i == 0) {
-                                //当前项为第一项
-                                this._qList.splice(0, 0, item);
-                                break;
-                            }
-                            else {
-                                //当前项为中间项
-                                this._qList[i - 1].next = item;
-                            }
-                        }
-                        break;
-                    default:
-                        //低优先级
-                        this._qList[this._qList.length - 1].next = item;
-                        break;
-                }
-                //重排序
-                this._reSortQList();
-                return this;
-            }
-            //#endregion
-            //#region 初始化状态
-            if (this._qList.length == 0) {
-                this._qList = [item];
-                return this;
-            }
-            //高优先级
-            if (priority == Priority.High || priority == Priority.Highest) {
-                item.next = this._qList[0];
-                this._qList.unshift(item);
-                return this;
-            }
-            //低优先级
-            this._qList[this._qList.length - 1].next = item;
-            this._qList.push(item);
-            //#endregion
-            return this;
-        }
-        /**
-         * 注册唯一的一个队列项。此方法会先销毁整个队列，再重新注册只有一个执行项的队列。注册完后，会锁定此队列。
-         * @param item 队列项
-         * @param isForce 是否绕过队列锁定并强制注册（默认为true）
-         */
-        regUnique(item, isForce = true) {
-            if (!isForce && this._isLock) {
-                return this;
-            }
-            this.unLock();
-            this.clear();
-            this.reg(item);
-            this.lock();
-            return this;
-        }
-        /**
-         * 注册一个新的队列项到一个已有且未完成的队列项的后面
-         * @param parent 已有的未完成的队列项
-         * @param newItem 此次新加的队列项（parent执行完后，才会执行newItem）
-         */
-        regAfter(parent, newItem) {
-            if (this._isLock) {
-                return this;
-            }
-            if (!parent || parent.isComplete() || !newItem) {
-                return this;
-            }
-            newItem.next = parent.next;
-            parent.next = newItem;
-            this._reSortQList();
-            return this;
-        }
-        /**
-         * 注册一个新的队列项到一个已有且未完成的队列项的前面
-         * @param lastItem 已有的未完成的队列项
-         * @param newItem 此次新加的队列项（newItem执行完后，才会执行lastItem）
-         */
-        regBefore(lastItem, newItem) {
-            if (this._isLock) {
-                return this;
-            }
-            if (!lastItem || lastItem.isComplete() || !newItem) {
-                return this;
-            }
-            //lastItem是当前项或第一项
-            if (lastItem == this.getCur() || this._qList[0] == lastItem) {
-                this.reg(newItem, Priority.Highest);
-                return this;
-            }
-            //lastItem非当前项，也非第一项
-            for (let i = 0; i < this._qList.length; i++) {
-                let m = this._qList[i];
-                if (m.next != lastItem) {
-                    continue;
-                }
-                newItem.next = lastItem;
-                m.next = newItem;
-            }
-            this._reSortQList();
-            return this;
-        }
-        /**
-         * 运行队列
-         */
-        run() {
-            if (this._isWatching)
-                return this;
-            this._isWatching = true;
-            if (this._qList.length === 0) {
-                return this;
-            }
-            this._qList[0].run();
-            return this;
-        }
-        /**
-         * 获取当前正在执行中的队列项（运行时，队列中第一个状态为Pending的项）
-         */
-        getCur() {
-            if (!this._isWatching) {
-                return null;
-            }
-            if (this._qList.length == 0)
-                return null;
-            let c;
-            let fun = (m) => {
-                if (m.isPending()) {
-                    c = m;
-                }
-                else {
-                    m.next && fun(m.next);
-                }
-            };
-            fun(this._qList[0]);
-            return c;
-        }
-        /**
-         * 锁定队列，不允许再修改队列
-         */
-        lock() {
-            this._isLock = true;
-            return this;
-        }
-        /**
-         * 解锁队列，允许修改队列
-         */
-        unLock() {
-            this._isLock = false;
-            return this;
-        }
-        /**
-         * 销毁指定队列项
-         * 此方法不会去调用该项的解决或拒绝，直接从队列中删除此项
-         * @param item 要销毁的队列项
-         */
-        destroy(item) {
-            if (this._isLock) {
-                return this;
-            }
-            if (null == item || item.isComplete()) {
-                return this;
-            }
-            let cur = this.getCur();
-            for (let i = 0; i < this._qList.length; i++) {
-                if (this._qList[i] != item) {
-                    continue;
-                }
-                if (i == 0) {
-                    //第一项
-                    this._qList.shift();
-                }
-                else if (i == this._qList.length - 1) {
-                    //最后一项
-                    this._qList[i - 1].next = null;
-                }
-                else {
-                    //中间项
-                    this._qList[i - 1].next = item.next;
-                }
-                if (this.isWatching) {
-                    if (cur === item) {
-                        //销毁的正是当前项
-                        item.destroyCallback && item.destroyCallback();
-                        item.next && item.next.run();
-                    }
-                }
-                this._reSortQList();
-                break;
-            }
-            return this;
-        }
-        /**
-         * 销毁整个队列
-         */
-        clear() {
-            if (this._isLock) {
-                return this;
-            }
-            let cur = this.getCur();
-            if (cur) {
-                cur.next = null;
-                this._qList = [cur];
-                this.destroy(cur);
-            }
-            else {
-                this._qList = [];
-            }
-            return this;
-        }
-        /**
-         * 判断当前时刻队列是否已全部运行完
-         */
-        isComplete() {
-            if (this._qList.length == 0) {
-                return true;
-            }
-            let isDone = true;
-            for (let m of this._qList) {
-                if (m.isRejected()) {
-                    break;
-                }
-                if (!m.isComplete()) {
-                    isDone = false;
-                    break;
-                }
-            }
-            return isDone;
-        }
-        /**
-         * 是否为监听中
-         */
-        isWatching() {
-            return this._isWatching;
-        }
-        /**
-         * 获取当前时刻表示整个队列是否完成的Promise对象
-         */
-        getCurPms() {
-            this._promiseContext.init();
-            if (this.isComplete()) {
-                this._promiseContext.resolve();
-            }
-            return this._promiseContext.queuePms;
-        }
-        /**
-         * 根据队列项的id查找队列项
-         * @param id 队列项的id
-         */
-        getQItemById(id) {
-            if (!id) {
-                return null;
-            }
-            for (let m of this._qList) {
-                if (m.id == id) {
-                    return m;
-                }
-            }
-            return null;
-        }
-    }
-    exports.default = { QItem, Queue };
-}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-//# sourceMappingURL=xPromiseQueue.js.map
-
-/***/ }),
-/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11280,7 +10803,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var react_redux_1 = __webpack_require__(12);
-var react_html_parser_1 = __webpack_require__(102);
+var react_html_parser_1 = __webpack_require__(101);
 var ResultFrame = /** @class */ (function (_super) {
     __extends(ResultFrame, _super);
     function ResultFrame(props) {
@@ -11324,7 +10847,7 @@ exports.default = react_redux_1.connect(mapProps)(ResultFrame);
 
 
 /***/ }),
-/* 102 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11362,7 +10885,7 @@ Object.defineProperty(exports, 'htmlparser2', {
   }
 });
 
-var _HtmlParser = __webpack_require__(147);
+var _HtmlParser = __webpack_require__(146);
 
 var _HtmlParser2 = _interopRequireDefault(_HtmlParser);
 
@@ -11371,7 +10894,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _HtmlParser2.default;
 
 /***/ }),
-/* 103 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11393,7 +10916,7 @@ function isEmptyTextNode(node) {
 }
 
 /***/ }),
-/* 104 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11407,19 +10930,19 @@ var _ElementType$Text$Ele;
 
 var _htmlparser = __webpack_require__(3);
 
-var _TextElementType = __webpack_require__(138);
+var _TextElementType = __webpack_require__(137);
 
 var _TextElementType2 = _interopRequireDefault(_TextElementType);
 
-var _TagElementType = __webpack_require__(139);
+var _TagElementType = __webpack_require__(138);
 
 var _TagElementType2 = _interopRequireDefault(_TagElementType);
 
-var _StyleElementType = __webpack_require__(145);
+var _StyleElementType = __webpack_require__(144);
 
 var _StyleElementType2 = _interopRequireDefault(_StyleElementType);
 
-var _UnsupportedElementType = __webpack_require__(146);
+var _UnsupportedElementType = __webpack_require__(145);
 
 var _UnsupportedElementType2 = _interopRequireDefault(_UnsupportedElementType);
 
@@ -11434,20 +10957,20 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 exports.default = (_ElementType$Text$Ele = {}, _defineProperty(_ElementType$Text$Ele, _htmlparser.ElementType.Text, _TextElementType2.default), _defineProperty(_ElementType$Text$Ele, _htmlparser.ElementType.Tag, _TagElementType2.default), _defineProperty(_ElementType$Text$Ele, _htmlparser.ElementType.Style, _StyleElementType2.default), _defineProperty(_ElementType$Text$Ele, _htmlparser.ElementType.Directive, _UnsupportedElementType2.default), _defineProperty(_ElementType$Text$Ele, _htmlparser.ElementType.Comment, _UnsupportedElementType2.default), _defineProperty(_ElementType$Text$Ele, _htmlparser.ElementType.Script, _UnsupportedElementType2.default), _defineProperty(_ElementType$Text$Ele, _htmlparser.ElementType.CDATA, _UnsupportedElementType2.default), _defineProperty(_ElementType$Text$Ele, _htmlparser.ElementType.Doctype, _UnsupportedElementType2.default), _ElementType$Text$Ele);
 
 /***/ }),
-/* 105 */
+/* 104 */
 /***/ (function(module, exports) {
 
 module.exports = {"0":65533,"128":8364,"130":8218,"131":402,"132":8222,"133":8230,"134":8224,"135":8225,"136":710,"137":8240,"138":352,"139":8249,"140":338,"142":381,"145":8216,"146":8217,"147":8220,"148":8221,"149":8226,"150":8211,"151":8212,"152":732,"153":8482,"154":353,"155":8250,"156":339,"158":382,"159":376}
 
 /***/ }),
-/* 106 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var ElementType = __webpack_require__(5);
 
 var re_whitespace = /\s+/g;
 var NodePrototype = __webpack_require__(40);
-var ElementPrototype = __webpack_require__(107);
+var ElementPrototype = __webpack_require__(106);
 
 function DomHandler(callback, options, elementCB){
 	if(typeof callback === "object"){
@@ -11663,7 +11186,7 @@ module.exports = DomHandler;
 
 
 /***/ }),
-/* 107 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // DOM-Level-1-compliant structure
@@ -11689,7 +11212,7 @@ Object.keys(domLvl1).forEach(function(key) {
 
 
 /***/ }),
-/* 108 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var index = __webpack_require__(3),
@@ -11790,7 +11313,7 @@ module.exports = FeedHandler;
 
 
 /***/ }),
-/* 109 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = Stream;
@@ -11830,7 +11353,7 @@ Object.keys(EVENTS).forEach(function(name){
 });
 
 /***/ }),
-/* 110 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Copyright Joyent, Inc. and other Node contributors.
@@ -11861,10 +11384,10 @@ var inherits = __webpack_require__(1);
 
 inherits(Stream, EE);
 Stream.Readable = __webpack_require__(18);
-Stream.Writable = __webpack_require__(119);
-Stream.Duplex = __webpack_require__(120);
-Stream.Transform = __webpack_require__(121);
-Stream.PassThrough = __webpack_require__(122);
+Stream.Writable = __webpack_require__(118);
+Stream.Duplex = __webpack_require__(119);
+Stream.Transform = __webpack_require__(120);
+Stream.PassThrough = __webpack_require__(121);
 
 // Backwards-compat with node 0.4.x
 Stream.Stream = Stream;
@@ -11963,7 +11486,7 @@ Stream.prototype.pipe = function(dest, options) {
 
 
 /***/ }),
-/* 111 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12084,7 +11607,7 @@ function fromByteArray (uint8) {
 
 
 /***/ }),
-/* 112 */
+/* 111 */
 /***/ (function(module, exports) {
 
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -12174,13 +11697,13 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 113 */
+/* 112 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 114 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12260,7 +11783,7 @@ module.exports = function () {
 }();
 
 /***/ }),
-/* 115 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = Function.prototype.apply;
@@ -12313,13 +11836,13 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(116);
+__webpack_require__(115);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
 
 /***/ }),
-/* 116 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -12512,7 +12035,7 @@ exports.clearImmediate = clearImmediate;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(9)))
 
 /***/ }),
-/* 117 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {
@@ -12586,7 +12109,7 @@ function config (name) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 118 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12639,41 +12162,41 @@ PassThrough.prototype._transform = function (chunk, encoding, cb) {
 };
 
 /***/ }),
-/* 119 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(20);
 
 
 /***/ }),
-/* 120 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(4);
 
 
 /***/ }),
-/* 121 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(18).Transform
 
 
 /***/ }),
-/* 122 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(18).PassThrough
 
 
 /***/ }),
-/* 123 */
+/* 122 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 124 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = ProxyHandler;
@@ -12705,18 +12228,18 @@ Object.keys(EVENTS).forEach(function(name){
 });
 
 /***/ }),
-/* 125 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var DomUtils = module.exports;
 
 [
-	__webpack_require__(126),
+	__webpack_require__(125),
+	__webpack_require__(131),
 	__webpack_require__(132),
 	__webpack_require__(133),
 	__webpack_require__(134),
-	__webpack_require__(135),
-	__webpack_require__(136)
+	__webpack_require__(135)
 ].forEach(function(ext){
 	Object.keys(ext).forEach(function(key){
 		DomUtils[key] = ext[key].bind(DomUtils);
@@ -12725,11 +12248,11 @@ var DomUtils = module.exports;
 
 
 /***/ }),
-/* 126 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var ElementType = __webpack_require__(5),
-    getOuterHTML = __webpack_require__(127),
+    getOuterHTML = __webpack_require__(126),
     isTag = ElementType.isTag;
 
 module.exports = {
@@ -12754,14 +12277,14 @@ function getText(elem){
 
 
 /***/ }),
-/* 127 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
   Module dependencies
 */
-var ElementType = __webpack_require__(128);
-var entities = __webpack_require__(129);
+var ElementType = __webpack_require__(127);
+var entities = __webpack_require__(128);
 
 /*
   Boolean Attributes
@@ -12938,7 +12461,7 @@ function renderComment(elem) {
 
 
 /***/ }),
-/* 128 */
+/* 127 */
 /***/ (function(module, exports) {
 
 //Types of elements found in the DOM
@@ -12957,11 +12480,11 @@ module.exports = {
 };
 
 /***/ }),
-/* 129 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var encode = __webpack_require__(130),
-    decode = __webpack_require__(131);
+var encode = __webpack_require__(129),
+    decode = __webpack_require__(130);
 
 exports.decode = function(data, level){
 	return (!level || level <= 0 ? decode.XML : decode.HTML)(data);
@@ -12996,7 +12519,7 @@ exports.escape = encode.escape;
 
 
 /***/ }),
-/* 130 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var inverseXML = getInverseObj(__webpack_require__(17)),
@@ -13075,7 +12598,7 @@ exports.escape = escapeXML;
 
 
 /***/ }),
-/* 131 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var entityMap = __webpack_require__(16),
@@ -13152,7 +12675,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 132 */
+/* 131 */
 /***/ (function(module, exports) {
 
 var getChildren = exports.getChildren = function(elem){
@@ -13182,7 +12705,7 @@ exports.getName = function(elem){
 
 
 /***/ }),
-/* 133 */
+/* 132 */
 /***/ (function(module, exports) {
 
 exports.removeElement = function(elem){
@@ -13265,7 +12788,7 @@ exports.prepend = function(elem, prev){
 
 
 /***/ }),
-/* 134 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isTag = __webpack_require__(5).isTag;
@@ -13370,7 +12893,7 @@ function findAll(test, rootElems){
 
 
 /***/ }),
-/* 135 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var ElementType = __webpack_require__(5);
@@ -13463,7 +12986,7 @@ exports.getElementsByTagType = function(type, element, recurse, limit){
 
 
 /***/ }),
-/* 136 */
+/* 135 */
 /***/ (function(module, exports) {
 
 // removeSubsets
@@ -13610,7 +13133,7 @@ exports.uniqueSort = function(nodes) {
 
 
 /***/ }),
-/* 137 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = CollectingHandler;
@@ -13671,7 +13194,7 @@ CollectingHandler.prototype.restart = function(){
 
 
 /***/ }),
-/* 138 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13694,7 +13217,7 @@ function TextElementType(node) {
 }
 
 /***/ }),
-/* 139 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13717,7 +13240,7 @@ var _generatePropsFromAttributes = __webpack_require__(47);
 
 var _generatePropsFromAttributes2 = _interopRequireDefault(_generatePropsFromAttributes);
 
-var _VoidElements = __webpack_require__(144);
+var _VoidElements = __webpack_require__(143);
 
 var _VoidElements2 = _interopRequireDefault(_VoidElements);
 
@@ -13758,7 +13281,7 @@ function TagElementType(node, index, transform) {
 }
 
 /***/ }),
-/* 140 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13769,11 +13292,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = htmlAttributesToReact;
 
-var _BooleanAttributes = __webpack_require__(141);
+var _BooleanAttributes = __webpack_require__(140);
 
 var _BooleanAttributes2 = _interopRequireDefault(_BooleanAttributes);
 
-var _ReactAttributes = __webpack_require__(142);
+var _ReactAttributes = __webpack_require__(141);
 
 var _ReactAttributes2 = _interopRequireDefault(_ReactAttributes);
 
@@ -13831,7 +13354,7 @@ function htmlAttributesToReact(attributes) {
 }
 
 /***/ }),
-/* 141 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13851,7 +13374,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = ['allowfullScreen', 'async', 'autoplay', 'capture', 'checked', 'controls', 'default', 'defer', 'disabled', 'formnovalidate', 'hidden', 'loop', 'multiple', 'muted', 'novalidate', 'open', 'playsinline', 'readonly', 'required', 'reversed', 'scoped', 'seamless', 'selected', 'itemscope'];
 
 /***/ }),
-/* 142 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14026,7 +13549,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 143 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14090,7 +13613,7 @@ function InlineStyleToObject() {
 }
 
 /***/ }),
-/* 144 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14107,7 +13630,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = ['area', 'base', 'br', 'col', 'command', 'embed', 'hr', 'img', 'input', 'keygen', 'link', 'meta', 'param', 'source', 'track', 'wbr'];
 
 /***/ }),
-/* 145 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14152,7 +13675,7 @@ function StyleElementType(node, index) {
 }
 
 /***/ }),
-/* 146 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14174,7 +13697,7 @@ function UnsupportedElementType() {
 }
 
 /***/ }),
-/* 147 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14217,7 +13740,7 @@ function HtmlParser(html) {
 }
 
 /***/ }),
-/* 148 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

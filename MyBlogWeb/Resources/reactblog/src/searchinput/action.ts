@@ -1,13 +1,9 @@
 import actionTypes from './actionTypes'
 import * as baseInfo from './base';
 import { AnyAction } from 'redux';
-import * as xPromiseQueue from 'xpromisequeue'
+import { print } from 'util';
 
-const xq = xPromiseQueue['default'];
-
-const xqueue = new xq.Queue();
-xqueue.run();
-
+let win: any = window;
 
 export const changeEngine = (id: number): baseInfo.IChangeEngineAction => {
     return {
@@ -22,30 +18,48 @@ export const searchButtonClick = (): baseInfo.ISearchButtonClickAction => {
     }
 }
 
-export const searchKeyWordsChange = (kw: string): baseInfo.ISearchKeyWordsChangeAction => {
+export const searchKeyWordsChange = (kw: string, kwMatchs: Array<string>): baseInfo.ISearchKeyWordsChangeAction => {
     return {
         type: actionTypes.SearchKeyWordsChange,
-        keyWord: kw
+        keyWord: kw,
+        keyWordMatchList: kwMatchs
     }
 }
 
+let keySugXHRObj: any = null;
+
 export const searchKeyWordsChangeAsync = (kw: string) => {
-    return (dispatch: any) => {
-        xqueue.regUnique(new xq.QItem(function () {
-            const encodeKw = encodeURIComponent(kw);
-            let fet: any = fetch(`https://api.bing.com/qsonhs.aspx?type=cb&cb=bingSoCallBack&q=${encodeKw}&_=1514293293180`, {
-                mode: "no-cors"
-            }).then(res => {
-                return res.text();
-            }).then(res => {
-                this.resolve();
-                return dispatch(searchKeyWordsChange(res));
-            }).catch(() => {
-                this.resolve();
-            });
-            this.destroyCallback = () => {
-                fet.terminate();
+    win.bingSoCallBackResult = [];
+    if (!win.bingSoCallBack) {
+        win.bingSoCallBack = (m: any) => {
+            if (!m) {
+                return;
             }
-        }));
+            for (var k in m) {
+                if (!m[k] || !m[k].Results || m[k].Results.length == 0 || !m[k].Results[0].Suggests) {
+                    return;
+                }
+                win.bingSoCallBackResult = $.map(m[k].Results[0].Suggests, function (x: any) {
+                    return x.Txt;
+                });
+                return;
+            };
+            return;
+        }
+    }
+    return (dispatch: any) => {
+        keySugXHRObj && keySugXHRObj.abort();
+        keySugXHRObj = $.ajax({
+            type: "get",
+            dataType: "jsonp",
+            data: { "q": kw },
+            url: "https://api.bing.com/qsonhs.aspx?type=cb",
+            jsonp: "cb",
+            jsonpCallback: "bingSoCallBack"
+        });
+        keySugXHRObj.then(() => {
+            dispatch(searchKeyWordsChange(kw, win.bingSoCallBackResult));
+        });
+
     }
 }

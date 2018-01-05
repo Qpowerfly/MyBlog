@@ -7,7 +7,8 @@ import thunk from 'redux-thunk';
 const initStore: baseInfo.ISearchStore = {
     engineList: [],
     currentEngine: null,
-    currentSearchKey:''
+    currentSearchKey: '',
+    currentSearchKeySugList: []
 };
 
 

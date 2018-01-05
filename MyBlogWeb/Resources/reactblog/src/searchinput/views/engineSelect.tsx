@@ -6,6 +6,7 @@ import * as actions from '../action'
 interface IStateProps {
     engineList?: Array<baseInfo.EngineEntity>
     currentEngine: baseInfo.EngineEntity
+    currentSearchKeySugList: Array<string>
 }
 interface IDispatchProps {
     searchClick: () => void
@@ -41,7 +42,8 @@ class EngineSelect extends React.Component<IStateProps & IDispatchProps> {
 const mapProps = (state: baseInfo.ISearchStore): IStateProps => {
     return {
         engineList: state.engineList,
-        currentEngine: state.currentEngine
+        currentEngine: state.currentEngine,
+        currentSearchKeySugList: state.currentSearchKeySugList
     };
 };
 

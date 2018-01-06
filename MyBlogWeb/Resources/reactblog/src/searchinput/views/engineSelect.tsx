@@ -3,10 +3,12 @@ import { connect, Dispatch } from 'react-redux'
 import * as baseInfo from '../base';
 import * as actions from '../action'
 
+let win: any = window;
+
 interface IStateProps {
     engineList?: Array<baseInfo.EngineEntity>
     currentEngine: baseInfo.EngineEntity
-    currentSearchKeySugList: Array<string>
+    currentSearchKey: string
 }
 interface IDispatchProps {
     searchClick: () => void
@@ -17,6 +19,73 @@ interface IDispatchProps {
 class EngineSelect extends React.Component<IStateProps & IDispatchProps> {
     constructor(props: IStateProps & IDispatchProps) {
         super(props);
+    }
+    componentDidMount() {
+        let bingSoCallBackResult: Array<string> = [];
+        let bingSoAjaxObject: any = null;
+        win.bingSoCallBack = function (m: any) {
+            if (!m) {
+                return;
+            }
+            for (let k in m) {
+                if (!m[k] || !m[k].Results || m[k].Results.length == 0 || !m[k].Results[0].Suggests) {
+                    return;
+                }
+                bingSoCallBackResult = $.map(m[k].Results[0].Suggests, function (x: any) {
+                    return x.Txt;
+                });
+                return;
+            };
+            return;
+        };
+        let search = function () {
+            $(".autocomplete-suggestions").hide();
+            let kw = $.trim($("#txtKW").val());
+            if (kw == '') return;
+            kw = encodeURIComponent(kw);
+            $(".divSoContent iframe").each(function () {
+                this.src = $(this).attr('data-src') + kw;
+                $(this).closest(".panel").find(".linkFullScreen").attr({ "href": this.src });
+            });
+            window.history.pushState(null, "", `${win.pageConfig.RootURL}Common/So?q=${kw}`);
+        };
+        let resizeIframe = function () {
+            let h = $("body").height() - $(".divLinks").height() - 220;
+            $("#styleIframe").html(".divSoContent iframe{height:" + h + "px;}");
+        };
+        $(function () {
+            $("body").on("click", "#btnSearch", function () {
+                search();
+                return false;
+            });
+            $("#txtKW").val(decodeURIComponent(win.pageConfig.SoDefaultKey)).on("keyup", function (e: any) {
+                if (e.keyCode == 13) {
+                    search();
+                }
+            }).autoComplete({
+                minChars: 1,
+                source: function (term: any, response: any) {
+                    bingSoCallBackResult = [];
+                    bingSoAjaxObject && bingSoAjaxObject.abort();
+                    bingSoAjaxObject = $.ajax({
+                        type: "get",
+                        dataType: "jsonp",
+                        data: { "q": term },
+                        url: "https://api.bing.com/qsonhs.aspx?type=cb&mkt=zh-cn",
+                        jsonp: "cb",
+                        jsonpCallback: "bingSoCallBack",
+                        success: function (data: any) {
+                            response(bingSoCallBackResult);
+                        }
+                    });
+                }
+            });
+            $(win).on("resize", function () {
+                resizeIframe();
+            });
+            search();
+            resizeIframe();
+        });
     }
     render() {
         return <div className="input-group">
@@ -43,7 +112,7 @@ const mapProps = (state: baseInfo.ISearchStore): IStateProps => {
     return {
         engineList: state.engineList,
         currentEngine: state.currentEngine,
-        currentSearchKeySugList: state.currentSearchKeySugList
+        currentSearchKey: state.currentSearchKey
     };
 };
 

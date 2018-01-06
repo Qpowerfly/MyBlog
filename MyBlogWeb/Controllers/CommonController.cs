@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Web;
+using System.Web.Mvc;
 
 namespace MyBlogWeb.Controllers
 {
@@ -22,32 +23,16 @@ namespace MyBlogWeb.Controllers
             return View("~/Views/Common/Error.cshtml", viewModel);
         }
 
-        ///// <summary>
-        ///// 搜索和导航
-        ///// </summary>
-        //[OutputCache(Duration = 3600)]
-        //public ActionResult So()
-        //{
-        //    var viewModel = new Models.Common.SoVM();
-        //    viewModel.Key = XCLNetTools.StringHander.FormHelper.GetString("q");
-        //    ViewBag.IsShowHeader = false;
-        //    ViewBag.IsNeedAngular = true;
-        //    ViewBag.Title = "导航搜索";
-        //    return View(viewModel);
-        //}
-
         /// <summary>
         /// react版的导航搜索
         /// </summary>
         public ActionResult So()
         {
             var viewModel = new Models.Common.SoVM();
-            viewModel.Key = XCLNetTools.StringHander.FormHelper.GetString("q");
-            ViewBag.IsShowHeader = false;
-            ViewBag.IsNeedAngular = false;
+            viewModel.Key = HttpUtility.UrlEncode(XCLNetTools.StringHander.FormHelper.GetString("q"));
             ViewBag.IsShowHeader = false;
             ViewBag.Title = "导航搜索";
-            return View("~/Views/Common/So2.cshtml", viewModel);
+            return View(viewModel);
         }
     }
 }

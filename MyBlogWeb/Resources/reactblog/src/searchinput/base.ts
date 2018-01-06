@@ -32,7 +32,6 @@ export interface ISearchButtonClickAction extends Action {
 export interface ISearchKeyWordsChangeAction extends Action {
     type: string
     keyWord: string
-    keyWordMatchList: Array<string>
 }
 
 /**
@@ -47,5 +46,4 @@ export interface ISearchStore {
     engineList: Array<EngineEntity>
     currentEngine: EngineEntity
     currentSearchKey: string
-    currentSearchKeySugList: Array<string>
 }

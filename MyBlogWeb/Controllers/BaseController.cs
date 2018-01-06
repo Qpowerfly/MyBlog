@@ -32,7 +32,6 @@ namespace MyBlogWeb.Controllers
             base.OnActionExecuting(filterContext);
             ViewBag.MainUserToken = this.MainUserToken;
             ViewBag.IsNeedHighlight = false;
-            ViewBag.IsNeedAngular = false;
 
             //获取文章分类
             var request = XCLCMS.Lib.WebAPI.Library.CreateRequest<long>(this.MainUserToken);

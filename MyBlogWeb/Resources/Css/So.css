@@ -1,0 +1,74 @@
+﻿body {
+    position: relative;
+}
+
+.panel {
+    margin-bottom: 10px;
+}
+
+.XCLMainDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hrBottom, .XCLBottomDiv {
+    display: none;
+}
+
+.inputbox {
+    height: 40px;
+    font-size: 18px;
+}
+
+.searchBtn {
+    height: 40px;
+    font-weight: bolder;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+.searchBtnMenu {
+    height: 40px;
+    margin-left: -5px !important;
+}
+
+.divSo .label {
+    color: #fff !important;
+}
+
+    .divSo .label:hover {
+        color: #ddd !important;
+    }
+
+.divSoContent {
+    margin-top: 120px;
+}
+
+    .divSoContent .panel-body {
+        padding: 0;
+    }
+
+    .divSoContent iframe {
+        width: 100%;
+        border: none;
+    }
+
+.divLinks {
+    font-size: 14px;
+    word-spacing: 5px;
+    letter-spacing: 5px;
+    color: #888;
+}
+
+    .divLinks .panel-body {
+        padding: 5px;
+    }
+
+.divSoBottom {
+    text-align: center;
+    font-size: 14px;
+}

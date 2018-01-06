@@ -2,22 +2,18 @@
 <meta name="keywords" content="@ViewBag.KeyWords" />
 <meta name="description" content="@ViewBag.Description" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-
+<script type="text/javascript">
+    (function (config) {
+        config.RootURL = "@(XCLNetTools.StringHander.Common.RootURL)";
+    })(window.pageConfig = window.pageConfig || {});
+</script>
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css?v=@(ViewBag.ResourceVersion)" rel="stylesheet">
-
 @if (null != ViewBag.IsNeedHighlight && ViewBag.IsNeedHighlight)
 {
     <link href="~/Resources/Js/highlight/tomorrow-night-bright.css?v=@(ViewBag.ResourceVersion)" rel="stylesheet" />
 }
-
 <link href="~/Resources/Css/Base.css?v=@(ViewBag.ResourceVersion)" rel="stylesheet" />
-<script src="https://cdn.bootcss.com/labjs/2.0.3/LAB.min.js?v=@(ViewBag.ResourceVersion)"></script>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js?v=@(ViewBag.ResourceVersion)"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js?v=@(ViewBag.ResourceVersion)"></script>
 <link href="https://cdn.bootcss.com/jquery-autocomplete/1.0.7/jquery.auto-complete.min.css?v=@(ViewBag.ResourceVersion)" rel="stylesheet">
 <script src="https://cdn.bootcss.com/jquery-autocomplete/1.0.7/jquery.auto-complete.min.js?v=@(ViewBag.ResourceVersion)"></script>
-
-@if (null != ViewBag.IsNeedAngular && ViewBag.IsNeedAngular)
-{
-    <script src="https://cdn.bootcss.com/angular.js/1.6.6/angular.min.js?v=@(ViewBag.ResourceVersion)"></script>
-}

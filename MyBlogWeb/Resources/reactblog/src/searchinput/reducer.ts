@@ -16,10 +16,8 @@ export default (state: baseInfo.ISearchStore, action: baseInfo.IAllActionType): 
             let searchAction = <baseInfo.ISearchKeyWordsChangeAction>action;
             state = {
                 ...state,
-                currentSearchKey: searchAction.keyWord,
-                currentSearchKeySugList: searchAction.keyWordMatchList
+                currentSearchKey: searchAction.keyWord
             }
-            console.log(state.currentSearchKey);
             break;
     }
     return state;

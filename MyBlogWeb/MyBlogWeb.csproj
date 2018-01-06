@@ -5,7 +5,7 @@
   <Import Project="..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
-	<TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>
@@ -153,6 +153,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Resources\Css\Base.css" />
+    <Content Include="Resources\Css\So.css" />
     <Content Include="Resources\Images\banners\0.jpg" />
     <Content Include="Resources\Images\banners\1.jpg" />
     <Content Include="Resources\Images\banners\2.jpg" />
@@ -213,9 +214,8 @@
     <Content Include="Config\XConfigGen.bat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Views\Common\So.cshtml" />
     <None Include="Properties\PublishProfiles\publish.pubxml" />
-    <Content Include="Views\Common\So2.cshtml" />
+    <Content Include="Views\Common\So.cshtml" />
     <Content Include="Resources\reactblog\dist\bundle.js.map" />
     <Content Include="Resources\reactblog\package.json" />
     <Content Include="Resources\reactblog\tsconfig.json" />

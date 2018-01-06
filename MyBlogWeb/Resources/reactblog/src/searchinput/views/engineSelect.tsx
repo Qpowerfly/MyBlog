@@ -58,7 +58,7 @@ class EngineSelect extends React.Component<IStateProps & IDispatchProps> {
                 search();
                 return false;
             });
-            $("#txtKW").val(decodeURIComponent(win.pageConfig.SoDefaultKey)).on("keyup", function (e: any) {
+            $("#txtKW").val(win.pageConfig.SoDefaultKey).on("keyup", function (e: any) {
                 if (e.keyCode == 13) {
                     search();
                 }

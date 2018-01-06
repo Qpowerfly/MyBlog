@@ -29,7 +29,7 @@ namespace MyBlogWeb.Controllers
         public ActionResult So()
         {
             var viewModel = new Models.Common.SoVM();
-            viewModel.Key = HttpUtility.UrlEncode(XCLNetTools.StringHander.FormHelper.GetString("q"));
+            viewModel.Key = XCLNetTools.StringHander.FormHelper.GetString("q").Replace("\"", " ").Replace("'", " ");
             ViewBag.IsShowHeader = false;
             ViewBag.Title = "导航搜索";
             return View(viewModel);

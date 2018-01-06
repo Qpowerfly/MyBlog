@@ -24,7 +24,6 @@ export const searchKeyWordsChange = (kw: string): baseInfo.ISearchKeyWordsChange
 
 export const searchKeyWordsChangeAsync = (kw: string) => {
     return (dispatch: any) => {
-        console.log(kw);
         dispatch(searchKeyWordsChange(kw));
     }
 }

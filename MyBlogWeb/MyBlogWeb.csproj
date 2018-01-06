@@ -227,6 +227,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Resources\reactblog\src\common.d.ts" />
     <TypeScriptCompile Include="Resources\reactblog\src\searchinput\action.ts" />
     <TypeScriptCompile Include="Resources\reactblog\src\searchinput\actiontypes.ts" />
     <TypeScriptCompile Include="Resources\reactblog\src\searchinput\base.ts" />
@@ -235,11 +239,9 @@
     <TypeScriptCompile Include="Resources\reactblog\src\searchinput\store.ts" />
     <TypeScriptCompile Include="Resources\reactblog\src\searchinput\views\engineSelect.tsx" />
     <TypeScriptCompile Include="Resources\reactblog\src\searchinput\views\index.tsx" />
+    <TypeScriptCompile Include="Resources\reactblog\src\searchinput\views\inputSo.tsx" />
+    <TypeScriptCompile Include="Resources\reactblog\src\searchinput\views\links.tsx" />
     <TypeScriptCompile Include="Resources\reactblog\src\searchinput\views\resultFrame.tsx" />
-    <TypeScriptCompile Include="Resources\reactblog\src\searchinput\views\soContainer.tsx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

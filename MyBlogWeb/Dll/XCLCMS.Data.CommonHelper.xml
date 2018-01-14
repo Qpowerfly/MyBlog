@@ -732,6 +732,11 @@
             数据过滤-仅限当前商户
              </summary>
         </member>
+        <member name="F:XCLCMS.Data.CommonHelper.Function.FunctionEnum.SysFun_DataFilter_ShowAllRecordState">
+             <summary>
+            数据过滤-数据列表显示所有记录状态的数据
+             </summary>
+        </member>
         <member name="F:XCLCMS.Data.CommonHelper.Function.FunctionEnum.FriendLinks_Add">
              <summary>
             友情链接管理-友情链接添加
